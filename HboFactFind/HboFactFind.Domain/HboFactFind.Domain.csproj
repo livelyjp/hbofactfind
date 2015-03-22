@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractEntities\BaseEntity.cs" />
+    <Compile Include="Questions\BreakDownOfLiabilities.cs" />
+    <Compile Include="Enums\EmploymentStatus.cs" />
+    <Compile Include="Enums\MartialStatusEnum.cs" />
+    <Compile Include="Enums\SexEnum.cs" />
+    <Compile Include="Enums\TaxRateEnum.cs" />
+    <Compile Include="Enums\TitleEnum.cs" />
+    <Compile Include="Questions\ExistingPlans\AbstractExistingPlan\Policy.cs" />
+    <Compile Include="Questions\ExistingPlans\PensionPolicies.cs" />
+    <Compile Include="Questions\ExistingPlans\ProtectionAndInsurancePolicies.cs" />
+    <Compile Include="Questions\ExistingPlans\SavingsAndInvestmentPolicies.cs" />
+    <Compile Include="FactFind.cs" />
+    <Compile Include="Questions\Dependants\FinancialDependant.cs" />
+    <Compile Include="Questions\Dependants\NonFinancialDependants.cs" />
+    <Compile Include="Pages\Abstracts\Page.cs" />
+    <Compile Include="Pages\PageEight.cs" />
+    <Compile Include="Pages\PageFive.cs" />
+    <Compile Include="Pages\PageFour.cs" />
+    <Compile Include="Pages\PageNine.cs" />
+    <Compile Include="Pages\PageOne.cs" />
+    <Compile Include="Pages\PageSeven.cs" />
+    <Compile Include="Pages\PageSix.cs" />
+    <Compile Include="Pages\PageTen.cs" />
+    <Compile Include="Pages\PageThree.cs" />
+    <Compile Include="Pages\PageTwo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

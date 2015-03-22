@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HboFactFind.Domain
+namespace HboFactFind.Domain.AbstractEntities
 {
     public class BaseEntity
     {
