@@ -5,6 +5,23 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HboFactFind", "HboFactFind\HboFactFind.csproj", "{227388FC-1D90-474D-A232-F477DB6F1FBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HboFactFind.Domain", "HboFactFind.Domain\HboFactFind.Domain.csproj", "{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{0231F33E-39C3-4FAB-8519-6638F88A3340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HboFactFind.Services", "HboFactFind.Services\HboFactFind.Services.csproj", "{714F3D25-72F4-47D2-B22C-D5C37B20BB0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HboFactFind.EF", "HboFactFind.EF\HboFactFind.EF.csproj", "{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B200C7C5-C7FD-410C-8E34-FEAEB0E5FFB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{722D121C-428E-4402-8D36-620F4AF79E05}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +32,26 @@ Global
 		{227388FC-1D90-474D-A232-F477DB6F1FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{227388FC-1D90-474D-A232-F477DB6F1FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{227388FC-1D90-474D-A232-F477DB6F1FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{714F3D25-72F4-47D2-B22C-D5C37B20BB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{714F3D25-72F4-47D2-B22C-D5C37B20BB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{714F3D25-72F4-47D2-B22C-D5C37B20BB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{714F3D25-72F4-47D2-B22C-D5C37B20BB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{227388FC-1D90-474D-A232-F477DB6F1FBB} = {B200C7C5-C7FD-410C-8E34-FEAEB0E5FFB5}
+		{40063BE7-3AA7-4B22-AB94-510AB0B9D24F} = {0231F33E-39C3-4FAB-8519-6638F88A3340}
+		{714F3D25-72F4-47D2-B22C-D5C37B20BB0B} = {0231F33E-39C3-4FAB-8519-6638F88A3340}
+		{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF} = {0231F33E-39C3-4FAB-8519-6638F88A3340}
 	EndGlobalSection
 EndGlobal
