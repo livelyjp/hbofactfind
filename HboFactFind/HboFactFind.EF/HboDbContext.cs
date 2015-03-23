@@ -14,23 +14,23 @@ namespace HboFactFind.EF
         }
 
         public virtual IDbSet<User> Users { get; set; }
-        public virtual IDbSet<FactFind> FactFinds { get; set; }
-        public virtual IDbSet<PageOne> PageOne { get; set; }
-        public virtual IDbSet<PageTwo> PageTwos { get; set; }
-        public virtual IDbSet<PageThree> PageThrees { get; set; }
-        public virtual IDbSet<PageFour> PageFours { get; set; }
-        public virtual IDbSet<PageFive> PageFives { get; set; }
-        public virtual IDbSet<PageSix> PageSixs { get; set; }
-        public virtual IDbSet<PageSeven> PageSevens { get; set; }
-        public virtual IDbSet<PageEight> PageEights { get; set; }
-        public virtual IDbSet<PageNine> PageNines { get; set; }
-        public virtual IDbSet<PageTen> PageTens { get; set; }
-        public virtual IDbSet<FinancialDependant> FinancialDependants { get; set; }
-        public virtual IDbSet<NonFinancialDependants> NonFinancialDependantses { get; set; }
-        public virtual IDbSet<BreakDownOfLiabilities> BreakDownOfLiabilitieses { get; set; }
-        public virtual IDbSet<PensionPolicies> PensionPolicieses { get; set; }
-        public virtual IDbSet<ProtectionAndInsurancePolicies> ProtectionAndInsurancePolicieses { get; set; }
-        public virtual IDbSet<SavingsAndInvestmentPolicies> SavingsAndInvestmentPolicieses { get; set; }
+        public virtual DbSet<FactFind> FactFinds { get; set; }
+        public virtual DbSet<PageOne> PageOnes { get; set; }
+        public virtual DbSet<PageTwo> PageTwos { get; set; }
+        public virtual DbSet<PageThree> PageThrees { get; set; }
+        public virtual DbSet<PageFour> PageFours { get; set; }
+        public virtual DbSet<PageFive> PageFives { get; set; }
+        public virtual DbSet<PageSix> PageSixs { get; set; }
+        public virtual DbSet<PageSeven> PageSevens { get; set; }
+        public virtual DbSet<PageEight> PageEights { get; set; }
+        public virtual DbSet<PageNine> PageNines { get; set; }
+        public virtual DbSet<PageTen> PageTens { get; set; }
+        public virtual DbSet<FinancialDependant> FinancialDependants { get; set; }
+        public virtual DbSet<NonFinancialDependants> NonFinancialDependantses { get; set; }
+        public virtual DbSet<BreakDownOfLiabilities> BreakDownOfLiabilitieses { get; set; }
+        public virtual DbSet<PensionPolicies> PensionPolicieses { get; set; }
+        public virtual DbSet<ProtectionAndInsurancePolicies> ProtectionAndInsurancePolicieses { get; set; }
+        public virtual DbSet<SavingsAndInvestmentPolicies> SavingsAndInvestmentPolicieses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

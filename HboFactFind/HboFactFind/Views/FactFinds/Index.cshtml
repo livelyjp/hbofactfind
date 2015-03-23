@@ -1,0 +1,177 @@
+﻿@model IEnumerable<HboFactFind.Domain.FactFind>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PageEightClientOne.ClientOneRequiredEmergancyFund)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageFiveClientOne.ClientOneIncomeNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageFourClientOne.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageNineClientOne.ClientOnePrioritiesNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageOneClientOne.ClientOneForename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageSevenClientOne.AssetsNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageSixClientOne.OutGoingsNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageTenClientOne.ExistingPlansNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageThreeClientOne.ClientOneSolicitor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageTwoClientOne.ClientOneOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletionDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageOneClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageTwoClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageThreeClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageFourClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageFiveClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageSixClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageSevenClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageEightClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageNineClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageTenClientOneId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageEightClientOne.ClientOneRequiredEmergancyFund)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageFiveClientOne.ClientOneIncomeNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageFourClientOne.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageNineClientOne.ClientOnePrioritiesNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageOneClientOne.ClientOneForename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageSevenClientOne.AssetsNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageSixClientOne.OutGoingsNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageTenClientOne.ExistingPlansNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageThreeClientOne.ClientOneSolicitor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageTwoClientOne.ClientOneOccupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompletionDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageOneClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageTwoClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageThreeClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageFourClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageFiveClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageSixClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageSevenClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageEightClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageNineClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageTenClientOneId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

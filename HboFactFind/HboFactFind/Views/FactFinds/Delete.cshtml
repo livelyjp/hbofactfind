@@ -1,0 +1,224 @@
+﻿@model HboFactFind.Domain.FactFind
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FactFind</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageEightClientOne.ClientOneRequiredEmergancyFund)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageEightClientOne.ClientOneRequiredEmergancyFund)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageFiveClientOne.ClientOneIncomeNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageFiveClientOne.ClientOneIncomeNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageFourClientOne.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageFourClientOne.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageNineClientOne.ClientOnePrioritiesNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageNineClientOne.ClientOnePrioritiesNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageOneClientOne.ClientOneForename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageOneClientOne.ClientOneForename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageSevenClientOne.AssetsNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageSevenClientOne.AssetsNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageSixClientOne.OutGoingsNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageSixClientOne.OutGoingsNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTenClientOne.ExistingPlansNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTenClientOne.ExistingPlansNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageThreeClientOne.ClientOneSolicitor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageThreeClientOne.ClientOneSolicitor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTwoClientOne.ClientOneOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTwoClientOne.ClientOneOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompletionDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompletionDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageOneClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageOneClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTwoClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTwoClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageThreeClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageThreeClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageFourClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageFourClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageFiveClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageFiveClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageSixClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageSixClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageSevenClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageSevenClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageEightClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageEightClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageNineClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageNineClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTenClientOneId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTenClientOneId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
