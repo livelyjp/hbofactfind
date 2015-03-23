@@ -49,10 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HboDbContext.cs" />
-    <Compile Include="Migrations\201503231757292_Init of Db.cs" />
-    <Compile Include="Migrations\201503231757292_Init of Db.Designer.cs">
-      <DependentUpon>201503231757292_Init of Db.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,11 +61,6 @@
       <Project>{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}</Project>
       <Name>HboFactFind.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503231757292_Init of Db.resx">
-      <DependentUpon>201503231757292_Init of Db.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

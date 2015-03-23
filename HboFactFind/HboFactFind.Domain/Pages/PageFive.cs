@@ -5,17 +5,30 @@ namespace HboFactFind.Domain.Pages
 {
     public class PageFive : Page
     {
-        public decimal GrossEmploymentIncome { get; set; }
-        public decimal GrossSelfEmploymentIncome { get; set; }
-        public decimal GroddPrivatePensionIncome { get; set; }
-        public decimal GrossStatePension { get; set; }
-        public decimal AdditionalIncome { get; set; }
-        public decimal TotalAnnualIncome { get; set; }
-        public decimal TotalGrossMonthlyIncome { get; set; }
-        public decimal TotalNetMonthlyIncome { get; set; }
-        public TaxRateEnum TaxRate { get; set; }
-        public bool AnyChangesToIncome { get; set; }
-        public bool AnyChangesToTax { get; set; }
-        public string IncomeNotes { get; set; }
+        public decimal ClientOneGrossEmploymentIncome { get; set; }
+        public decimal ClientOneGrossSelfEmploymentIncome { get; set; }
+        public decimal ClientOneGroddPrivatePensionIncome { get; set; }
+        public decimal ClientOneGrossStatePension { get; set; }
+        public decimal ClientOneAdditionalIncome { get; set; }
+        public decimal ClientOneTotalAnnualIncome { get; set; }
+        public decimal ClientOneTotalGrossMonthlyIncome { get; set; }
+        public decimal ClientOneTotalNetMonthlyIncome { get; set; }
+        public TaxRateEnum ClientOneTaxRate { get; set; }
+        public bool ClientOneAnyChangesToIncome { get; set; }
+        public bool ClientOneAnyChangesToTax { get; set; }
+        public string ClientOneIncomeNotes { get; set; }
+
+        public decimal ClientTwoGrossEmploymentIncome { get; set; }
+        public decimal ClientTwoGrossSelfEmploymentIncome { get; set; }
+        public decimal ClientTwoGroddPrivatePensionIncome { get; set; }
+        public decimal ClientTwoGrossStatePension { get; set; }
+        public decimal ClientTwoAdditionalIncome { get; set; }
+        public decimal ClientTwoTotalAnnualIncome { get; set; }
+        public decimal ClientTwoTotalGrossMonthlyIncome { get; set; }
+        public decimal ClientTwoTotalNetMonthlyIncome { get; set; }
+        public TaxRateEnum ClientTwoTaxRate { get; set; }
+        public bool ClientTwoAnyChangesToIncome { get; set; }
+        public bool ClientTwoAnyChangesToTax { get; set; }
+        public string ClientTwoIncomeNotes { get; set; }
     }
 }

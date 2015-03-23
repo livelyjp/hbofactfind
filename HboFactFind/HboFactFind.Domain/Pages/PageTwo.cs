@@ -7,10 +7,16 @@ namespace HboFactFind.Domain.Pages
     public class PageTwo : Page
     {
         //PageTwo
-        public EmploymentStatus EmploymentStatus { get; set; }
-        public string Occupation { get; set; }
-        public string DetailsOfEmployer { get; set; }
-        public DateTime EmploymentStartDate { get; set; }
-        public int IntendedRetirementAge { get; set; }
+        public EmploymentStatus ClientOneEmploymentStatus { get; set; }
+        public string ClientOneOccupation { get; set; }
+        public string ClientOneDetailsOfEmployer { get; set; }
+        public DateTime ClientOneEmploymentStartDate { get; set; }
+        public int ClientOneIntendedRetirementAge { get; set; }
+
+        public EmploymentStatus ClientTwoStatusEmploymentStatus { get; set; }
+        public string ClientTwoOccupation { get; set; }
+        public string ClientTwoDetailsOfEmployer { get; set; }
+        public DateTime ClientTwoEmploymentStartDate { get; set; }
+        public int ClientTwoIntendedRetirementAge { get; set; }
     }
 }

@@ -4,9 +4,14 @@ namespace HboFactFind.Domain.Pages
 {
     public class PageEight : Page
     {
-        public string RequiredEmergancyFund { get; set; }
-        public string PlannedExpenditure { get; set; }
-        public bool MadeAWill { get; set; }
-        public string WillNotes { get; set; }
+        public string ClientOneRequiredEmergancyFund { get; set; }
+        public string ClientOnePlannedExpenditure { get; set; }
+        public bool ClientOneMadeAWill { get; set; }
+        public string ClientOneWillNotes { get; set; }
+
+        public string ClientTwoRequiredEmergancyFund { get; set; }
+        public string ClientTwoPlannedExpenditure { get; set; }
+        public bool ClientTwoMadeAWill { get; set; }
+        public string ClientTwoWillNotes { get; set; }
     }
 }

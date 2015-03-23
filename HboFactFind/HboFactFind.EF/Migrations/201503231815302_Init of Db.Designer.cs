@@ -13,7 +13,7 @@ namespace HboFactFind.EF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201503231757292_Init of Db"; }
+            get { return "201503231815302_Init of Db"; }
         }
         
         string IMigrationMetadata.Source
