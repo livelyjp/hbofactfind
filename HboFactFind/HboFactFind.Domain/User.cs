@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using HboFactFind.Domain.AbstractEntities;
 
 namespace HboFactFind.Domain
 {
-    public class User
+    public class User : BaseEntity
     {
         [Required]
         public string FirstName { get; set; }
