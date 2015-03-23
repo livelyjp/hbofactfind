@@ -1,0 +1,114 @@
+﻿@model HboFactFind.Domain.Pages.PageTwo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PageTwo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FactFind.ClientOneName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FactFind.ClientOneName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEmploymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEmploymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneDetailsOfEmployer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneDetailsOfEmployer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEmploymentStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEmploymentStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneIntendedRetirementAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneIntendedRetirementAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoStatusEmploymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoStatusEmploymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoDetailsOfEmployer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoDetailsOfEmployer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoEmploymentStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoEmploymentStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoIntendedRetirementAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoIntendedRetirementAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

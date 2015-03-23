@@ -1,0 +1,285 @@
+﻿@model IEnumerable<HboFactFind.Domain.Pages.PageSix>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FactFind.ClientOneName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneMortageRent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneCouncilTax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneUtilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneFoodShopping)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneTvSateliteCableInternet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneTransportation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneFinancials)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneLoansCreditStoreCardRepayments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneSavings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePensionContributions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneMiscellaneious)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneHolidays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneRegularSubscriptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneClothing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneTotalOutgoings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneSurplusIncome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneFinancialGoalCommitment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoMortageRent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoCouncilTax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoUtilities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoFoodShopping)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoTvSateliteCableInternet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoTransportation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoFinancials)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoLoansCreditStoreCardRepayments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoSavings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPensionContributions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoMiscellaneious)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoHolidays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoRegularSubscriptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoClothing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoTotalOutgoings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoSurplusIncome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoFinancialGoalCommitment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutGoingsNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactFind.ClientOneName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneMortageRent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneCouncilTax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneUtilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneFoodShopping)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneTvSateliteCableInternet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneTransportation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneFinancials)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneLoansCreditStoreCardRepayments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneSavings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePensionContributions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneMiscellaneious)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneHolidays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneRegularSubscriptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneClothing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneTotalOutgoings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneSurplusIncome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneFinancialGoalCommitment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoMortageRent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoCouncilTax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoUtilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoFoodShopping)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoTvSateliteCableInternet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoTransportation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoFinancials)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoLoansCreditStoreCardRepayments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoSavings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPensionContributions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoMiscellaneious)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoHolidays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoRegularSubscriptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoClothing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoTotalOutgoings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoSurplusIncome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoFinancialGoalCommitment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutGoingsNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

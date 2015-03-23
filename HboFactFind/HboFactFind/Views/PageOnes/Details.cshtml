@@ -1,0 +1,402 @@
+﻿@model HboFactFind.Domain.Pages.PageOne
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PageOne</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FactFind.ClientOneName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FactFind.ClientOneName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneForename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneForename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneSurnames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneSurnames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneAddressLineOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneAddressLineOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneAddressLineTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneAddressLineTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneAddressLineThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneAddressLineThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneCounty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneCounty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOnePostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOnePostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneHomeTelephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneHomeTelephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneMobileTelephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneMobileTelephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneDateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneDateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneSex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneSex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneMartialStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneMartialStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneGoodHealth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneGoodHealth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneSmoked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneSmoked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneNationalInsuranceNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneNationalInsuranceNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneNationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneNationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneCountryOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneCountryOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneCountryOfResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneCountryOfResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneDomicile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneDomicile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneTaxationResidency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneTaxationResidency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneExtraInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneExtraInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoForename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoForename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoSurnames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoSurnames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoAddressLineOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoAddressLineOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoAddressLineTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoAddressLineTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoAddressLineThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoAddressLineThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoCounty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoCounty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoPostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoPostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoEmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoHomeTelephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoHomeTelephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoMobileTelephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoMobileTelephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoDateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoDateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoSex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoSex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoMartialStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoMartialStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoGoodHealth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoGoodHealth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoSmoked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoSmoked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoNationalInsuranceNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoNationalInsuranceNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoNationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoNationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoCountryOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoCountryOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoCountryOfResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoCountryOfResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoDomicile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoDomicile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoTaxationResidency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoTaxationResidency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoExtraInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoExtraInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
