@@ -2,7 +2,7 @@ using System.Data.Entity.Migrations;
 
 namespace HboFactFind.EF.Migrations
 {
-    public partial class InitofDb : DbMigration
+    public partial class InitofDB : DbMigration
     {
         public override void Up()
         {
@@ -81,16 +81,16 @@ namespace HboFactFind.EF.Migrations
                     ClientTwoName = c.String(),
                     UserId = c.Long(false),
                     CompletionDateTime = c.DateTime(false),
-                    PageOneClientOneId = c.Long(false),
-                    PageTwoClientOneId = c.Long(false),
-                    PageThreeClientOneId = c.Long(false),
-                    PageFourClientOneId = c.Long(false),
-                    PageFiveClientOneId = c.Long(false),
-                    PageSixClientOneId = c.Long(false),
-                    PageSevenClientOneId = c.Long(false),
-                    PageEightClientOneId = c.Long(false),
-                    PageNineClientOneId = c.Long(false),
-                    PageTenClientOneId = c.Long(false),
+                    PageOneId = c.Long(false),
+                    PageTwoId = c.Long(false),
+                    PageThreeId = c.Long(false),
+                    PageFourId = c.Long(false),
+                    PageFiveId = c.Long(false),
+                    PageSixId = c.Long(false),
+                    PageSevenId = c.Long(false),
+                    PageEightId = c.Long(false),
+                    PageNineId = c.Long(false),
+                    PageTenId = c.Long(false),
                     CreatedDateTime = c.DateTime(false),
                 })
                 .PrimaryKey(t => t.Id)

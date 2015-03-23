@@ -15,16 +15,16 @@ namespace HboFactFind.Controllers
         public async Task<ActionResult> Index()
         {
             var factFinds =
-                db.FactFinds.Include(f => f.PageEightClientOne)
-                    .Include(f => f.PageFiveClientOne)
-                    .Include(f => f.PageFourClientOne)
-                    .Include(f => f.PageNineClientOne)
-                    .Include(f => f.PageOneClientOne)
-                    .Include(f => f.PageSevenClientOne)
-                    .Include(f => f.PageSixClientOne)
-                    .Include(f => f.PageTenClientOne)
-                    .Include(f => f.PageThreeClientOne)
-                    .Include(f => f.PageTwoClientOne);
+                db.FactFinds.Include(f => f.PageEight)
+                    .Include(f => f.PageFive)
+                    .Include(f => f.PageFour)
+                    .Include(f => f.PageNine)
+                    .Include(f => f.PageOne)
+                    .Include(f => f.PageSeven)
+                    .Include(f => f.PageSix)
+                    .Include(f => f.PageTen)
+                    .Include(f => f.PageThree)
+                    .Include(f => f.PageTwo);
             return View(await factFinds.ToListAsync());
         }
 
@@ -67,7 +67,7 @@ namespace HboFactFind.Controllers
         public async Task<ActionResult> Create(
             [Bind(
                 Include =
-                    "Id,ClientOneName,ClientTwoName,UserId,CompletionDateTime,PageOneClientOneId,PageTwoClientOneId,PageThreeClientOneId,PageFourClientOneId,PageFiveClientOneId,PageSixClientOneId,PageSevenClientOneId,PageEightClientOneId,PageNineClientOneId,PageTenClientOneId,CreatedDateTime"
+                    "Id,ClientOneName,ClientTwoName,UserId,CompletionDateTime,PageOneClientOneId,PageTwoId,PageThreeId,PageFourId,PageFiveId,PageSixId,PageSevenId,PageEightId,PageNineId,PageTenId,CreatedDateTime"
                 )] FactFind factFind)
         {
             if (ModelState.IsValid)
@@ -123,7 +123,7 @@ namespace HboFactFind.Controllers
         public async Task<ActionResult> Edit(
             [Bind(
                 Include =
-                    "Id,ClientOneName,ClientTwoName,UserId,CompletionDateTime,PageOneClientOneId,PageTwoClientOneId,PageThreeClientOneId,PageFourClientOneId,PageFiveClientOneId,PageSixClientOneId,PageSevenClientOneId,PageEightClientOneId,PageNineClientOneId,PageTenClientOneId,CreatedDateTime"
+                    "Id,ClientOneName,ClientTwoName,UserId,CompletionDateTime,PageOneClientOneId,PageTwoId,PageThreeId,PageFourId,PageFiveId,PageSixId,PageSevenId,PageEightId,PageNineId,PageTenId,CreatedDateTime"
                 )] FactFind factFind)
         {
             if (ModelState.IsValid)

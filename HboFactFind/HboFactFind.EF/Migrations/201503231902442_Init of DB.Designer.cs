@@ -7,13 +7,13 @@ namespace HboFactFind.EF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitofDb : IMigrationMetadata
+    public sealed partial class InitofDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitofDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitofDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201503231815302_Init of Db"; }
+            get { return "201503231902442_Init of DB"; }
         }
         
         string IMigrationMetadata.Source

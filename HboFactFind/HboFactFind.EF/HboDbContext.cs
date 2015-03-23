@@ -14,7 +14,7 @@ namespace HboFactFind.EF
         {
         }
 
-        public virtual IDbSet<User> Users { get; set; }
+        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<FactFind> FactFinds { get; set; }
         public virtual DbSet<PageOne> PageOnes { get; set; }
         public virtual DbSet<PageTwo> PageTwos { get; set; }
@@ -37,16 +37,16 @@ namespace HboFactFind.EF
         {
             modelBuilder.Entity<User>();
 
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageOneClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTwoClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageThreeClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFourClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFiveClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSixClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSevenClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageEightClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageNineClientOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTenClientOne).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageOne).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTwo).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageThree).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFour).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFive).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSix).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSeven).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageEight).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageNine).WithOptional();
+            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTen).WithOptional();
 
             modelBuilder.Entity<PageOne>();
             modelBuilder.Entity<PageTwo>();

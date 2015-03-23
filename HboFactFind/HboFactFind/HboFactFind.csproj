@@ -132,6 +132,7 @@
     <Compile Include="Controllers\PageTensController.cs" />
     <Compile Include="Controllers\PageThreesController.cs" />
     <Compile Include="Controllers\PageTwoesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +229,11 @@
     <Content Include="Views\PageTens\Details.cshtml" />
     <Content Include="Views\PageTens\Edit.cshtml" />
     <Content Include="Views\PageTens\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
