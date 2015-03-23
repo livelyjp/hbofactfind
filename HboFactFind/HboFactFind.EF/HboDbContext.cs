@@ -9,7 +9,8 @@ namespace HboFactFind.EF
 {
     public class HboDbContext : DbContext
     {
-        public HboDbContext() : base("HboContext")
+        public HboDbContext()
+            : base("HboDbContext")
         {
         }
 
