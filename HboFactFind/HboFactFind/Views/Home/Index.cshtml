@@ -3,10 +3,15 @@
 }
 
 <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-        @*HBO Logo Goes Here*@
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 hboHomePanel">
         <h2>Welcome To HBO Fact Find</h2>
         <strong>To Begin, Click The Button Below</strong>
-        @Html.ActionLink("Begin", "Index", "Login")
+        
+        <div>
+            <a class="blueButton" href="@Url.Action("Index", "FactFind")">Begin</a>
+        </div>
+
+        @*<img src="~/Content/Images/HobLogo.png" alt="HBO Logo" />*@
+
     </div>
 </div>

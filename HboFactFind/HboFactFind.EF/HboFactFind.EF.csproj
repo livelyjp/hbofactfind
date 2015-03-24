@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201503231902442_Init of DB.Designer.cs">
       <DependentUpon>201503231902442_Init of DB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503242034552_Removed Session Token From User.cs" />
+    <Compile Include="Migrations\201503242034552_Removed Session Token From User.Designer.cs">
+      <DependentUpon>201503242034552_Removed Session Token From User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503231902442_Init of DB.resx">
       <DependentUpon>201503231902442_Init of DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503242034552_Removed Session Token From User.resx">
+      <DependentUpon>201503242034552_Removed Session Token From User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

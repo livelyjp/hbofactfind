@@ -36,13 +36,13 @@ namespace HboFactFind.Controllers
             if (SecurityUtil.AuthenticUser(User)) return RedirectToAction("Index", "Dashboard");
             if (ModelState.IsValid)
             {
-                var existingUser = _dbContext.Users.FirstOrDefault(user => user.Id == loginModel.UserID);
+                var existingUser = _dbContext.Users.FirstOrDefault(user => user.Id == loginModel.EmailAddress);
                 if (existingUser != null)
                 {
                     if (SecurityUtil.IsPasswordValid(existingUser, loginModel.Password))
                     {
                         //Password Valid
-                        FormsAuthentication.SetAuthCookie(existingUser.Id.ToString(), loginModel.RememberMe);
+                        FormsAuthentication.SetAuthCookie(existingUser.Id.ToString(), false);
                         return RedirectToAction("Index", "Dashboard");
                     }
                 }

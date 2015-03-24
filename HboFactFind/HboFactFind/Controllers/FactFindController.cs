@@ -7,7 +7,7 @@ using HboFactFind.EF;
 
 namespace HboFactFind.Controllers
 {
-    public class FactFindsController : Controller
+    public class FactFindController : Controller
     {
         private readonly HboDbContext db = new HboDbContext();
 

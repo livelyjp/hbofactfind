@@ -120,7 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\FactFindsController.cs" />
+    <Compile Include="Controllers\FactFindController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\Pages\PageEightsController.cs" />
@@ -152,6 +152,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\HBO.css" />
+    <Content Include="Content\Images\HobLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -183,11 +186,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\FactFinds\Create.cshtml" />
-    <Content Include="Views\FactFinds\Delete.cshtml" />
-    <Content Include="Views\FactFinds\Details.cshtml" />
-    <Content Include="Views\FactFinds\Edit.cshtml" />
-    <Content Include="Views\FactFinds\Index.cshtml" />
+    <Content Include="Views\FactFind\Create.cshtml" />
+    <Content Include="Views\FactFind\Delete.cshtml" />
+    <Content Include="Views\FactFind\Details.cshtml" />
+    <Content Include="Views\FactFind\Edit.cshtml" />
+    <Content Include="Views\FactFind\Index.cshtml" />
     <Content Include="Views\PageOnes\Create.cshtml" />
     <Content Include="Views\PageOnes\Delete.cshtml" />
     <Content Include="Views\PageOnes\Details.cshtml" />
