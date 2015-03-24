@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using HboFactFind.Domain.Pages;
 using HboFactFind.EF;
 
-namespace HboFactFind.Controllers
+namespace HboFactFind.Controllers.Pages
 {
     public class PageSevensController : Controller
     {

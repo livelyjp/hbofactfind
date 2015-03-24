@@ -5,116 +5,122 @@ using System.Web.Mvc;
 using HboFactFind.Domain.Pages;
 using HboFactFind.EF;
 
-namespace HboFactFind.Controllers
+namespace HboFactFind.Controllers.Pages
 {
-    public class PageFoursController : Controller
+    public class PageTwoesController : Controller
     {
         private readonly HboDbContext db = new HboDbContext();
 
-        // GET: PageFours
+        // GET: PageTwoes
         public async Task<ActionResult> Index()
         {
-            var pageFours = db.PageFours.Include(p => p.FactFind);
-            return View(await pageFours.ToListAsync());
+            var pageTwos = db.PageTwos.Include(p => p.FactFind);
+            return View(await pageTwos.ToListAsync());
         }
 
-        // GET: PageFours/Details/5
+        // GET: PageTwoes/Details/5
         public async Task<ActionResult> Details(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var pageFour = await db.PageFours.FindAsync(id);
-            if (pageFour == null)
+            var pageTwo = await db.PageTwos.FindAsync(id);
+            if (pageTwo == null)
             {
                 return HttpNotFound();
             }
-            return View(pageFour);
+            return View(pageTwo);
         }
 
-        // GET: PageFours/Create
+        // GET: PageTwoes/Create
         public ActionResult Create()
         {
             ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName");
             return View();
         }
 
-        // POST: PageFours/Create
+        // POST: PageTwoes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(
-            [Bind(Include = "Id,AnyFinancialDependants,FactFindId,CreatedDateTime")] PageFour pageFour)
+            [Bind(
+                Include =
+                    "Id,ClientOneEmploymentStatus,ClientOneOccupation,ClientOneDetailsOfEmployer,ClientOneEmploymentStartDate,ClientOneIntendedRetirementAge,ClientTwoStatusEmploymentStatus,ClientTwoOccupation,ClientTwoDetailsOfEmployer,ClientTwoEmploymentStartDate,ClientTwoIntendedRetirementAge,FactFindId,CreatedDateTime"
+                )] PageTwo pageTwo)
         {
             if (ModelState.IsValid)
             {
-                db.PageFours.Add(pageFour);
+                db.PageTwos.Add(pageTwo);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName", pageFour.FactFindId);
-            return View(pageFour);
+            ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName", pageTwo.FactFindId);
+            return View(pageTwo);
         }
 
-        // GET: PageFours/Edit/5
+        // GET: PageTwoes/Edit/5
         public async Task<ActionResult> Edit(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var pageFour = await db.PageFours.FindAsync(id);
-            if (pageFour == null)
+            var pageTwo = await db.PageTwos.FindAsync(id);
+            if (pageTwo == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName", pageFour.FactFindId);
-            return View(pageFour);
+            ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName", pageTwo.FactFindId);
+            return View(pageTwo);
         }
 
-        // POST: PageFours/Edit/5
+        // POST: PageTwoes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(
-            [Bind(Include = "Id,AnyFinancialDependants,FactFindId,CreatedDateTime")] PageFour pageFour)
+            [Bind(
+                Include =
+                    "Id,ClientOneEmploymentStatus,ClientOneOccupation,ClientOneDetailsOfEmployer,ClientOneEmploymentStartDate,ClientOneIntendedRetirementAge,ClientTwoStatusEmploymentStatus,ClientTwoOccupation,ClientTwoDetailsOfEmployer,ClientTwoEmploymentStartDate,ClientTwoIntendedRetirementAge,FactFindId,CreatedDateTime"
+                )] PageTwo pageTwo)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(pageFour).State = EntityState.Modified;
+                db.Entry(pageTwo).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName", pageFour.FactFindId);
-            return View(pageFour);
+            ViewBag.FactFindId = new SelectList(db.FactFinds, "Id", "ClientOneName", pageTwo.FactFindId);
+            return View(pageTwo);
         }
 
-        // GET: PageFours/Delete/5
+        // GET: PageTwoes/Delete/5
         public async Task<ActionResult> Delete(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var pageFour = await db.PageFours.FindAsync(id);
-            if (pageFour == null)
+            var pageTwo = await db.PageTwos.FindAsync(id);
+            if (pageTwo == null)
             {
                 return HttpNotFound();
             }
-            return View(pageFour);
+            return View(pageTwo);
         }
 
-        // POST: PageFours/Delete/5
+        // POST: PageTwoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(long id)
         {
-            var pageFour = await db.PageFours.FindAsync(id);
-            db.PageFours.Remove(pageFour);
+            var pageTwo = await db.PageTwos.FindAsync(id);
+            db.PageTwos.Remove(pageTwo);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
