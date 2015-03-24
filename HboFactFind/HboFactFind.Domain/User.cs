@@ -17,7 +17,6 @@ namespace HboFactFind.Domain
 
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
-        public string SessionToken { get; set; }
 
         [Required]
         public bool IsAdmin { get; set; }
