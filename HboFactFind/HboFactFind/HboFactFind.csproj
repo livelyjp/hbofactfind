@@ -120,11 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BreakDownOfLiabilitiesController.cs" />
     <Compile Include="Controllers\FactFindsController.cs" />
-    <Compile Include="Controllers\FinancialDependantsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NonFinancialDependantsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\Pages\PageEightsController.cs" />
     <Compile Include="Controllers\Pages\PageFivesController.cs" />
     <Compile Include="Controllers\Pages\PageFoursController.cs" />
@@ -135,14 +133,20 @@
     <Compile Include="Controllers\Pages\PageTensController.cs" />
     <Compile Include="Controllers\Pages\PageThreesController.cs" />
     <Compile Include="Controllers\Pages\PageTwoesController.cs" />
-    <Compile Include="Controllers\PensionPoliciesController.cs" />
-    <Compile Include="Controllers\ProtectionAndInsurancePoliciesController.cs" />
-    <Compile Include="Controllers\SavingsAndInvestmentPoliciesController.cs" />
+    <Compile Include="Controllers\SubSections\BreakDownOfLiabilitiesController.cs" />
+    <Compile Include="Controllers\SubSections\FinancialDependantsController.cs" />
+    <Compile Include="Controllers\SubSections\NonFinancialDependantsController.cs" />
+    <Compile Include="Controllers\SubSections\PensionPoliciesController.cs" />
+    <Compile Include="Controllers\SubSections\ProtectionAndInsurancePoliciesController.cs" />
+    <Compile Include="Controllers\SubSections\SavingsAndInvestmentPoliciesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\PasswordHasher.cs" />
+    <Compile Include="Utils\SecurityUtil.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -176,8 +180,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\FactFinds\Create.cshtml" />
@@ -270,6 +272,7 @@
     <Content Include="Views\SavingsAndInvestmentPolicies\Details.cshtml" />
     <Content Include="Views\SavingsAndInvestmentPolicies\Edit.cshtml" />
     <Content Include="Views\SavingsAndInvestmentPolicies\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

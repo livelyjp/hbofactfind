@@ -1,0 +1,74 @@
+﻿@model HboFactFind.Domain.Questions.BreakDownOfLiabilities
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BreakDownOfLiabilities</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageSeven.AssetsNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageSeven.AssetsNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoregateLoadCreditOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoregateLoadCreditOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepaymentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepaymentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepaymentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepaymentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

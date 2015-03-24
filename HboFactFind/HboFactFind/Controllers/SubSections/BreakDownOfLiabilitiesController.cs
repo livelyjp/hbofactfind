@@ -2,45 +2,45 @@
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using HboFactFind.Domain.Questions.Dependants;
+using HboFactFind.Domain.Questions;
 using HboFactFind.EF;
 
-namespace HboFactFind.Controllers
+namespace HboFactFind.Controllers.SubSections
 {
-    public class FinancialDependantsController : Controller
+    public class BreakDownOfLiabilitiesController : Controller
     {
         private readonly HboDbContext db = new HboDbContext();
 
-        // GET: FinancialDependants
+        // GET: BreakDownOfLiabilities
         public async Task<ActionResult> Index()
         {
-            var financialDependants = db.FinancialDependants.Include(f => f.PageFour);
-            return View(await financialDependants.ToListAsync());
+            var breakDownOfLiabilitieses = db.BreakDownOfLiabilitieses.Include(b => b.PageSeven);
+            return View(await breakDownOfLiabilitieses.ToListAsync());
         }
 
-        // GET: FinancialDependants/Details/5
+        // GET: BreakDownOfLiabilities/Details/5
         public async Task<ActionResult> Details(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var financialDependant = await db.FinancialDependants.FindAsync(id);
-            if (financialDependant == null)
+            var breakDownOfLiabilities = await db.BreakDownOfLiabilitieses.FindAsync(id);
+            if (breakDownOfLiabilities == null)
             {
                 return HttpNotFound();
             }
-            return View(financialDependant);
+            return View(breakDownOfLiabilities);
         }
 
-        // GET: FinancialDependants/Create
+        // GET: BreakDownOfLiabilities/Create
         public ActionResult Create()
         {
-            ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id");
+            ViewBag.PageSevenId = new SelectList(db.PageSevens, "Id", "AssetsNotes");
             return View();
         }
 
-        // POST: FinancialDependants/Create
+        // POST: BreakDownOfLiabilities/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -48,37 +48,36 @@ namespace HboFactFind.Controllers
         public async Task<ActionResult> Create(
             [Bind(
                 Include =
-                    "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime"
-                )] FinancialDependant financialDependant)
+                    "Id,PageSevenId,MoregateLoadCreditOwner,Lender,Amount,RepaymentType,RepaymentDate,CreatedDateTime")] BreakDownOfLiabilities breakDownOfLiabilities)
         {
             if (ModelState.IsValid)
             {
-                db.FinancialDependants.Add(financialDependant);
+                db.BreakDownOfLiabilitieses.Add(breakDownOfLiabilities);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id", financialDependant.PageFourId);
-            return View(financialDependant);
+            ViewBag.PageSevenId = new SelectList(db.PageSevens, "Id", "AssetsNotes", breakDownOfLiabilities.PageSevenId);
+            return View(breakDownOfLiabilities);
         }
 
-        // GET: FinancialDependants/Edit/5
+        // GET: BreakDownOfLiabilities/Edit/5
         public async Task<ActionResult> Edit(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var financialDependant = await db.FinancialDependants.FindAsync(id);
-            if (financialDependant == null)
+            var breakDownOfLiabilities = await db.BreakDownOfLiabilitieses.FindAsync(id);
+            if (breakDownOfLiabilities == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id", financialDependant.PageFourId);
-            return View(financialDependant);
+            ViewBag.PageSevenId = new SelectList(db.PageSevens, "Id", "AssetsNotes", breakDownOfLiabilities.PageSevenId);
+            return View(breakDownOfLiabilities);
         }
 
-        // POST: FinancialDependants/Edit/5
+        // POST: BreakDownOfLiabilities/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -86,41 +85,40 @@ namespace HboFactFind.Controllers
         public async Task<ActionResult> Edit(
             [Bind(
                 Include =
-                    "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime"
-                )] FinancialDependant financialDependant)
+                    "Id,PageSevenId,MoregateLoadCreditOwner,Lender,Amount,RepaymentType,RepaymentDate,CreatedDateTime")] BreakDownOfLiabilities breakDownOfLiabilities)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(financialDependant).State = EntityState.Modified;
+                db.Entry(breakDownOfLiabilities).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id", financialDependant.PageFourId);
-            return View(financialDependant);
+            ViewBag.PageSevenId = new SelectList(db.PageSevens, "Id", "AssetsNotes", breakDownOfLiabilities.PageSevenId);
+            return View(breakDownOfLiabilities);
         }
 
-        // GET: FinancialDependants/Delete/5
+        // GET: BreakDownOfLiabilities/Delete/5
         public async Task<ActionResult> Delete(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var financialDependant = await db.FinancialDependants.FindAsync(id);
-            if (financialDependant == null)
+            var breakDownOfLiabilities = await db.BreakDownOfLiabilitieses.FindAsync(id);
+            if (breakDownOfLiabilities == null)
             {
                 return HttpNotFound();
             }
-            return View(financialDependant);
+            return View(breakDownOfLiabilities);
         }
 
-        // POST: FinancialDependants/Delete/5
+        // POST: BreakDownOfLiabilities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(long id)
         {
-            var financialDependant = await db.FinancialDependants.FindAsync(id);
-            db.FinancialDependants.Remove(financialDependant);
+            var breakDownOfLiabilities = await db.BreakDownOfLiabilitieses.FindAsync(id);
+            db.BreakDownOfLiabilitieses.Remove(breakDownOfLiabilities);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
