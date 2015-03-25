@@ -10,5 +10,12 @@ namespace HboFactFind.Domain.Pages
         public List<PensionPolicies> PensionPolicieses { get; set; }
         public List<SavingsAndInvestmentPolicies> SavingsAndInvestmentPolicieses { get; set; }
         public string ExistingPlansNotes { get; set; }
+
+        public PageTen()
+        {
+            ProtectionAndInsurancePolicies = new List<ProtectionAndInsurancePolicies>();
+            PensionPolicieses = new List<PensionPolicies>();
+            SavingsAndInvestmentPolicieses = new List<SavingsAndInvestmentPolicies>();
+        }
     }
 }

@@ -49,13 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HboDbContext.cs" />
-    <Compile Include="Migrations\201503231902442_Init of DB.cs" />
-    <Compile Include="Migrations\201503231902442_Init of DB.Designer.cs">
-      <DependentUpon>201503231902442_Init of DB.cs</DependentUpon>
+    <Compile Include="Migrations\201503251948460_Init of Db.cs" />
+    <Compile Include="Migrations\201503251948460_Init of Db.Designer.cs">
+      <DependentUpon>201503251948460_Init of Db.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503242034552_Removed Session Token From User.cs" />
-    <Compile Include="Migrations\201503242034552_Removed Session Token From User.Designer.cs">
-      <DependentUpon>201503242034552_Removed Session Token From User.cs</DependentUpon>
+    <Compile Include="Migrations\201503251957110_Made sure all datetimes are datetime2 tyoe.cs" />
+    <Compile Include="Migrations\201503251957110_Made sure all datetimes are datetime2 tyoe.Designer.cs">
+      <DependentUpon>201503251957110_Made sure all datetimes are datetime2 tyoe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,11 +71,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503231902442_Init of DB.resx">
-      <DependentUpon>201503231902442_Init of DB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503251948460_Init of Db.resx">
+      <DependentUpon>201503251948460_Init of Db.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503242034552_Removed Session Token From User.resx">
-      <DependentUpon>201503242034552_Removed Session Token From User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503251957110_Made sure all datetimes are datetime2 tyoe.resx">
+      <DependentUpon>201503251957110_Made sure all datetimes are datetime2 tyoe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

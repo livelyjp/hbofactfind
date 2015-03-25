@@ -38,15 +38,58 @@ namespace HboFactFind.EF
             modelBuilder.Entity<User>();
 
             modelBuilder.Entity<FactFind>().HasRequired(t => t.PageOne).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTwo).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageThree).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFour).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFive).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSix).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSeven).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageEight).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageNine).WithOptional();
-            modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTen).WithOptional();
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageOne)
+                .WithMany()
+                .HasForeignKey(u => u.PageOneId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageTwo)
+                .WithMany()
+                .HasForeignKey(u => u.PageTwoId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageThree)
+                .WithMany()
+                .HasForeignKey(u => u.PageThreeId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageFour)
+                .WithMany()
+                .HasForeignKey(u => u.PageFourId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageFive)
+                .WithMany()
+                .HasForeignKey(u => u.PageFiveId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageSix)
+                .WithMany()
+                .HasForeignKey(u => u.PageSixId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageSeven)
+                .WithMany()
+                .HasForeignKey(u => u.PageSevenId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageEight)
+                .WithMany()
+                .HasForeignKey(u => u.PageEightId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageNine)
+                .WithMany()
+                .HasForeignKey(u => u.PageNineId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(a => a.PageTen)
+                .WithMany()
+                .HasForeignKey(u => u.PageTenId).WillCascadeOnDelete(false);
+
+
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageOne).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTwo).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageThree).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFour).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageFive).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSix).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageSeven).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageEight).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageNine).WithOptional();
+            //modelBuilder.Entity<FactFind>().HasRequired(t => t.PageTen).WithOptional();
 
             modelBuilder.Entity<PageOne>();
             modelBuilder.Entity<PageTwo>();
@@ -70,25 +113,25 @@ namespace HboFactFind.EF
                 .HasForeignKey(x => x.PageFourId);
 
             modelBuilder.Entity<BreakDownOfLiabilities>()
-               .HasRequired(x => x.PageSeven)
-               .WithMany(x => x.BreakDownOfLiabilitieses)
-               .HasForeignKey(x => x.PageSevenId);
+                .HasRequired(x => x.PageSeven)
+                .WithMany(x => x.BreakDownOfLiabilitieses)
+                .HasForeignKey(x => x.PageSevenId);
 
             modelBuilder.Entity<PensionPolicies>()
-               .HasRequired(x => x.PageTen)
-               .WithMany(x => x.PensionPolicieses)
-               .HasForeignKey(x => x.PageTenId);
+                .HasRequired(x => x.PageTen)
+                .WithMany(x => x.PensionPolicieses)
+                .HasForeignKey(x => x.PageTenId);
 
             modelBuilder.Entity<ProtectionAndInsurancePolicies>()
-               .HasRequired(x => x.PageTen)
-               .WithMany(x => x.ProtectionAndInsurancePolicies)
-               .HasForeignKey(x => x.PageTenId);
+                .HasRequired(x => x.PageTen)
+                .WithMany(x => x.ProtectionAndInsurancePolicies)
+                .HasForeignKey(x => x.PageTenId);
 
 
             modelBuilder.Entity<SavingsAndInvestmentPolicies>()
-               .HasRequired(x => x.PageTen)
-               .WithMany(x => x.SavingsAndInvestmentPolicieses)
-               .HasForeignKey(x => x.PageTenId);
+                .HasRequired(x => x.PageTen)
+                .WithMany(x => x.SavingsAndInvestmentPolicieses)
+                .HasForeignKey(x => x.PageTenId);
         }
     }
 }

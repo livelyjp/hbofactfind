@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -14,17 +15,7 @@ namespace HboFactFind.Controllers
         // GET: FactFinds
         public async Task<ActionResult> Index()
         {
-            var factFinds =
-                db.FactFinds.Include(f => f.PageEight)
-                    .Include(f => f.PageFive)
-                    .Include(f => f.PageFour)
-                    .Include(f => f.PageNine)
-                    .Include(f => f.PageOne)
-                    .Include(f => f.PageSeven)
-                    .Include(f => f.PageSix)
-                    .Include(f => f.PageTen)
-                    .Include(f => f.PageThree)
-                    .Include(f => f.PageTwo);
+            var factFinds = db.FactFinds;
             return View(await factFinds.ToListAsync());
         }
 
@@ -46,47 +37,33 @@ namespace HboFactFind.Controllers
         // GET: FactFinds/Create
         public ActionResult Create()
         {
-            ViewBag.Id = new SelectList(db.PageEights, "Id", "ClientOneRequiredEmergancyFund");
-            ViewBag.Id = new SelectList(db.PageFives, "Id", "ClientOneIncomeNotes");
-            ViewBag.Id = new SelectList(db.PageFours, "Id", "Id");
-            ViewBag.Id = new SelectList(db.PageNines, "Id", "ClientOnePrioritiesNotes");
-            ViewBag.Id = new SelectList(db.PageOnes, "Id", "ClientOneForename");
-            ViewBag.Id = new SelectList(db.PageSevens, "Id", "AssetsNotes");
-            ViewBag.Id = new SelectList(db.PageSixs, "Id", "OutGoingsNotes");
-            ViewBag.Id = new SelectList(db.PageTens, "Id", "ExistingPlansNotes");
-            ViewBag.Id = new SelectList(db.PageThrees, "Id", "ClientOneSolicitor");
-            ViewBag.Id = new SelectList(db.PageTwos, "Id", "ClientOneOccupation");
             return View();
         }
 
         // POST: FactFinds/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(
             [Bind(
                 Include =
-                    "Id,ClientOneName,ClientTwoName,UserId,CompletionDateTime,PageOneClientOneId,PageTwoId,PageThreeId,PageFourId,PageFiveId,PageSixId,PageSevenId,PageEightId,PageNineId,PageTenId,CreatedDateTime"
+                    "ClientOneName,ClientTwoName"
                 )] FactFind factFind)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.FactFinds.Add(factFind);
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    if (factFind.CreatedDateTime == DateTime.MinValue) factFind.CreatedDateTime = DateTime.Now;
+                    db.FactFinds.Add(factFind);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
 
-            ViewBag.Id = new SelectList(db.PageEights, "Id", "ClientOneRequiredEmergancyFund", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageFives, "Id", "ClientOneIncomeNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageFours, "Id", "Id", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageNines, "Id", "ClientOnePrioritiesNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageOnes, "Id", "ClientOneForename", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageSevens, "Id", "AssetsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageSixs, "Id", "OutGoingsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageTens, "Id", "ExistingPlansNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageThrees, "Id", "ClientOneSolicitor", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageTwos, "Id", "ClientOneOccupation", factFind.Id);
             return View(factFind);
         }
 
@@ -116,8 +93,6 @@ namespace HboFactFind.Controllers
         }
 
         // POST: FactFinds/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(

@@ -49,5 +49,10 @@ namespace HboFactFind.Domain.Pages
 
         public virtual List<BreakDownOfLiabilities> BreakDownOfLiabilitieses { get; set; }
         public string AssetsNotes { get; set; }
+
+        public PageSeven()
+        {
+            BreakDownOfLiabilitieses = new List<BreakDownOfLiabilities>();
+        }
     }
 }

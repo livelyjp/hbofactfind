@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using HboFactFind.Domain.AbstractEntities;
 using HboFactFind.Domain.Pages;
 
@@ -23,7 +24,8 @@ namespace HboFactFind.Domain
         public string ClientOneName { get; set; }
         public string ClientTwoName { get; set; }
         public long UserId { get; set; }
-        public DateTime CompletionDateTime { get; set; }
+        [Column(TypeName = "DateTime2")]
+        public DateTime? CompletionDateTime { get; set; }
 
         //PageOne
         public long PageOneId { get; set; }

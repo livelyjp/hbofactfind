@@ -1,15 +1,16 @@
 ﻿using System;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 using HboFactFind.Domain.Enums;
-using HboFactFind.Domain.Pages.Abstracts;
 
-namespace HboFactFind.Domain.Pages
+namespace HboFactFind.ViewModels
 {
-    public class PageOne : Page
+    public class PageOneViewModel
     {
-        //Page One
+        [HiddenInput(DisplayValue = false)]
+        public long FactFindId { get; set; }
+
         [DisplayName("Title")]
         public TitleEnum ClientOneTitle { get; set; }
 
@@ -44,7 +45,6 @@ namespace HboFactFind.Domain.Pages
         public string ClientOneMobileTelephone { get; set; }
 
         [DisplayName("Date Of Birth")]
-        [Column(TypeName = "DateTime2")]
         public DateTime ClientOneDateOfBirth { get; set; }
 
         [DisplayName("Sex")]
@@ -80,51 +80,75 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Extra Information")]
         public string ClientOneExtraInformation { get; set; }
 
+        [DisplayName("Title")]
         public TitleEnum ClientTwoTitle { get; set; }
 
+        [DisplayName("Forenames")]
         public string ClientTwoForename { get; set; }
 
+        [DisplayName("Surnames")]
         public string ClientTwoSurnames { get; set; }
 
+        [DisplayName("Address Line One")]
         public string ClientTwoAddressLineOne { get; set; }
 
+        [DisplayName("Address Line Two")]
         public string ClientTwoAddressLineTwo { get; set; }
 
+        [DisplayName("Address Line Three")]
         public string ClientTwoAddressLineThree { get; set; }
 
+        [DisplayName("County")]
         public string ClientTwoCounty { get; set; }
 
+        [DisplayName("Post Code")]
         public string ClientTwoPostCode { get; set; }
 
+        [DisplayName("Email Address")]
         public string ClientTwoEmailAddress { get; set; }
 
+        [DisplayName("Home Telephone")]
         public string ClientTwoHomeTelephone { get; set; }
 
+        [DisplayName("Mobile Telephone")]
         public string ClientTwoMobileTelephone { get; set; }
+
+        [DisplayName("Date Of Birth")]
 
         [Column(TypeName = "DateTime2")]
         public DateTime ClientTwoDateOfBirth { get; set; }
 
+        [DisplayName("Sex")]
         public SexEnum ClientTwoSex { get; set; }
 
+        [DisplayName("Marital Status")]
         public MartialStatusEnum ClientTwoMartialStatus { get; set; }
 
+        [DisplayName("Good Health")]
         public bool ClientTwoGoodHealth { get; set; }
 
+        [DisplayName("Smoked")]
         public bool ClientTwoSmoked { get; set; }
 
+        [DisplayName("National Insurance Number")]
         public string ClientTwoNationalInsuranceNumber { get; set; }
 
+        [DisplayName("Nationality")]
         public string ClientTwoNationality { get; set; }
 
+        [DisplayName("Country Of Birth")]
         public string ClientTwoCountryOfBirth { get; set; }
 
+        [DisplayName("Country Of Residence")]
         public string ClientTwoCountryOfResidence { get; set; }
 
+        [DisplayName("Domicile")]
         public string ClientTwoDomicile { get; set; }
 
+        [DisplayName("Taxation Residency")]
         public string ClientTwoTaxationResidency { get; set; }
 
+        [DisplayName("Extra Information")]
         public string ClientTwoExtraInformation { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HboFactFind.Domain.AbstractEntities
 {
@@ -12,6 +13,7 @@ namespace HboFactFind.Domain.AbstractEntities
 
         [Key]
         public long Id { get; set; }
+        [Column(TypeName = "DateTime2")]
         public DateTime CreatedDateTime { get; set; }
     }
 }
