@@ -49,13 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HboDbContext.cs" />
-    <Compile Include="Migrations\201503251948460_Init of Db.cs" />
-    <Compile Include="Migrations\201503251948460_Init of Db.Designer.cs">
-      <DependentUpon>201503251948460_Init of Db.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503251957110_Made sure all datetimes are datetime2 tyoe.cs" />
-    <Compile Include="Migrations\201503251957110_Made sure all datetimes are datetime2 tyoe.Designer.cs">
-      <DependentUpon>201503251957110_Made sure all datetimes are datetime2 tyoe.cs</DependentUpon>
+    <Compile Include="Migrations\201503252013378_Init of Db.cs" />
+    <Compile Include="Migrations\201503252013378_Init of Db.Designer.cs">
+      <DependentUpon>201503252013378_Init of Db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,11 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503251948460_Init of Db.resx">
-      <DependentUpon>201503251948460_Init of Db.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503251957110_Made sure all datetimes are datetime2 tyoe.resx">
-      <DependentUpon>201503251957110_Made sure all datetimes are datetime2 tyoe.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503252013378_Init of Db.resx">
+      <DependentUpon>201503252013378_Init of Db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
