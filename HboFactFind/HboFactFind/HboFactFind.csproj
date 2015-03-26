@@ -123,8 +123,19 @@
     <Compile Include="Controllers\FactFindController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PageEightController.cs" />
+    <Compile Include="Controllers\PageFiveController.cs" />
+    <Compile Include="Controllers\PageFourController.cs" />
+    <Compile Include="Controllers\PageNineController.cs" />
     <Compile Include="Controllers\PageOneController.cs" />
     <Compile Include="Controllers\PageOnesController.cs" />
+    <Compile Include="Controllers\PageSevenController.cs" />
+    <Compile Include="Controllers\PageSixController.cs" />
+    <Compile Include="Controllers\PageSixesController.cs" />
+    <Compile Include="Controllers\PageTenController.cs" />
+    <Compile Include="Controllers\PageTensController.cs" />
+    <Compile Include="Controllers\PageThreeController.cs" />
+    <Compile Include="Controllers\PageTwoController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,10 +202,56 @@
     <Content Include="Views\PageOne\Details.cshtml" />
     <Content Include="Views\PageOne\Edit.cshtml" />
     <Content Include="Views\PageOne\Index.cshtml" />
+    <Content Include="Views\PageTwo\Create.cshtml" />
+    <Content Include="Views\PageTwo\Delete.cshtml" />
+    <Content Include="Views\PageTwo\Details.cshtml" />
+    <Content Include="Views\PageTwo\Edit.cshtml" />
+    <Content Include="Views\PageTwo\Index.cshtml" />
+    <Content Include="Views\PageThree\Create.cshtml" />
+    <Content Include="Views\PageThree\Delete.cshtml" />
+    <Content Include="Views\PageThree\Details.cshtml" />
+    <Content Include="Views\PageThree\Edit.cshtml" />
+    <Content Include="Views\PageThree\Index.cshtml" />
+    <Content Include="Views\PageFour\Create.cshtml" />
+    <Content Include="Views\PageFour\Delete.cshtml" />
+    <Content Include="Views\PageFour\Details.cshtml" />
+    <Content Include="Views\PageFour\Edit.cshtml" />
+    <Content Include="Views\PageFour\Index.cshtml" />
+    <Content Include="Views\PageFive\Create.cshtml" />
+    <Content Include="Views\PageFive\Delete.cshtml" />
+    <Content Include="Views\PageFive\Details.cshtml" />
+    <Content Include="Views\PageFive\Edit.cshtml" />
+    <Content Include="Views\PageFive\Index.cshtml" />
+    <Content Include="Views\PageSix\Create.cshtml" />
+    <Content Include="Views\PageSix\Delete.cshtml" />
+    <Content Include="Views\PageSix\Details.cshtml" />
+    <Content Include="Views\PageSix\Edit.cshtml" />
+    <Content Include="Views\PageSix\Index.cshtml" />
+    <Content Include="Views\PageSeven\Create.cshtml" />
+    <Content Include="Views\PageSeven\Delete.cshtml" />
+    <Content Include="Views\PageSeven\Details.cshtml" />
+    <Content Include="Views\PageSeven\Edit.cshtml" />
+    <Content Include="Views\PageSeven\Index.cshtml" />
+    <Content Include="Views\PageEight\Create.cshtml" />
+    <Content Include="Views\PageEight\Delete.cshtml" />
+    <Content Include="Views\PageEight\Details.cshtml" />
+    <Content Include="Views\PageEight\Edit.cshtml" />
+    <Content Include="Views\PageEight\Index.cshtml" />
+    <Content Include="Views\PageNine\Create.cshtml" />
+    <Content Include="Views\PageNine\Delete.cshtml" />
+    <Content Include="Views\PageNine\Details.cshtml" />
+    <Content Include="Views\PageNine\Edit.cshtml" />
+    <Content Include="Views\PageNine\Index.cshtml" />
+    <Content Include="Views\PageTens\Create.cshtml" />
+    <Content Include="Views\PageTens\Delete.cshtml" />
+    <Content Include="Views\PageTens\Details.cshtml" />
+    <Content Include="Views\PageTens\Edit.cshtml" />
+    <Content Include="Views\PageTens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\PageTen\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

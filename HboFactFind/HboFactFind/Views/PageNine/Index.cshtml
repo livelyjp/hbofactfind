@@ -1,0 +1,153 @@
+﻿@model IEnumerable<HboFactFind.Domain.Pages.PageNine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePersonalProtectionPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePensionPlanningPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOptionsAtRetirementPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneSavingsAndInvestmentsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneEstatePlanningPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneMortgageNeedsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneEquityReleasePriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneLongTermCarePriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneGeneralInsuranceNeedsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePrioritiesNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPersonalProtectionPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPensionPlanningPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOptionsAtRetirementPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoSavingsAndInvestmentsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoEstatePlanningPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoMortgageNeedsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoEquityReleasePriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoLongTermCarePriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoGeneralInsuranceNeedsPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPrioritiesNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePersonalProtectionPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePensionPlanningPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOptionsAtRetirementPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneSavingsAndInvestmentsPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneEstatePlanningPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneMortgageNeedsPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneEquityReleasePriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneLongTermCarePriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneGeneralInsuranceNeedsPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePrioritiesNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPersonalProtectionPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPensionPlanningPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOptionsAtRetirementPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoSavingsAndInvestmentsPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoEstatePlanningPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoMortgageNeedsPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoEquityReleasePriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoLongTermCarePriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoGeneralInsuranceNeedsPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPrioritiesNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

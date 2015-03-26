@@ -1,0 +1,80 @@
+﻿@model HboFactFind.Domain.Pages.PageThree
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PageThree</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneSolicitor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneSolicitor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneAccountant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneAccountant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneAdviserOther)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneAdviserOther)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoSolicitor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoSolicitor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoAccountant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoAccountant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoAdviserOther)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoAdviserOther)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

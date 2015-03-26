@@ -1,0 +1,90 @@
+﻿@model HboFactFind.Domain.Pages.PageEight
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PageEight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneRequiredEmergancyFund)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneRequiredEmergancyFund)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOnePlannedExpenditure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOnePlannedExpenditure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneMadeAWill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneMadeAWill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneWillNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneWillNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoRequiredEmergancyFund)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoRequiredEmergancyFund)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoPlannedExpenditure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoPlannedExpenditure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoMadeAWill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoMadeAWill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoWillNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoWillNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

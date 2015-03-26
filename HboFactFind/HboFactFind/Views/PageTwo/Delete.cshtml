@@ -1,0 +1,112 @@
+﻿@model HboFactFind.Domain.Pages.PageTwo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PageTwo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEmploymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEmploymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneDetailsOfEmployer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneDetailsOfEmployer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEmploymentStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEmploymentStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneIntendedRetirementAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneIntendedRetirementAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoStatusEmploymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoStatusEmploymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoDetailsOfEmployer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoDetailsOfEmployer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoEmploymentStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoEmploymentStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoIntendedRetirementAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoIntendedRetirementAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,192 @@
+﻿@model HboFactFind.Domain.Pages.PageNine
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PageNine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOnePersonalProtectionPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOnePersonalProtectionPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOnePensionPlanningPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOnePensionPlanningPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneOptionsAtRetirementPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneOptionsAtRetirementPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneSavingsAndInvestmentsPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneSavingsAndInvestmentsPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEstatePlanningPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEstatePlanningPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneMortgageNeedsPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneMortgageNeedsPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneEquityReleasePriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneEquityReleasePriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneLongTermCarePriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneLongTermCarePriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOneGeneralInsuranceNeedsPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOneGeneralInsuranceNeedsPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientOnePrioritiesNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientOnePrioritiesNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoPersonalProtectionPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoPersonalProtectionPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoPensionPlanningPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoPensionPlanningPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoOptionsAtRetirementPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoOptionsAtRetirementPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoSavingsAndInvestmentsPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoSavingsAndInvestmentsPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoEstatePlanningPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoEstatePlanningPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoMortgageNeedsPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoMortgageNeedsPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoEquityReleasePriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoEquityReleasePriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoLongTermCarePriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoLongTermCarePriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoGeneralInsuranceNeedsPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoGeneralInsuranceNeedsPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientTwoPrioritiesNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientTwoPrioritiesNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<HboFactFind.Domain.Pages.PageEight>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneRequiredEmergancyFund)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePlannedExpenditure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneMadeAWill)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneWillNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoRequiredEmergancyFund)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPlannedExpenditure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoMadeAWill)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoWillNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneRequiredEmergancyFund)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePlannedExpenditure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneMadeAWill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneWillNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoRequiredEmergancyFund)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPlannedExpenditure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoMadeAWill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoWillNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

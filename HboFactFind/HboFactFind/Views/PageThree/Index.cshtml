@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HboFactFind.Domain.Pages.PageThree>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneSolicitor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneAccountant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneAdviserOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoSolicitor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoAccountant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoAdviserOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneSolicitor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneAccountant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneAdviserOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoSolicitor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoAccountant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoAdviserOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

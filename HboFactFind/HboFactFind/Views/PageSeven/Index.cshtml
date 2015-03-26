@@ -1,0 +1,255 @@
+﻿@model IEnumerable<HboFactFind.Domain.Pages.PageSeven>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOtherProperty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneCashDeposits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneInvestmentBonds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOnePensionFunds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneIsa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneCollectives)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneShares)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneBuisnessAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOtherAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneTotalAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneMainMortgage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneCreditCards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOverdraft)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneLoansHp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOtherMortgage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneOtherLending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientOneTotalDebt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOtherProperty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoCashDeposits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoInvestmentBonds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoPensionFunds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoIsa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoCollectives)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoShares)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoBuisnessAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOtherAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoTotalAssets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoMainMortgage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoCreditCards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOverdraft)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoLoansHp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOtherMortgage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoOtherLending)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientTwoTotalDebt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetsNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOtherProperty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneCashDeposits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneInvestmentBonds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOnePensionFunds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneIsa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneCollectives)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneShares)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneBuisnessAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOtherAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneTotalAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneMainMortgage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneCreditCards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOverdraft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneLoansHp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOtherMortgage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneOtherLending)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientOneTotalDebt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOtherProperty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoCashDeposits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoInvestmentBonds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoPensionFunds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoIsa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoCollectives)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoShares)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoBuisnessAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOtherAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoTotalAssets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoMainMortgage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoCreditCards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOverdraft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoLoansHp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOtherMortgage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoOtherLending)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientTwoTotalDebt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssetsNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
