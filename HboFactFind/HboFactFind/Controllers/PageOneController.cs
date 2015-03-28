@@ -76,7 +76,7 @@ namespace HboFactFind.Controllers
 
             //_db.Entry(factFind).State = EntityState.Modified;
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Edit", "PageTwo");
         }
 
         // GET: PageOnes/Delete/5

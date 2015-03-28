@@ -62,17 +62,8 @@ namespace HboFactFind.Controllers
         {
             if (!ModelState.IsValid) return View(pageTen);
             _db.Entry(pageTen).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
-
-            //var factFind = await _db.FactFinds.FindAsync(pageTen.Id);
-
-            //factFind.ClientOneName = string.Format("{0} {1}", pageTen.ClientOneForename, pageTen.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", pageTen.ClientTwoForename, pageTen.ClientTwoSurnames);
-
-            //_db.Entry(factFind).State = EntityState.Modified;
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "FactFind", new {@id = 1});
         }
 
         // GET: PageTens/Delete/5

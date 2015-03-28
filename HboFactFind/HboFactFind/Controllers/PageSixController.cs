@@ -59,24 +59,12 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageSix/{factFindId}")]
         public async Task<ActionResult> Edit(
-            [Bind(
-                Include =
-                    "Id,ClientOneTitle,ClientOneForename,ClientOneSurnames,ClientOneAddressLineOne,ClientOneAddressLineTwo,ClientOneAddressLineThree,ClientOneCounty,ClientOnePostCode,ClientOneEmailAddress,ClientOneHomeTelephone,ClientOneMobileTelephone,ClientOneDateOfBirth,ClientOneSex,ClientOneMartialStatus,ClientOneGoodHealth,ClientOneSmoked,ClientOneNationalInsuranceNumber,ClientOneNationality,ClientOneCountryOfBirth,ClientOneCountryOfResidence,ClientOneDomicile,ClientOneTaxationResidency,ClientOneExtraInformation,ClientTwoTitle,ClientTwoForename,ClientTwoSurnames,ClientTwoAddressLineOne,ClientTwoAddressLineTwo,ClientTwoAddressLineThree,ClientTwoCounty,ClientTwoPostCode,ClientTwoEmailAddress,ClientTwoHomeTelephone,ClientTwoMobileTelephone,ClientTwoDateOfBirth,ClientTwoSex,ClientTwoMartialStatus,ClientTwoGoodHealth,ClientTwoSmoked,ClientTwoNationalInsuranceNumber,ClientTwoNationality,ClientTwoCountryOfBirth,ClientTwoCountryOfResidence,ClientTwoDomicile,ClientTwoTaxationResidency,ClientTwoExtraInformation,CreatedDateTime"
-                )] PageSix pageSix)
+           [Bind(Include = "Id,ClientOneMortageRent,ClientOneCouncilTax,ClientOneUtilities,ClientOneFoodShopping,ClientOneTvSateliteCableInternet,ClientOnePhone,ClientOneTransportation,ClientOneFinancials,ClientOneLoansCreditStoreCardRepayments,ClientOneSavings,ClientOneInsurance,ClientOnePensionContributions,ClientOneMiscellaneious,ClientOneHolidays,ClientOneRegularSubscriptions,ClientOneClothing,ClientOneOther,ClientOneTotalOutgoings,ClientOneSurplusIncome,ClientOneFinancialGoalCommitment,ClientTwoMortageRent,ClientTwoCouncilTax,ClientTwoUtilities,ClientTwoFoodShopping,ClientTwoTvSateliteCableInternet,ClientTwoPhone,ClientTwoTransportation,ClientTwoFinancials,ClientTwoLoansCreditStoreCardRepayments,ClientTwoSavings,ClientTwoInsurance,ClientTwoPensionContributions,ClientTwoMiscellaneious,ClientTwoHolidays,ClientTwoRegularSubscriptions,ClientTwoClothing,ClientTwoOther,ClientTwoTotalOutgoings,ClientTwoSurplusIncome,ClientTwoFinancialGoalCommitment,OutGoingsNotes,CreatedDateTime")] PageSix pageSix)
         {
             if (!ModelState.IsValid) return View(pageSix);
             _db.Entry(pageSix).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
-
-            //var factFind = await _db.FactFinds.FindAsync(pageSix.Id);
-
-            //factFind.ClientOneName = string.Format("{0} {1}", pageSix.ClientOneForename, pageSix.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", pageSix.ClientTwoForename, pageSix.ClientTwoSurnames);
-
-            //_db.Entry(factFind).State = EntityState.Modified;
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Edit", "PageSeven");
         }
 
         // GET: PageSixs/Delete/5

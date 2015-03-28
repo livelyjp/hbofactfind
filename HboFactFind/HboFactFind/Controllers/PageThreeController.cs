@@ -59,24 +59,12 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageThree/{factFindId}")]
         public async Task<ActionResult> Edit(
-            [Bind(
-                Include =
-                    "Id,ClientOneTitle,ClientOneForename,ClientOneSurnames,ClientOneAddressLineOne,ClientOneAddressLineTwo,ClientOneAddressLineThree,ClientOneCounty,ClientOnePostCode,ClientOneEmailAddress,ClientOneHomeTelephone,ClientOneMobileTelephone,ClientOneDateOfBirth,ClientOneSex,ClientOneMartialStatus,ClientOneGoodHealth,ClientOneSmoked,ClientOneNationalInsuranceNumber,ClientOneNationality,ClientOneCountryOfBirth,ClientOneCountryOfResidence,ClientOneDomicile,ClientOneTaxationResidency,ClientOneExtraInformation,ClientTwoTitle,ClientTwoForename,ClientTwoSurnames,ClientTwoAddressLineOne,ClientTwoAddressLineTwo,ClientTwoAddressLineThree,ClientTwoCounty,ClientTwoPostCode,ClientTwoEmailAddress,ClientTwoHomeTelephone,ClientTwoMobileTelephone,ClientTwoDateOfBirth,ClientTwoSex,ClientTwoMartialStatus,ClientTwoGoodHealth,ClientTwoSmoked,ClientTwoNationalInsuranceNumber,ClientTwoNationality,ClientTwoCountryOfBirth,ClientTwoCountryOfResidence,ClientTwoDomicile,ClientTwoTaxationResidency,ClientTwoExtraInformation,CreatedDateTime"
-                )] PageThree PageThree)
+            [Bind(Include = "Id,ClientOneSolicitor,ClientOneAccountant,ClientOneAdviserOther,ClientTwoSolicitor,ClientTwoAccountant,ClientTwoAdviserOther,CreatedDateTime")] PageThree PageThree)
         {
             if (!ModelState.IsValid) return View(PageThree);
             _db.Entry(PageThree).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
-
-            //var factFind = await _db.FactFinds.FindAsync(PageThree.Id);
-
-            //factFind.ClientOneName = string.Format("{0} {1}", PageThree.ClientOneForename, PageThree.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", PageThree.ClientTwoForename, PageThree.ClientTwoSurnames);
-
-            //_db.Entry(factFind).State = EntityState.Modified;
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Edit", "PageFour");
         }
 
         // GET: PageThrees/Delete/5

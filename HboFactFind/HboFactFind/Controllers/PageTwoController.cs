@@ -10,7 +10,6 @@ namespace HboFactFind.Controllers
     public class PageTwoController : Controller
     {
         private readonly HboDbContext _db = new HboDbContext();
-
         // GET: PageTwoes
         public async Task<ActionResult> Index()
         {
@@ -62,24 +61,12 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageOne/{factFindId}")]
         public async Task<ActionResult> Edit(
-            [Bind(
-                Include =
-                    "Id,ClientOneEmploymentStatus,ClientOneOccupation,ClientOneDetailsOfEmployer,ClientOneEmploymentStartDate,ClientOneIntendedRetirementAge,ClientTwoStatusEmploymentStatus,ClientTwoOccupation,ClientTwoDetailsOfEmployer,ClientTwoEmploymentStartDate,ClientTwoIntendedRetirementAge,CreatedDateTime"
-                )] PageTwo pageTwo)
+            [Bind(Include = "Id,ClientOneEmploymentStatus,ClientOneOccupation,ClientOneDetailsOfEmployer,ClientOneEmploymentStartDate,ClientOneIntendedRetirementAge,ClientTwoStatusEmploymentStatus,ClientTwoOccupation,ClientTwoDetailsOfEmployer,ClientTwoEmploymentStartDate,ClientTwoIntendedRetirementAge,CreatedDateTime")] PageTwo pageTwo)
         {
             if (!ModelState.IsValid) return View(pageTwo);
-
             _db.Entry(pageTwo).State = EntityState.Modified;
             await _db.SaveChangesAsync();
-
-            //var factFind = await _db.FactFinds.FindAsync(pageOne.Id);
-
-            //factFind.ClientOneName = string.Format("{0} {1}", pageOne.ClientOneForename, pageOne.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", pageOne.ClientTwoForename, pageOne.ClientTwoSurnames);
-
-            //_db.Entry(factFind).State = EntityState.Modified;
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Edit", "PageThree");
         }
 
         // GET: PageTwoes/Delete/5

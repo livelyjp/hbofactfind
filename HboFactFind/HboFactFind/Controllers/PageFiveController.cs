@@ -59,10 +59,7 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageFive/{factFindId}")]
         public async Task<ActionResult> Edit(
-            [Bind(
-                Include =
-                    "Id,ClientOneTitle,ClientOneForename,ClientOneSurnames,ClientOneAddressLineOne,ClientOneAddressLineTwo,ClientOneAddressLineThree,ClientOneCounty,ClientOnePostCode,ClientOneEmailAddress,ClientOneHomeTelephone,ClientOneMobileTelephone,ClientOneDateOfBirth,ClientOneSex,ClientOneMartialStatus,ClientOneGoodHealth,ClientOneSmoked,ClientOneNationalInsuranceNumber,ClientOneNationality,ClientOneCountryOfBirth,ClientOneCountryOfResidence,ClientOneDomicile,ClientOneTaxationResidency,ClientOneExtraInformation,ClientTwoTitle,ClientTwoForename,ClientTwoSurnames,ClientTwoAddressLineOne,ClientTwoAddressLineTwo,ClientTwoAddressLineThree,ClientTwoCounty,ClientTwoPostCode,ClientTwoEmailAddress,ClientTwoHomeTelephone,ClientTwoMobileTelephone,ClientTwoDateOfBirth,ClientTwoSex,ClientTwoMartialStatus,ClientTwoGoodHealth,ClientTwoSmoked,ClientTwoNationalInsuranceNumber,ClientTwoNationality,ClientTwoCountryOfBirth,ClientTwoCountryOfResidence,ClientTwoDomicile,ClientTwoTaxationResidency,ClientTwoExtraInformation,CreatedDateTime"
-                )] PageFive pageFive)
+           [Bind(Include = "Id,ClientOneGrossEmploymentIncome,ClientOneGrossSelfEmploymentIncome,ClientOneGroddPrivatePensionIncome,ClientOneGrossStatePension,ClientOneAdditionalIncome,ClientOneTotalAnnualIncome,ClientOneTotalGrossMonthlyIncome,ClientOneTotalNetMonthlyIncome,ClientOneTaxRate,ClientOneAnyChangesToIncome,ClientOneAnyChangesToTax,ClientOneIncomeNotes,ClientTwoGrossEmploymentIncome,ClientTwoGrossSelfEmploymentIncome,ClientTwoGroddPrivatePensionIncome,ClientTwoGrossStatePension,ClientTwoAdditionalIncome,ClientTwoTotalAnnualIncome,ClientTwoTotalGrossMonthlyIncome,ClientTwoTotalNetMonthlyIncome,ClientTwoTaxRate,ClientTwoAnyChangesToIncome,ClientTwoAnyChangesToTax,ClientTwoIncomeNotes,CreatedDateTime")] PageFive pageFive)
         {
             if (!ModelState.IsValid) return View(pageFive);
             _db.Entry(pageFive).State = EntityState.Modified;
@@ -75,8 +72,7 @@ namespace HboFactFind.Controllers
             //factFind.ClientTwoName = string.Format("{0} {1}", pageFive.ClientTwoForename, pageFive.ClientTwoSurnames);
 
             //_db.Entry(factFind).State = EntityState.Modified;
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Edit", "PageSix");
         }
 
         // GET: PageFives/Delete/5

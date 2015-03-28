@@ -128,12 +128,9 @@
     <Compile Include="Controllers\PageFourController.cs" />
     <Compile Include="Controllers\PageNineController.cs" />
     <Compile Include="Controllers\PageOneController.cs" />
-    <Compile Include="Controllers\PageOnesController.cs" />
     <Compile Include="Controllers\PageSevenController.cs" />
     <Compile Include="Controllers\PageSixController.cs" />
-    <Compile Include="Controllers\PageSixesController.cs" />
     <Compile Include="Controllers\PageTenController.cs" />
-    <Compile Include="Controllers\PageTensController.cs" />
     <Compile Include="Controllers\PageThreeController.cs" />
     <Compile Include="Controllers\PageTwoController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -242,16 +239,15 @@
     <Content Include="Views\PageNine\Details.cshtml" />
     <Content Include="Views\PageNine\Edit.cshtml" />
     <Content Include="Views\PageNine\Index.cshtml" />
-    <Content Include="Views\PageTens\Create.cshtml" />
-    <Content Include="Views\PageTens\Delete.cshtml" />
-    <Content Include="Views\PageTens\Details.cshtml" />
-    <Content Include="Views\PageTens\Edit.cshtml" />
-    <Content Include="Views\PageTens\Index.cshtml" />
+    <Content Include="Views\PageTen\Create.cshtml" />
+    <Content Include="Views\PageTen\Delete.cshtml" />
+    <Content Include="Views\PageTen\Details.cshtml" />
+    <Content Include="Views\PageTen\Edit.cshtml" />
+    <Content Include="Views\PageTen\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\PageTen\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
