@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,7 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactFindRepositorty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HboFactFind.Domain\HboFactFind.Domain.csproj">
+      <Project>{40063BE7-3AA7-4B22-AB94-510AB0B9D24F}</Project>
+      <Name>HboFactFind.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HboFactFind.EF\HboFactFind.EF.csproj">
+      <Project>{063AC1BC-F9BD-4565-A5C8-D42A0A5046AF}</Project>
+      <Name>HboFactFind.EF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

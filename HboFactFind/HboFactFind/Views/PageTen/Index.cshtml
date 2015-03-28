@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HboFactFind.Domain.Pages.PageFour>
+﻿@model IEnumerable<HboFactFind.Domain.Pages.PageTen>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.AnyFinancialDependants)
+            @Html.DisplayNameFor(model => model.ExistingPlansNotes)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedDateTime)
@@ -23,7 +23,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.AnyFinancialDependants)
+            @Html.DisplayFor(modelItem => item.ExistingPlansNotes)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedDateTime)

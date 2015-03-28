@@ -32,7 +32,7 @@ namespace HboFactFind.Controllers
         }
 
         // GET: PageFours/Edit/5
-        [Route("~/FactFind/PageFour/{factFindId}")]
+        [Route("~/FactFind/PageFour/{factFindId}", Name = "PageFour")]
         public async Task<ActionResult> Edit(long? factFindId)
         {
             if (factFindId == null)
@@ -63,16 +63,7 @@ namespace HboFactFind.Controllers
         {
             if (!ModelState.IsValid) return View(pageFour);
             _db.Entry(pageFour).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
-
-            //var factFind = await _db.FactFinds.FindAsync(pageFour.Id);
-
-            //factFind.ClientOneName = string.Format("{0} {1}", pageFour.ClientOneForename, pageFour.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", pageFour.ClientTwoForename, pageFour.ClientTwoSurnames);
-
-            //_db.Entry(factFind).State = EntityState.Modified;
-
             return RedirectToAction("Edit", "PageFive");
         }
 

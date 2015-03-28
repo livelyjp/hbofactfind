@@ -1,9 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using HboFactFind.Domain.Pages;
 using HboFactFind.EF;
+using HboFactFind.Services;
 
 namespace HboFactFind.Controllers
 {
@@ -32,7 +34,7 @@ namespace HboFactFind.Controllers
         }
 
         // GET: PageTens/Edit/5
-        [Route("~/FactFind/PageTen/{factFindId}")]
+        [Route("~/FactFind/PageTen/{factFindId}", Name = "PageTen")]
         public async Task<ActionResult> Edit(long? factFindId)
         {
             if (factFindId == null)
@@ -63,6 +65,15 @@ namespace HboFactFind.Controllers
             if (!ModelState.IsValid) return View(pageTen);
             _db.Entry(pageTen).State = EntityState.Modified;
             await _db.SaveChangesAsync();
+
+            var factFindRepositorty = new FactFindRepositorty(_db);
+            var factFind = await factFindRepositorty.Get(pageTen.Id);
+
+            if (factFind == null) return RedirectToAction("Details", "FactFind");
+            factFind.CompletionDateTime = DateTime.UtcNow;
+            _db.Entry(factFind).State = EntityState.Modified;
+            await _db.SaveChangesAsync();
+
             return RedirectToAction("Details", "FactFind", new {@id = 1});
         }
 

@@ -1,10 +1,10 @@
 ﻿using System.Data.Entity;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using HboFactFind.Domain.Pages;
 using HboFactFind.EF;
+using HboFactFind.Services;
 
 namespace HboFactFind.Controllers
 {
@@ -33,7 +33,7 @@ namespace HboFactFind.Controllers
         }
 
         // GET: PageOnes/Edit/5
-        [Route("~/FactFind/PageOne/{factFindId}")]
+        [Route("~/FactFind/PageOne/{factFindId}", Name = "PageOne")]
         public async Task<ActionResult> Edit(long? factFindId)
         {
             if (factFindId == null)
@@ -67,17 +67,11 @@ namespace HboFactFind.Controllers
         {
             if (!ModelState.IsValid) return View(pageOne);
             _db.Entry(pageOne).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
-
-            var factFind = await _db.FactFinds.FindAsync(pageOne.Id) 
-                ?? _db.FactFinds.Single(x => x.PageOneId.Equals(pageOne.Id));
-
-            if (factFind == null) return RedirectToAction("Edit", "PageTwo");
-
+            var factFindRepositorty = new FactFindRepositorty(_db);
+            var factFind = await factFindRepositorty.Get(pageOne.Id);
             factFind.ClientOneName = string.Format("{0} {1}", pageOne.ClientOneForename, pageOne.ClientOneSurnames);
             factFind.ClientTwoName = string.Format("{0} {1}", pageOne.ClientTwoForename, pageOne.ClientTwoSurnames);
-
             _db.Entry(factFind).State = EntityState.Modified;
             await _db.SaveChangesAsync();
 

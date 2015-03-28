@@ -9,6 +9,10 @@ namespace HboFactFind.Domain.Pages
 {
     public class PageOne : Page
     {
+        public PageOne()
+        {
+        }
+
         //Page One
         [DisplayName("Title")]
         public TitleEnum ClientOneTitle { get; set; }

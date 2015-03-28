@@ -32,7 +32,7 @@ namespace HboFactFind.Controllers
         }
 
         // GET: PageNines/Edit/5
-        [Route("~/FactFind/PageNine/{factFindId}")]
+        [Route("~/FactFind/PageNine/{factFindId}", Name = "PageNine")]
         public async Task<ActionResult> Edit(long? factFindId)
         {
             if (factFindId == null)

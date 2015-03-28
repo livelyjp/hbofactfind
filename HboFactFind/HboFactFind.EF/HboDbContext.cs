@@ -12,6 +12,8 @@ namespace HboFactFind.EF
         public HboDbContext()
             : base("HboDbContext")
         {
+            //Configuration.LazyLoadingEnabled = true;
+            //Configuration.ProxyCreationEnabled = true;
         }
 
         public virtual DbSet<User> Users { get; set; }

@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HboDbContext.cs" />
-    <Compile Include="Migrations\201503281119303_Init of Db.cs" />
-    <Compile Include="Migrations\201503281119303_Init of Db.Designer.cs">
-      <DependentUpon>201503281119303_Init of Db.cs</DependentUpon>
+    <Compile Include="Migrations\201503281331566_Init of Db.cs" />
+    <Compile Include="Migrations\201503281331566_Init of Db.Designer.cs">
+      <DependentUpon>201503281331566_Init of Db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503281119303_Init of Db.resx">
-      <DependentUpon>201503281119303_Init of Db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503281331566_Init of Db.resx">
+      <DependentUpon>201503281331566_Init of Db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
