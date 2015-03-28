@@ -2,12 +2,14 @@
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using HboFactFind.Attributes;
 using HboFactFind.Domain.Pages;
 using HboFactFind.EF;
 using HboFactFind.Services;
 
 namespace HboFactFind.Controllers
 {
+    [Authentication]
     public class PageOneController : Controller
     {
         private readonly HboDbContext _db = new HboDbContext();

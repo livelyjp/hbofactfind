@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Data.Entity;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using HboFactFind.Attributes;
 using HboFactFind.Domain;
 using HboFactFind.EF;
 using HboFactFind.Services;
 
 namespace HboFactFind.Controllers
 {
+    [Authentication]
     public class FactFindController : Controller
     {
         private readonly HboDbContext _db = new HboDbContext();
@@ -27,47 +28,8 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var factFind =
-                
-                    _db.FactFinds.Include(x => x.PageOne)
-                        .Include(x => x.PageTwo)
-                        .Include(x => x.PageThree)
-                        .Include(x => x.PageFour)
-                        .Include(x => x.PageFive)
-                        .Include(x => x.PageSix)
-                        .Include(x => x.PageSeven)
-                        .Include(x => x.PageEight)
-                        .Include(x => x.PageNine)
-                        .Include(x => x.PageTen).First(x => x.Id == (id));
-
-//              var factFind = _db.FactFinds.First(x => x.Id == (id));
-//            factFind.PageOne = _db.PageOnes.Find(id);
-//            factFind.PageTwo = _db.PageTwos.Find(id);
-//            factFind.PageThree = _db.PageThrees.Find(id);
-//            factFind.PageFour = _db.PageFours.Find(id);
-//            factFind.PageFive = _db.PageFives.Find(id);
-//            factFind.PageSix = _db.PageSixs.Find(id);
-//            factFind.PageSeven = _db.PageSevens.Find(id);
-//            factFind.PageEight = _db.PageEights.Find(id);
-//            factFind.PageNine = _db.PageNines.Find(id);
-//            factFind.PageTen = _db.PageTens.Find(id);
-////
-//            var factFind = await _db.FactFinds.FindAsync(id);
-//
-//            // Load the blog related to a given post 
-//            _db.Entry(factFind).Reference(p => p.PageOne).Load();
-
-            //// Load the blog related to a given post using a string  
-            //context.Entry(post).Reference("Blog").Load();
-
-            //var blog = context.Blogs.Find(1);
-
-            //// Load the posts related to a given blog 
-            //context.Entry(blog).Collection(p => p.Posts).Load();
-
-            //// Load the posts related to a given blog  
-            //// using a string to specify the relationship 
-            //context.Entry(blog).Collection("Posts").Load(); 
+            var factFindRepositorty = new FactFindRepositorty(_db);
+            var factFind = await factFindRepositorty.Get(id.Value);
 
             if (factFind == null)
             {
@@ -80,8 +42,8 @@ namespace HboFactFind.Controllers
         public ActionResult Create()
         {
 //            var newFactFind = new FactFind();
-            FactFindRepositorty factFindRepositorty = new FactFindRepositorty(_db);
-            var newFactFind =  factFindRepositorty.Create();
+            var factFindRepositorty = new FactFindRepositorty(_db);
+            var newFactFind = factFindRepositorty.Create(Convert.ToInt32(User.Identity.Name));
 
             return RedirectToAction("PageOne", "FactFind", new {@id = newFactFind.Id});
         }

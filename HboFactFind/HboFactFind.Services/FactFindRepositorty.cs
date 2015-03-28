@@ -15,7 +15,7 @@ namespace HboFactFind.Services
             _dbContext = dbContext;
         }
 
-        public FactFind Create()
+        public FactFind Create(int userId)
         {
             var factFind = new FactFind
             {
@@ -28,7 +28,8 @@ namespace HboFactFind.Services
                 PageSeven = new PageSeven(),
                 PageEight = new PageEight(),
                 PageNine = new PageNine(),
-                PageTen = new PageTen()
+                PageTen = new PageTen(),
+                UserId = userId
             };
 
             _dbContext.FactFinds.Add(factFind);
@@ -48,7 +49,7 @@ namespace HboFactFind.Services
                 .Include(x => x.PageSeven)
                 .Include(x => x.PageEight)
                 .Include(x => x.PageNine)
-                .Include(x => x.PageTen).FirstAsync(x => x.Id == (id));
+                .Include(x => x.PageTen).FirstOrDefaultAsync(x => x.Id == (id));
 
             return factFind;
         }

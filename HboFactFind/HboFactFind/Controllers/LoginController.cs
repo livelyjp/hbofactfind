@@ -36,7 +36,7 @@ namespace HboFactFind.Controllers
             if (SecurityUtil.AuthenticUser(User)) return RedirectToAction("Index", "FactFind");
             if (ModelState.IsValid)
             {
-                var existingUser = _dbContext.Users.FirstOrDefault(user => user.Id == loginModel.EmailAddress);
+                var existingUser = _dbContext.Users.FirstOrDefault(user => user.EmailAddress == loginModel.EmailAddress);
                 if (existingUser != null)
                 {
                     if (SecurityUtil.IsPasswordValid(existingUser, loginModel.Password))
