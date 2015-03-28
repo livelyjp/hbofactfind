@@ -63,9 +63,7 @@ namespace HboFactFind.Controllers
         {
             if (!ModelState.IsValid) return View(pageSeven);
             _db.Entry(pageSeven).State = EntityState.Modified;
-
             await _db.SaveChangesAsync();
-
             return RedirectToAction("Edit", "PageEight");
         }
 

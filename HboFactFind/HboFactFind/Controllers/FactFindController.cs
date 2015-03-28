@@ -10,12 +10,11 @@ namespace HboFactFind.Controllers
 {
     public class FactFindController : Controller
     {
-        private readonly HboDbContext db = new HboDbContext();
-
+        private readonly HboDbContext _db = new HboDbContext();
         // GET: FactFinds
         public async Task<ActionResult> Index()
         {
-            var factFinds = db.FactFinds;
+            var factFinds = _db.FactFinds;
             return View(await factFinds.ToListAsync());
         }
 
@@ -26,7 +25,7 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var factFind = await db.FactFinds.FindAsync(id);
+            var factFind = await _db.FactFinds.FindAsync(id);
             if (factFind == null)
             {
                 return HttpNotFound();
@@ -37,7 +36,11 @@ namespace HboFactFind.Controllers
         // GET: FactFinds/Create
         public ActionResult Create()
         {
-            return View();
+            var newFactFind = new FactFind();
+            _db.FactFinds.Add(newFactFind);
+            _db.SaveChanges();
+
+            return RedirectToAction("PageOne", "FactFind", new {@id=newFactFind.Id});
         }
 
         // POST: FactFinds/Create
@@ -54,8 +57,8 @@ namespace HboFactFind.Controllers
                 if (ModelState.IsValid)
                 {
                     if (factFind.CreatedDateTime == DateTime.MinValue) factFind.CreatedDateTime = DateTime.Now;
-                    db.FactFinds.Add(factFind);
-                    await db.SaveChangesAsync();
+                    _db.FactFinds.Add(factFind);
+                    await _db.SaveChangesAsync();
                     return RedirectToAction("Index");
                 }
             }
@@ -74,21 +77,21 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var factFind = await db.FactFinds.FindAsync(id);
+            var factFind = await _db.FactFinds.FindAsync(id);
             if (factFind == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.Id = new SelectList(db.PageEights, "Id", "ClientOneRequiredEmergancyFund", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageFives, "Id", "ClientOneIncomeNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageFours, "Id", "Id", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageNines, "Id", "ClientOnePrioritiesNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageOnes, "Id", "ClientOneForename", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageSevens, "Id", "AssetsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageSixs, "Id", "OutGoingsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageTens, "Id", "ExistingPlansNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageThrees, "Id", "ClientOneSolicitor", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageTwos, "Id", "ClientOneOccupation", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageEights, "Id", "ClientOneRequiredEmergancyFund", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageFives, "Id", "ClientOneIncomeNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageFours, "Id", "Id", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageNines, "Id", "ClientOnePrioritiesNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageOnes, "Id", "ClientOneForename", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageSevens, "Id", "AssetsNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageSixs, "Id", "OutGoingsNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageTens, "Id", "ExistingPlansNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageThrees, "Id", "ClientOneSolicitor", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageTwos, "Id", "ClientOneOccupation", factFind.Id);
             return View(factFind);
         }
 
@@ -103,20 +106,20 @@ namespace HboFactFind.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(factFind).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                _db.Entry(factFind).State = EntityState.Modified;
+                await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.Id = new SelectList(db.PageEights, "Id", "ClientOneRequiredEmergancyFund", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageFives, "Id", "ClientOneIncomeNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageFours, "Id", "Id", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageNines, "Id", "ClientOnePrioritiesNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageOnes, "Id", "ClientOneForename", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageSevens, "Id", "AssetsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageSixs, "Id", "OutGoingsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageTens, "Id", "ExistingPlansNotes", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageThrees, "Id", "ClientOneSolicitor", factFind.Id);
-            ViewBag.Id = new SelectList(db.PageTwos, "Id", "ClientOneOccupation", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageEights, "Id", "ClientOneRequiredEmergancyFund", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageFives, "Id", "ClientOneIncomeNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageFours, "Id", "Id", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageNines, "Id", "ClientOnePrioritiesNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageOnes, "Id", "ClientOneForename", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageSevens, "Id", "AssetsNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageSixs, "Id", "OutGoingsNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageTens, "Id", "ExistingPlansNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageThrees, "Id", "ClientOneSolicitor", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageTwos, "Id", "ClientOneOccupation", factFind.Id);
             return View(factFind);
         }
 
@@ -127,7 +130,7 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var factFind = await db.FactFinds.FindAsync(id);
+            var factFind = await _db.FactFinds.FindAsync(id);
             if (factFind == null)
             {
                 return HttpNotFound();
@@ -140,9 +143,9 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(long id)
         {
-            var factFind = await db.FactFinds.FindAsync(id);
-            db.FactFinds.Remove(factFind);
-            await db.SaveChangesAsync();
+            var factFind = await _db.FactFinds.FindAsync(id);
+            _db.FactFinds.Remove(factFind);
+            await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -150,7 +153,7 @@ namespace HboFactFind.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

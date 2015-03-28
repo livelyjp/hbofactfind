@@ -66,15 +66,7 @@ namespace HboFactFind.Controllers
 
             await _db.SaveChangesAsync();
 
-            //var factFind = await _db.FactFinds.FindAsync(pageEight.Id);
-
-            //factFind.ClientOneName = string.Format("{0} {1}", pageEight.ClientOneForename, pageEight.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", pageEight.ClientTwoForename, pageEight.ClientTwoSurnames);
-
-            //_db.Entry(factFind).State = EntityState.Modified;
-
             return RedirectToAction("Edit", "PageNine");
-            return RedirectToAction("Index");
         }
 
         // GET: PageEights/Delete/5

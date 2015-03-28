@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -69,12 +70,16 @@ namespace HboFactFind.Controllers
 
             await _db.SaveChangesAsync();
 
-            //var factFind = await _db.FactFinds.FindAsync(pageOne.Id);
+            var factFind = await _db.FactFinds.FindAsync(pageOne.Id) 
+                ?? _db.FactFinds.Single(x => x.PageOneId.Equals(pageOne.Id));
 
-            //factFind.ClientOneName = string.Format("{0} {1}", pageOne.ClientOneForename, pageOne.ClientOneSurnames);
-            //factFind.ClientTwoName = string.Format("{0} {1}", pageOne.ClientTwoForename, pageOne.ClientTwoSurnames);
+            if (factFind == null) return RedirectToAction("Edit", "PageTwo");
 
-            //_db.Entry(factFind).State = EntityState.Modified;
+            factFind.ClientOneName = string.Format("{0} {1}", pageOne.ClientOneForename, pageOne.ClientOneSurnames);
+            factFind.ClientTwoName = string.Format("{0} {1}", pageOne.ClientTwoForename, pageOne.ClientTwoSurnames);
+
+            _db.Entry(factFind).State = EntityState.Modified;
+            await _db.SaveChangesAsync();
 
             return RedirectToAction("Edit", "PageTwo");
         }

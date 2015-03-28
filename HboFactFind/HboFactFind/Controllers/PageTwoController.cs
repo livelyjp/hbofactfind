@@ -59,7 +59,7 @@ namespace HboFactFind.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Route("~/FactFind/PageOne/{factFindId}")]
+        [Route("~/FactFind/PageTwo/{factFindId}")]
         public async Task<ActionResult> Edit(
             [Bind(Include = "Id,ClientOneEmploymentStatus,ClientOneOccupation,ClientOneDetailsOfEmployer,ClientOneEmploymentStartDate,ClientOneIntendedRetirementAge,ClientTwoStatusEmploymentStatus,ClientTwoOccupation,ClientTwoDetailsOfEmployer,ClientTwoEmploymentStartDate,ClientTwoIntendedRetirementAge,CreatedDateTime")] PageTwo pageTwo)
         {

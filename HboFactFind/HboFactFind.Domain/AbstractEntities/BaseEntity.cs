@@ -12,6 +12,7 @@ namespace HboFactFind.Domain.AbstractEntities
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         [Column(TypeName = "DateTime2")]
         public DateTime CreatedDateTime { get; set; }

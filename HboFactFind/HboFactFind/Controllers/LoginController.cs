@@ -33,7 +33,7 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(LoginViewModel loginModel)
         {
-            if (SecurityUtil.AuthenticUser(User)) return RedirectToAction("Index", "Dashboard");
+            if (SecurityUtil.AuthenticUser(User)) return RedirectToAction("Index", "FactFind");
             if (ModelState.IsValid)
             {
                 var existingUser = _dbContext.Users.FirstOrDefault(user => user.Id == loginModel.EmailAddress);
@@ -43,7 +43,7 @@ namespace HboFactFind.Controllers
                     {
                         //Password Valid
                         FormsAuthentication.SetAuthCookie(existingUser.Id.ToString(), false);
-                        return RedirectToAction("Index", "Dashboard");
+                        return RedirectToAction("Index", "FactFind");
                     }
                 }
             }
