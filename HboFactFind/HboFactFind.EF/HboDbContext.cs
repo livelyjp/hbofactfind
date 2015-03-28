@@ -37,8 +37,10 @@ namespace HboFactFind.EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>();
-
+            modelBuilder.Entity<FactFind>()
+                .HasRequired(t => t.User)
+                .WithMany(x => x.FactFinds)
+                .HasForeignKey(x => x.UserId);
             modelBuilder.Entity<FactFind>().HasRequired(t => t.PageOne).WithOptional();
             modelBuilder.Entity<FactFind>()
                 .HasRequired(a => a.PageOne)

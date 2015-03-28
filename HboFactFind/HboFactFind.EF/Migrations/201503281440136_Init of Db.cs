@@ -102,6 +102,8 @@ namespace HboFactFind.EF.Migrations
                 .ForeignKey("dbo.PageTens", t => t.PageTenId)
                 .ForeignKey("dbo.PageThrees", t => t.PageThreeId)
                 .ForeignKey("dbo.PageTwoes", t => t.PageTwoId)
+                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)
+                .Index(t => t.UserId)
                 .Index(t => t.PageOneId)
                 .Index(t => t.PageTwoId)
                 .Index(t => t.PageThreeId)
@@ -471,6 +473,7 @@ namespace HboFactFind.EF.Migrations
         
         public override void Down()
         {
+            DropForeignKey("dbo.FactFinds", "UserId", "dbo.Users");
             DropForeignKey("dbo.FactFinds", "PageTwoId", "dbo.PageTwoes");
             DropForeignKey("dbo.FactFinds", "PageThreeId", "dbo.PageThrees");
             DropForeignKey("dbo.FactFinds", "PageTenId", "dbo.PageTens");
@@ -502,6 +505,7 @@ namespace HboFactFind.EF.Migrations
             DropIndex("dbo.FactFinds", new[] { "PageThreeId" });
             DropIndex("dbo.FactFinds", new[] { "PageTwoId" });
             DropIndex("dbo.FactFinds", new[] { "PageOneId" });
+            DropIndex("dbo.FactFinds", new[] { "UserId" });
             DropIndex("dbo.BreakDownOfLiabilities", new[] { "PageSevenId" });
             DropTable("dbo.Users");
             DropTable("dbo.PageTwoes");

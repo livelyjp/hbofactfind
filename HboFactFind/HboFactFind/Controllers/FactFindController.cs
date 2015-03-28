@@ -17,7 +17,7 @@ namespace HboFactFind.Controllers
         // GET: FactFinds
         public async Task<ActionResult> Index()
         {
-            var factFinds = _db.FactFinds;
+            var factFinds = _db.FactFinds.Include(x=>x.User);
             return View(await factFinds.ToListAsync());
         }
 

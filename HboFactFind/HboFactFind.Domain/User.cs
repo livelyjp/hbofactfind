@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using HboFactFind.Domain.AbstractEntities;
 
@@ -22,5 +23,12 @@ namespace HboFactFind.Domain
         public bool IsAdmin { get; set; }
 
         public DateTime LastLoggedIn { get; set; }
+
+        public ICollection<FactFind> FactFinds { get; set; }
+
+        public string Name()
+        {
+            return FirstName + " " + SecondName;
+        }
     }
 }
