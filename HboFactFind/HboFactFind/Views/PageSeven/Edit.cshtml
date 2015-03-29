@@ -398,26 +398,6 @@
     </div>
 
     <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.CreatedDateTime)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.CreatedDateTime, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.CreatedDateTime, "", new {@class = "text-danger"})
-                    </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.CreatedDateTime, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.CreatedDateTime, "", new {@class = "text-danger"})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Save" class="btn btn-default"/>
         </div>

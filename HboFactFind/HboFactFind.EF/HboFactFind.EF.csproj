@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201503281440136_Init of Db.Designer.cs">
       <DependentUpon>201503281440136_Init of Db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503291640277_Corrected spelling mistake.cs" />
+    <Compile Include="Migrations\201503291640277_Corrected spelling mistake.Designer.cs">
+      <DependentUpon>201503291640277_Corrected spelling mistake.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503281440136_Init of Db.resx">
       <DependentUpon>201503281440136_Init of Db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503291640277_Corrected spelling mistake.resx">
+      <DependentUpon>201503291640277_Corrected spelling mistake.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
