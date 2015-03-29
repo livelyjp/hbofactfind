@@ -167,7 +167,7 @@ namespace HboFactFind.Controllers
             return new Rotativa.ViewAsPdf("Details", factFind)
             {
                 FileName = "TestViewAsPdf.pdf",
-                PageSize = Size.A4
+                PageSize = Size.A4,
             };
         }
     }
