@@ -7,7 +7,7 @@ namespace HboFactFind.Domain.Pages
     {
         public decimal ClientOneGrossEmploymentIncome { get; set; }
         public decimal ClientOneGrossSelfEmploymentIncome { get; set; }
-        public decimal ClientOneGroddPrivatePensionIncome { get; set; }
+        public decimal ClientOneGrossPrivatePensionIncome { get; set; }
         public decimal ClientOneGrossStatePension { get; set; }
         public decimal ClientOneAdditionalIncome { get; set; }
         public decimal ClientOneTotalAnnualIncome { get; set; }
@@ -20,7 +20,7 @@ namespace HboFactFind.Domain.Pages
 
         public decimal ClientTwoGrossEmploymentIncome { get; set; }
         public decimal ClientTwoGrossSelfEmploymentIncome { get; set; }
-        public decimal ClientTwoGroddPrivatePensionIncome { get; set; }
+        public decimal ClientTwoGrossPrivatePensionIncome { get; set; }
         public decimal ClientTwoGrossStatePension { get; set; }
         public decimal ClientTwoAdditionalIncome { get; set; }
         public decimal ClientTwoTotalAnnualIncome { get; set; }
