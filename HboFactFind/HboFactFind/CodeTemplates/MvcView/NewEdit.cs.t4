@@ -252,7 +252,7 @@ foreach (PropertyMetadata property in ModelMetadata.Properties) {
 }
 #>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div class="buttonPanel col-xs-12">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
