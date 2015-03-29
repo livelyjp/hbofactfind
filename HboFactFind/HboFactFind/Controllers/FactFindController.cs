@@ -168,6 +168,7 @@ namespace HboFactFind.Controllers
             {
                 FileName = "TestViewAsPdf.pdf",
                 PageSize = Size.A4,
+                CustomSwitches = "--disable-smart-shrinking --print-media-type"
             };
         }
     }
