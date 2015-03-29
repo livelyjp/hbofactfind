@@ -6,6 +6,16 @@
     Elements
 */
 
+h1,h2,h3,h4,h5 {
+    color: #101052;
+}
+
+h4 {
+    background-color: #101052;
+    padding: 10px;
+    color: white;
+}
+
 a.blueButton {
     background-color: #101052;
     clear: both;
@@ -34,8 +44,13 @@ a.blueButton {
 
 .hboDetailRow {
     min-height: 45px;
-    margin: 7px 0;
+    margin: 7px 40px;
     clear: both;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.hboDetailRow:last-child{
+    border: 0;
 }
 .headerStyle, .fieldStyle {
     /*clear: both;*/
