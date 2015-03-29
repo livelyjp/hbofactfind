@@ -438,6 +438,8 @@
 
 <div class="col-xs-12" style="text-align: center">
     <p>
-        @Html.ActionLink("Edit", "PageOne", new { id = Model.Id })
+        @Html.ActionLink("Edit", "PageOne", new {id = Model.Id})
     </p>
 </div>
+
+@Html.ActionLink("Export To Pdf", "ExportPdf", new { id = Model.Id })

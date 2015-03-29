@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
+using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -7,6 +8,8 @@ using HboFactFind.Attributes;
 using HboFactFind.Domain;
 using HboFactFind.EF;
 using HboFactFind.Services;
+using MvcRazorToPdf;
+using Rotativa.Options;
 
 namespace HboFactFind.Controllers
 {
@@ -146,6 +149,26 @@ namespace HboFactFind.Controllers
                 _db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public async Task<ActionResult> ExportPdf(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var factFindRepositorty = new FactFindRepositorty(_db);
+            var factFind = await factFindRepositorty.Get(id.Value);
+
+            if (factFind == null)
+            {
+                return HttpNotFound();
+            }
+            return new Rotativa.ViewAsPdf("Details", factFind)
+            {
+                FileName = "TestViewAsPdf.pdf",
+                PageSize = Size.A4
+            };
         }
     }
 }
