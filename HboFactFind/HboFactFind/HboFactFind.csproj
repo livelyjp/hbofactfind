@@ -175,6 +175,7 @@
     <Content Include="CodeTemplates\MvcView\List.vb.t4" />
     <Content Include="CodeTemplates\MvcView\ModelMetadataFunctions.cs.include.t4" />
     <Content Include="CodeTemplates\MvcView\ModelMetadataFunctions.vb.include.t4" />
+    <Content Include="CodeTemplates\MvcView\NewEdit.cs.t4" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -274,6 +275,7 @@
     <Content Include="Views\FactFind\Partial\_DetailsPageEight.cshtml" />
     <Content Include="Views\FactFind\Partial\_DetailsPageNine.cshtml" />
     <Content Include="Views\FactFind\Partial\_DetailsPageTen.cshtml" />
+    <Content Include="Views\PageOne\Partial\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
