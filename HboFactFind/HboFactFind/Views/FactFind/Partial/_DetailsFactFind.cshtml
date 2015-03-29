@@ -1,0 +1,62 @@
+﻿@model HboFactFind.Domain.FactFind
+
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        <div class="headerStyle col-xs-12 col-sm-4">
+            @Html.DisplayNameFor(model => model.ClientOneName)
+        </div>
+        <div class="fieldStyle col-xs-12 col-sm-8">
+            <div class="topTFStyle col-xs-12 col-sm-6">
+                @Html.DisplayFor(model => model.ClientOneName)
+            </div>
+            <div class="bottomTFStyle col-xs-12 col-sm-6">
+                @Html.DisplayFor(model => model.ClientTwoName)
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        <div class="headerStyle col-xs-12 col-sm-4">
+            @Html.DisplayNameFor(model => model.UserId)
+        </div>
+        <div class="fieldStyle col-xs-12 col-sm-8">
+            <div class="topTFStyle col-xs-12 col-sm-6">
+                @Html.DisplayFor(model => model.User.EmailAddress)
+            </div>
+            <div class="bottomTFStyle col-xs-12 col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        <div class="headerStyle col-xs-12 col-sm-4">
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </div>
+        <div class="fieldStyle col-xs-12 col-sm-8">
+            <div class="topTFStyle col-xs-12 col-sm-6">
+                @Html.DisplayFor(model => model.CreatedDateTime)
+            </div>
+            <div class="bottomTFStyle col-xs-12 col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        <div class="headerStyle col-xs-12 col-sm-4">
+            @Html.DisplayNameFor(model => model.CompletionDateTime)
+        </div>
+        <div class="fieldStyle col-xs-12 col-sm-8">
+            <div class="topTFStyle col-xs-12 col-sm-6">
+                @Html.DisplayFor(model => model.CompletionDateTime)
+            </div>
+            <div class="bottomTFStyle col-xs-12 col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+

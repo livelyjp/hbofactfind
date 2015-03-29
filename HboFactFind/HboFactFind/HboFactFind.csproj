@@ -263,6 +263,17 @@
     <Content Include="Views\PageTen\Edit.cshtml" />
     <Content Include="Views\PageTen\Index.cshtml" />
     <Content Include="Views\FactFind\View.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsFactFind.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageOne.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageTwo.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageThree.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageFour.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageFive.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageSix.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageSeven.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageEight.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageNine.cshtml" />
+    <Content Include="Views\FactFind\Partial\_DetailsPageTen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
