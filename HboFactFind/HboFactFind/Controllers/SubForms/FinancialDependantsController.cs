@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using System.Net;
-using System.Web;
+using System.Threading.Tasks;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using HboFactFind.Domain.Questions.Dependants;
 using HboFactFind.EF;
@@ -14,8 +10,7 @@ namespace HboFactFind.Controllers.SubForms
 {
     public class FinancialDependantsController : Controller
     {
-        private HboDbContext db = new HboDbContext();
-
+        private readonly HboDbContext db = new HboDbContext();
         // GET: FinancialDependants
         public async Task<ActionResult> Index()
         {
@@ -30,7 +25,7 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FinancialDependant financialDependant = await db.FinancialDependants.FindAsync(id);
+            var financialDependant = await db.FinancialDependants.FindAsync(id);
             if (financialDependant == null)
             {
                 return HttpNotFound();
@@ -45,12 +40,31 @@ namespace HboFactFind.Controllers.SubForms
             return View();
         }
 
+        public class TestObj
+        {
+            public string TestOne { get;set; }
+            public string TestTwo { get;set; }
+
+        }
+
+        public ActionResult Test([Bind(
+               Include =
+                   "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime"
+               )] FinancialDependant financialDependant)
+        {
+            return Json("hello", JsonRequestBehavior.AllowGet);
+        }
+
         // POST: FinancialDependants/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime")] FinancialDependant financialDependant)
+        public async Task<ActionResult> Create(
+            [Bind(
+                Include =
+                    "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime"
+                )] FinancialDependant financialDependant)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +84,7 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FinancialDependant financialDependant = await db.FinancialDependants.FindAsync(id);
+            var financialDependant = await db.FinancialDependants.FindAsync(id);
             if (financialDependant == null)
             {
                 return HttpNotFound();
@@ -84,7 +98,11 @@ namespace HboFactFind.Controllers.SubForms
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime")] FinancialDependant financialDependant)
+        public async Task<ActionResult> Edit(
+            [Bind(
+                Include =
+                    "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime"
+                )] FinancialDependant financialDependant)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +121,7 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FinancialDependant financialDependant = await db.FinancialDependants.FindAsync(id);
+            var financialDependant = await db.FinancialDependants.FindAsync(id);
             if (financialDependant == null)
             {
                 return HttpNotFound();
@@ -116,7 +134,7 @@ namespace HboFactFind.Controllers.SubForms
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(long id)
         {
-            FinancialDependant financialDependant = await db.FinancialDependants.FindAsync(id);
+            var financialDependant = await db.FinancialDependants.FindAsync(id);
             db.FinancialDependants.Remove(financialDependant);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

@@ -147,8 +147,5 @@ namespace HboFactFind.Domain.Pages
 
         [DisplayName("Client Two Taxation Residency")]
         public string ClientTwoTaxationResidency { get; set; }
-
-        [DisplayName("Client Two Extra Information")]
-        public string ClientTwoExtraInformation { get; set; }
     }
 }

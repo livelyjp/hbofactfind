@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<HboFactFind.Domain.Questions.Dependants.FinancialDependant>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "FinancialDependants")
 </p>
-<table class="table">
+<table class="table financialDependantsTable">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.DependantName)
@@ -45,5 +45,7 @@
         </td>
     </tr>
 }
+    <tr>
+
 
 </table>

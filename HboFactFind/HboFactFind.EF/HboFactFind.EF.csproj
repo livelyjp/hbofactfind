@@ -85,6 +85,10 @@
     <Compile Include="Migrations\201503301603566_Fixed Incorrect Spelling.Designer.cs">
       <DependentUpon>201503301603566_Fixed Incorrect Spelling.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503301725143_Removed client two notes from PageOne.cs" />
+    <Compile Include="Migrations\201503301725143_Removed client two notes from PageOne.Designer.cs">
+      <DependentUpon>201503301725143_Removed client two notes from PageOne.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503301603566_Fixed Incorrect Spelling.resx">
       <DependentUpon>201503301603566_Fixed Incorrect Spelling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301725143_Removed client two notes from PageOne.resx">
+      <DependentUpon>201503301725143_Removed client two notes from PageOne.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

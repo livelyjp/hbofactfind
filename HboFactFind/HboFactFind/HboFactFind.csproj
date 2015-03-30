@@ -148,6 +148,7 @@
     <Compile Include="Controllers\PageThreeController.cs" />
     <Compile Include="Controllers\PageTwoController.cs" />
     <Compile Include="Controllers\SubForms\FinancialDependantsController.cs" />
+    <Compile Include="Controllers\SubForms\NonFinancialDependantsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,6 +165,10 @@
     <Content Include="Content\Images\HobLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -294,14 +299,19 @@
     <Content Include="Views\FinancialDependants\Details.cshtml" />
     <Content Include="Views\FinancialDependants\Edit.cshtml" />
     <Content Include="Views\FinancialDependants\Index.cshtml" />
-    <Content Include="Views\FactFind\Partial\_FinancialDependantsIndex.cshtml" />
-    <Content Include="Views\FactFind\Partial\_NonFinancialDependantIndex.cshtml" />
+    <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsIndex.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantIndex.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Create.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Delete.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Details.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Edit.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Index.cshtml" />
+    <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsCreate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Dashboard\" />
-    <Folder Include="Views\FinancialDependants\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
