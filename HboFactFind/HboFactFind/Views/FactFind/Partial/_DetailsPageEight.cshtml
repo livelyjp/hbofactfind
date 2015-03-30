@@ -5,15 +5,19 @@
         <div class="headerStyle col-xs-12 col-sm-4">
         </div>
         <div class="columnTitle col-xs-12 col-sm-8">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-4">
                 <strong>Client One</strong>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-4">
                 <strong>Client Two</strong>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <strong>Joint</strong>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="hboDetailRow row">
     <div class="col-xs-12">
@@ -21,11 +25,14 @@
             @Html.DisplayNameFor(model => model.ClientOneRequiredEmergancyFund)
         </div>
         <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12 col-sm-6">
+            <div class="topTFStyle col-xs-12  col-sm-4">
                 @Html.DisplayFor(model => model.ClientOneRequiredEmergancyFund)
             </div>
-            <div class="bottomTFStyle col-xs-12 col-sm-6">
+            <div class="bottomTFStyle col-xs-12  col-sm-4">
                 @Html.DisplayFor(model => model.ClientTwoRequiredEmergancyFund)
+            </div>
+            <div class="bottomTFStyle col-xs-12  col-sm-4">
+                @Html.DisplayFor(model => model.JointRequiredEmergancyFund)
             </div>
         </div>
     </div>
@@ -38,16 +45,33 @@
             @Html.DisplayNameFor(model => model.ClientOnePlannedExpenditure)
         </div>
         <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12 col-sm-6">
+            <div class="topTFStyle col-xs-12  col-sm-4">
                 @Html.DisplayFor(model => model.ClientOnePlannedExpenditure)
             </div>
-            <div class="bottomTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientTwoPlannedExpenditure)
+            <div class="bottomTFStyle col-xs-12  col-sm-4">
+                @Html.DisplayFor(model => model.ClientOnePlannedExpenditure)
+            </div>
+            <div class="bottomTFStyle col-xs-12  col-sm-4">
+                @Html.DisplayFor(model => model.JointPlannedExpenditure)
             </div>
         </div>
     </div>
 </div>
 
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        <div class="headerStyle col-xs-12 col-sm-4">
+        </div>
+        <div class="columnTitle col-xs-12 col-sm-8">
+            <div class="col-xs-12 col-sm-6">
+                <strong>Client One</strong>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <strong>Client Two</strong>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="hboDetailRow row">
     <div class="col-xs-12">

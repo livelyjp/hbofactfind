@@ -77,6 +77,14 @@
     <Compile Include="Migrations\201503301510203_Added notes for Page One.Designer.cs">
       <DependentUpon>201503301510203_Added notes for Page One.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503301603079_Added Joint Fields To PageEight.cs" />
+    <Compile Include="Migrations\201503301603079_Added Joint Fields To PageEight.Designer.cs">
+      <DependentUpon>201503301603079_Added Joint Fields To PageEight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503301603566_Fixed Incorrect Spelling.cs" />
+    <Compile Include="Migrations\201503301603566_Fixed Incorrect Spelling.Designer.cs">
+      <DependentUpon>201503301603566_Fixed Incorrect Spelling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,6 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503301510203_Added notes for Page One.resx">
       <DependentUpon>201503301510203_Added notes for Page One.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301603079_Added Joint Fields To PageEight.resx">
+      <DependentUpon>201503301603079_Added Joint Fields To PageEight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301603566_Fixed Incorrect Spelling.resx">
+      <DependentUpon>201503301603566_Fixed Incorrect Spelling.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

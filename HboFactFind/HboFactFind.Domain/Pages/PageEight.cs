@@ -10,14 +10,19 @@ namespace HboFactFind.Domain.Pages
         public string ClientOneRequiredEmergancyFund { get; set; }
         [DisplayName("Details Of Planned Expenditure")]
         public string ClientOnePlannedExpenditure { get; set; }
-        [DisplayName("Have You Made A Will")]
-        public bool ClientOneMadeAWill { get; set; }
-        [DisplayName("Notes")]
-        [DataType(DataType.MultilineText)]
-        public string Notes { get; set; }
 
         public string ClientTwoRequiredEmergancyFund { get; set; }
         public string ClientTwoPlannedExpenditure { get; set; }
+
+        public string JointRequiredEmergancyFund { get; set; }
+        public string JointPlannedExpenditure { get; set; }
+
+        [DisplayName("Have You Made A Will")]
+        public bool ClientOneMadeAWill { get; set; }
         public bool ClientTwoMadeAWill { get; set; }
+
+        [DisplayName("Notes")]
+        [DataType(DataType.MultilineText)]
+        public string Notes { get; set; }
     }
 }
