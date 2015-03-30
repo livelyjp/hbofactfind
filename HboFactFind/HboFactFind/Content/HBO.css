@@ -78,7 +78,7 @@ a.blueButton {
 .headerStyle {
     text-align: right;
     /*background-color: red;*/
-    height: 49px;
+    min-height: 49px;
     padding-top: 14px;
     font-weight: bold;
 }
