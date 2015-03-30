@@ -41,7 +41,10 @@ a.blueButton {
 /*
     Details Pages
 */
-
+.columnTitle {
+    margin-top: 10px;
+    text-align: center;
+}
 .hboDetailRow {
     min-height: 45px;
     margin: 7px 40px;

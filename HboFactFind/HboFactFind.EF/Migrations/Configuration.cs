@@ -43,7 +43,7 @@ namespace HboFactFind.EF.Migrations
 
             context.Users.AddOrUpdate(new User
             {
-                Id = 2,
+                Id = 3,
                 EmailAddress = "nonadmin@adminaccount.co.uk",
                 FirstName = "Non",
                 SecondName = "Admin",
