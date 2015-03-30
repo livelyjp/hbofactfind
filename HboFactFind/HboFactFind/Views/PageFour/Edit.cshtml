@@ -42,86 +42,7 @@
 
         @Html.Partial("~/Views/FinancialDependants/Partials/_FinancialDependantsIndex.cshtml", Model.FinancialDependants)
 
-        <div id="dialog" title="Basic dialog">
-            <div class="modal-header">
-                <a class="close" data-dismiss="modal">&times;</a>
-                <h3>Title of the form</h3>
-            </div>
-            <div class="modal-body">
-                @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "helloworld", id = "__AjaxAntiForgeryForm" }))
-                {
-                    @Html.AntiForgeryToken()
-
-                     @Html.Partial("~/Views/FinancialDependants/Partials/_FinancialDependantsCreate.cshtml", new FinancialDependant(){Id = Model.Id})
-                }
-
-                
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-                <a href="#" class="btn btn-primary link">Save Changes</a>
-            </div>
-            
-            <div id="validationSummary" class="validation-summary">
-                <ul></ul>
-            </div>
-        </div>
-
-        <script type="text/javascript">
-
-            var initArticleModal = function () {
-                $("#articleForm").validate({
-                    rules: {
-                        Title: { required: true, minlength: 4 },
-                        Magazine: { required: true, minlength: 4 },
-                        PubMonth: { required: true, date: true }
-                    },
-                    messages: {
-                        Title: "Article title is required (at least 4 chars).",
-                        Magazine: "Magazine name is required is required (at least 4 chars)."
-                    },
-                    errorContainer: "#validationSummary",
-                    errorLabelContainer: "#validationSummary ul",
-                    wrapper: "li",
-                    submitHandler: function (form) {
-                        gladiatorApp.addArticle($(form));
-                    }
-                });
-            };
-
-           
-
-
-            $(function () {
-                $("#dialog").dialog();
-            });
-
-            $(document).ready(function () {
-                initArticleModal();
-                $(".btn.link").on("click", function () {
-                    var articleId = $(this).data('id');
-                    var frm = $(".helloworld");
-                    var data = JSON.stringify(frm.serializeArray());
-                    var form = $('__AjaxAntiForgeryForm');
-                    var token = $('input[name="__RequestVerificationToken"]', form).val();
-                    var postData = form.serialize();
-                    alert(token);
-
-                    $.ajax({
-                        url: "/FinancialDependants/Test",
-                        type: 'POST',
-                        data: {
-                            __RequestVerificationToken: token,
-                            data: postData
-                        },
-                        cache: false
-                    }).done(function (data) {
-                    });
-                });
-            });
-
-
-        </script>
+        
 
 
 
@@ -134,6 +55,104 @@
         </div>
     </div>
 }
+
+<div id="dialog" title="Basic dialog">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3>Title of the form</h3>
+    </div>
+    <div class="modal-body">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "helloworld", id = "__AjaxAntiForgeryForm" }))
+        {
+@*            @Html.AntiForgeryToken()*@
+
+            @Html.Partial("~/Views/FinancialDependants/Partials/_FinancialDependantsCreate.cshtml", new FinancialDependant() { Id = Model.Id })
+        }
+
+
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a href="#" class="btn btn-primary link">Save Changes</a>
+    </div>
+
+    <div id="validationSummary" class="validation-summary">
+        <ul></ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var initArticleModal = function () {
+        $("#articleForm").validate({
+            rules: {
+                Title: { required: true, minlength: 4 },
+                Magazine: { required: true, minlength: 4 },
+                PubMonth: { required: true, date: true }
+            },
+            messages: {
+                Title: "Article title is required (at least 4 chars).",
+                Magazine: "Magazine name is required is required (at least 4 chars)."
+            },
+            errorContainer: "#validationSummary",
+            errorLabelContainer: "#validationSummary ul",
+            wrapper: "li",
+            submitHandler: function (form) {
+                gladiatorApp.addArticle($(form));
+            }
+        });
+    };
+
+
+
+
+    $(function () {
+        $("#dialog").dialog();
+    });
+
+    $(document).ready(function () {
+        initArticleModal();
+        $(".btn.link").on("click", function () {
+            var articleId = $(this).data('id');
+            var frm = $(".helloworld");
+//            var data = JSON.stringify(frm.serializeObject());
+            var token = $('input[name="__RequestVerificationToken"]', frm).val();
+            var closest = frm.serializeArray();
+
+            var o = {};
+            var a = frm.serializeArray();
+            $.each(a, function () {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            var next = JSON.stringify(o);
+
+            $.ajax({
+                url: "/FinancialDependants/Test",
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                datatype: "html",
+
+                data: next,
+//                data: {
+//                    financialDependant: postData
+//                },
+                cache: false
+            }).done(function (data) {
+            });
+        });
+    });
+
+
+</script>
+
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")

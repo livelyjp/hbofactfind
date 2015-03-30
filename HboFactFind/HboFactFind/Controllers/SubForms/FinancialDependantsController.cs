@@ -47,10 +47,7 @@ namespace HboFactFind.Controllers.SubForms
 
         }
 
-        public ActionResult Test([Bind(
-               Include =
-                   "Id,PageFourId,DependantName,DateOfBirth,DependantOn,AgeOfIndependance,RelationshipAndReason,CreatedDateTime"
-               )] FinancialDependant financialDependant)
+        public ActionResult Test( FinancialDependant financialDependant)
         {
             return Json("hello", JsonRequestBehavior.AllowGet);
         }
