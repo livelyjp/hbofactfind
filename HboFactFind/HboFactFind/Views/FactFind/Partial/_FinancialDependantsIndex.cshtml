@@ -1,0 +1,49 @@
+﻿@model IEnumerable<HboFactFind.Domain.Questions.Dependants.FinancialDependant>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DependantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DependantOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgeOfIndependance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelationshipAndReason)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DependantName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DependantOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgeOfIndependance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelationshipAndReason)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

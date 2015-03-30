@@ -14,8 +14,26 @@
     </div>
 </div>
 
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        @Html.Partial("Partial/_FinancialDependantsIndex", Model.FinancialDependants)
+    </div>
+</div>
+
+<div class="hboDetailRow row">
+    <div class="headerStyle col-xs-12 col-sm-6">
+        <strong>Other non-financial dependants that you would like to condifer in relation to this advice</strong>
+    </div>
+</div>
+
+<div class="hboDetailRow row">
+    <div class="col-xs-12">
+        @Html.Partial("Partial/_NonFinancialDependantIndex", Model.NonFinancialDependantses)
+    </div>
+</div>
+
 <div class="col-xs-12" style="text-align: center">
     <p>
-        @Html.ActionLink("Edit", "PageFour", new { id = Model.Id })
+        @Html.ActionLink("Edit", "PageFour", new {id = Model.Id})
     </p>
 </div>

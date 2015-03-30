@@ -147,6 +147,7 @@
     <Compile Include="Controllers\PageTenController.cs" />
     <Compile Include="Controllers\PageThreeController.cs" />
     <Compile Include="Controllers\PageTwoController.cs" />
+    <Compile Include="Controllers\SubForms\FinancialDependantsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -288,11 +289,19 @@
     <Content Include="Views\PageEight\Edit.cshtml" />
     <Content Include="Views\PageNine\Edit.cshtml" />
     <Content Include="Views\PageTen\Edit.cshtml" />
+    <Content Include="Views\FinancialDependants\Create.cshtml" />
+    <Content Include="Views\FinancialDependants\Delete.cshtml" />
+    <Content Include="Views\FinancialDependants\Details.cshtml" />
+    <Content Include="Views\FinancialDependants\Edit.cshtml" />
+    <Content Include="Views\FinancialDependants\Index.cshtml" />
+    <Content Include="Views\FactFind\Partial\_FinancialDependantsIndex.cshtml" />
+    <Content Include="Views\FactFind\Partial\_NonFinancialDependantIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Dashboard\" />
+    <Folder Include="Views\FinancialDependants\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
