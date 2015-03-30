@@ -150,6 +150,7 @@ namespace HboFactFind.Domain.Pages
         public decimal JointFinancialGoalCommitment { get; set; }
 
         [DisplayName("Notes")]
+        [DataType(DataType.MultilineText)]
         public string OutGoingsNotes { get; set; }
     }
 }

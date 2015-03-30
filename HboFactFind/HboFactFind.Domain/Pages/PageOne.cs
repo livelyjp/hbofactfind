@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using HboFactFind.Domain.Enums;
 using HboFactFind.Domain.Pages.Abstracts;
@@ -76,8 +77,9 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Taxation Residency")]
         public string ClientOneTaxationResidency { get; set; }
 
-        [DisplayName("Extra Information")]
-        public string ClientOneExtraInformation { get; set; }
+        [DisplayName("Notes")]
+        [DataType(DataType.MultilineText)]
+        public string Notes { get; set; }
 
         [DisplayName("Client Two Title")]
         public TitleEnum ClientTwoTitle { get; set; }

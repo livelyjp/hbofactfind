@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201503301437017_Removeing Notes fr Page Nine.Designer.cs">
       <DependentUpon>201503301437017_Removeing Notes fr Page Nine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503301510203_Added notes for Page One.cs" />
+    <Compile Include="Migrations\201503301510203_Added notes for Page One.Designer.cs">
+      <DependentUpon>201503301510203_Added notes for Page One.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -104,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503301437017_Removeing Notes fr Page Nine.resx">
       <DependentUpon>201503301437017_Removeing Notes fr Page Nine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301510203_Added notes for Page One.resx">
+      <DependentUpon>201503301510203_Added notes for Page One.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -26,6 +26,11 @@ a.blueButton {
     text-align: center;
 }
 
+textarea.form-control {
+    width: 100%;
+    max-width: inherit;
+}
+
 /*
     Home Panel
 */
@@ -51,6 +56,11 @@ a.blueButton {
     margin-top: 20px;
 }
 
+.detailPageInformation {
+    margin-top: 15px;
+    text-align: center;
+}
+
 .columnTitle {
     margin-top: 10px;
     text-align: center;
@@ -65,10 +75,7 @@ a.blueButton {
 .hboDetailRow:last-child{
     border: 0;
 }
-.headerStyle, .fieldStyle {
-    /*clear: both;*/
-    /*widows: 100%;*/
-}
+
 .headerStyle, .fieldStyle, .topTFStyle, .bottomTFStyle {
     padding:7px;
     min-height: 35px;
@@ -77,27 +84,18 @@ a.blueButton {
 
 .headerStyle {
     text-align: right;
-    /*background-color: red;*/
     min-height: 49px;
     padding-top: 14px;
     font-weight: bold;
 }
 
 .fieldStyle {
-    /*background-color: blue;*/
     height: 100%;
 }
 
 .topTFStyle { 
-    /*background-color: green;*/ 
     height: 100%;
     word-wrap: break-word;
-
-}
-
-.bottomTFStyle { 
-    /*background-color: yellow;*/
-                 /*height: 100%;*/
 
 }
 

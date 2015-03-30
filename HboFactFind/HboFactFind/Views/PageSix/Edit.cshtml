@@ -13,7 +13,6 @@
 
     <div class="form-horizontal">
     <h4>PageSix</h4>
-    <hr/>
     @Html.ValidationSummary(true, "", new {@class = "text-danger"})
     @Html.HiddenFor(model => model.Id)
 
@@ -424,11 +423,7 @@
                     @Html.LabelFor(model => model.OutGoingsNotes)
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.OutGoingsNotes, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.OutGoingsNotes, "", new {@class = "text-danger"})
-                    </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
+                    <div class="topTFStyle col-xs-12">
                         @Html.EditorFor(model => model.OutGoingsNotes, new {htmlAttributes = new {@class = "form-control"}})
                         @Html.ValidationMessageFor(model => model.OutGoingsNotes, "", new {@class = "text-danger"})
                     </div>

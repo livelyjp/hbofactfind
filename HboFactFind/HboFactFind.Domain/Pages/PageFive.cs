@@ -40,6 +40,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Any Changes To Tax Status In Future")]
         public bool ClientOneAnyChangesToTax { get; set; }
         [DisplayName("Notes")]
+        [DataType(DataType.MultilineText)]
         public string IncomeNotes { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:c}")]

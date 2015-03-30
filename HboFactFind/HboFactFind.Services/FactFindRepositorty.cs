@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using HboFactFind.Domain;
 using HboFactFind.Domain.Pages;
@@ -33,7 +34,14 @@ namespace HboFactFind.Services
             };
 
             _dbContext.FactFinds.Add(factFind);
-            _dbContext.SaveChanges();
+            try
+            {
+                _dbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
             return factFind;
         }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using HboFactFind.Domain.Pages.Abstracts;
 using HboFactFind.Domain.Questions.ExistingPlans;
 
@@ -13,6 +14,7 @@ namespace HboFactFind.Domain.Pages
         public List<PensionPolicies> PensionPolicieses { get; set; }
         [DisplayName("Savings And Investment Policies")]
         public List<SavingsAndInvestmentPolicies> SavingsAndInvestmentPolicieses { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
 
         public PageTen()

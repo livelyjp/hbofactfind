@@ -196,6 +196,7 @@ namespace HboFactFind.Domain.Pages
         public virtual List<BreakDownOfLiabilities> BreakDownOfLiabilitieses { get; set; }
 
         [DisplayName("Notes")]
+        [DataType(DataType.MultilineText)]
         public string AssetsNotes { get; set; }
     }
 }

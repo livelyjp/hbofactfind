@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using HboFactFind.Domain.Pages.Abstracts;
 
 namespace HboFactFind.Domain.Pages
@@ -12,6 +13,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Have You Made A Will")]
         public bool ClientOneMadeAWill { get; set; }
         [DisplayName("Notes")]
+        [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
 
         public string ClientTwoRequiredEmergancyFund { get; set; }
