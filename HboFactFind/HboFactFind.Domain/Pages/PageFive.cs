@@ -31,7 +31,6 @@ namespace HboFactFind.Domain.Pages
         [DisplayFormat(DataFormatString = "{0:c}")]
         [DisplayName("Total Monthly Income (Net)")]
         public decimal ClientOneTotalNetMonthlyIncome { get; set; }
-        [DisplayFormat(DataFormatString = "{0:c}")]
         [DisplayName("Highest Rate Of Tax Paid")]
         public TaxRateEnum ClientOneTaxRate { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
@@ -59,7 +58,6 @@ namespace HboFactFind.Domain.Pages
         public decimal ClientTwoTotalGrossMonthlyIncome { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal ClientTwoTotalNetMonthlyIncome { get; set; }
-        [DisplayFormat(DataFormatString = "{0:c}")]
         public TaxRateEnum ClientTwoTaxRate { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
         public bool ClientTwoAnyChangesToIncome { get; set; }
