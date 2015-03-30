@@ -41,6 +41,16 @@ a.blueButton {
 /*
     Details Pages
 */
+
+.jumbotron {
+    background-color: #101052;
+    color: white;
+    font-size: 40px;
+    padding-bottom: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .columnTitle {
     margin-top: 10px;
     text-align: center;

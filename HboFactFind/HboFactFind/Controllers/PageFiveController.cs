@@ -61,7 +61,7 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageFive/{factFindId}")]
         public async Task<ActionResult> Edit(
-           [Bind(Include = "Id,ClientOneGrossEmploymentIncome,ClientOneGrossSelfEmploymentIncome,ClientOneGrossPrivatePensionIncome,ClientOneGrossStatePension,ClientOneAdditionalIncome,ClientOneTotalAnnualIncome,ClientOneTotalGrossMonthlyIncome,ClientOneTotalNetMonthlyIncome,ClientOneTaxRate,ClientOneAnyChangesToIncome,ClientOneAnyChangesToTax,ClientOneIncomeNotes,ClientTwoGrossEmploymentIncome,ClientTwoGrossSelfEmploymentIncome,ClientTwoGrossPrivatePensionIncome,ClientTwoGrossStatePension,ClientTwoAdditionalIncome,ClientTwoTotalAnnualIncome,ClientTwoTotalGrossMonthlyIncome,ClientTwoTotalNetMonthlyIncome,ClientTwoTaxRate,ClientTwoAnyChangesToIncome,ClientTwoAnyChangesToTax,ClientTwoIncomeNotes,CreatedDateTime")] PageFive pageFive)
+           [Bind(Include = "Id,ClientOneGrossEmploymentIncome,ClientOneGrossSelfEmploymentIncome,ClientOneGrossPrivatePensionIncome,ClientOneGrossStatePension,ClientOneAdditionalIncome,ClientOneTotalAnnualIncome,ClientOneTotalGrossMonthlyIncome,ClientOneTotalNetMonthlyIncome,ClientOneTaxRate,ClientOneAnyChangesToIncome,ClientOneAnyChangesToTax,IncomeNotes,ClientTwoGrossEmploymentIncome,ClientTwoGrossSelfEmploymentIncome,ClientTwoGrossPrivatePensionIncome,ClientTwoGrossStatePension,ClientTwoAdditionalIncome,ClientTwoTotalAnnualIncome,ClientTwoTotalGrossMonthlyIncome,ClientTwoTotalNetMonthlyIncome,ClientTwoTaxRate,ClientTwoAnyChangesToIncome,ClientTwoAnyChangesToTax,ClientTwoIncomeNotes,CreatedDateTime")] PageFive pageFive)
         {
             if (!ModelState.IsValid) return View(pageFive);
             _db.Entry(pageFive).State = EntityState.Modified;

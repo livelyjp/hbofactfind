@@ -12,7 +12,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Title")]
         public TitleEnum ClientOneTitle { get; set; }
 
-        [DisplayName("Forename")]
+        [DisplayName("Forenames")]
         public string ClientOneForename { get; set; }
 
         [DisplayName("Surname")]
@@ -33,10 +33,10 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Post Code")]
         public string ClientOnePostCode { get; set; }
 
-        [DisplayName("Address")]
+        [DisplayName("Email Address")]
         public string ClientOneEmailAddress { get; set; }
 
-        [DisplayName("Telephone")]
+        [DisplayName("Home Telephone")]
         public string ClientOneHomeTelephone { get; set; }
 
         [DisplayName("Mobile Telephone")]
@@ -52,10 +52,10 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Marital Status")]
         public MartialStatusEnum ClientOneMartialStatus { get; set; }
 
-        [DisplayName("Good Health")]
+        [DisplayName("Good Health?")]
         public bool ClientOneGoodHealth { get; set; }
 
-        [DisplayName("Smoked")]
+        [DisplayName("Smoked In The Last 12 Months?")]
         public bool ClientOneSmoked { get; set; }
 
         [DisplayName("National Insurance Number")]

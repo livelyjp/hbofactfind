@@ -57,6 +57,22 @@
     <Compile Include="Migrations\201503291640277_Corrected spelling mistake.Designer.cs">
       <DependentUpon>201503291640277_Corrected spelling mistake.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503301411177_Added Joint Financies To Page Six.cs" />
+    <Compile Include="Migrations\201503301411177_Added Joint Financies To Page Six.Designer.cs">
+      <DependentUpon>201503301411177_Added Joint Financies To Page Six.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503301419160_Added Joint fields to Page Seven.cs" />
+    <Compile Include="Migrations\201503301419160_Added Joint fields to Page Seven.Designer.cs">
+      <DependentUpon>201503301419160_Added Joint fields to Page Seven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503301423010_Removed Un needed client two notes from Page Eight.cs" />
+    <Compile Include="Migrations\201503301423010_Removed Un needed client two notes from Page Eight.Designer.cs">
+      <DependentUpon>201503301423010_Removed Un needed client two notes from Page Eight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503301437017_Removeing Notes fr Page Nine.cs" />
+    <Compile Include="Migrations\201503301437017_Removeing Notes fr Page Nine.Designer.cs">
+      <DependentUpon>201503301437017_Removeing Notes fr Page Nine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,6 +92,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503291640277_Corrected spelling mistake.resx">
       <DependentUpon>201503291640277_Corrected spelling mistake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301411177_Added Joint Financies To Page Six.resx">
+      <DependentUpon>201503301411177_Added Joint Financies To Page Six.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301419160_Added Joint fields to Page Seven.resx">
+      <DependentUpon>201503301419160_Added Joint fields to Page Seven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301423010_Removed Un needed client two notes from Page Eight.resx">
+      <DependentUpon>201503301423010_Removed Un needed client two notes from Page Eight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503301437017_Removeing Notes fr Page Nine.resx">
+      <DependentUpon>201503301437017_Removeing Notes fr Page Nine.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

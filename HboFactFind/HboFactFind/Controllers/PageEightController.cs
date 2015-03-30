@@ -61,7 +61,7 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageEight/{factFindId}")]
         public async Task<ActionResult> Edit(
-           [Bind(Include = "Id,ClientOneRequiredEmergancyFund,ClientOnePlannedExpenditure,ClientOneMadeAWill,ClientOneWillNotes,ClientTwoRequiredEmergancyFund,ClientTwoPlannedExpenditure,ClientTwoMadeAWill,ClientTwoWillNotes,CreatedDateTime")] PageEight pageEight)
+           [Bind(Include = "Id,ClientOneRequiredEmergancyFund,ClientOnePlannedExpenditure,ClientOneMadeAWill,Notes,ClientTwoRequiredEmergancyFund,ClientTwoPlannedExpenditure,ClientTwoMadeAWill,ClientTwoWillNotes,CreatedDateTime")] PageEight pageEight)
         {
             if (!ModelState.IsValid) return View(pageEight);
             _db.Entry(pageEight).State = EntityState.Modified;

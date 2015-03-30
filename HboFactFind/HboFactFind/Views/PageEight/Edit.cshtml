@@ -85,12 +85,12 @@
             <div class="hboDetailRow row">
                 <div class="col-xs-12">
                     <div class="headerStyle col-xs-12 col-sm-4">
-                        @Html.LabelFor(model => model.ClientOneWillNotes)
+                        @Html.LabelFor(model => model.Notes)
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientOneWillNotes, new {htmlAttributes = new {@class = "form-control"}})
-                            @Html.ValidationMessageFor(model => model.ClientOneWillNotes, "", new {@class = "text-danger"})
+                            @Html.EditorFor(model => model.Notes, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.Notes, "", new {@class = "text-danger"})
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
                             @Html.EditorFor(model => model.ClientTwoWillNotes, new {htmlAttributes = new {@class = "form-control"}})

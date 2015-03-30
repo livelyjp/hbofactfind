@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using HboFactFind.Domain.AbstractEntities;
 using HboFactFind.Domain.Pages;
@@ -9,16 +8,19 @@ namespace HboFactFind.Domain
 {
     public class FactFind : BaseEntity
     {
-        [DisplayName("Client One Name")]
+        [DisplayName("Client One")]
         public string ClientOneName { get; set; }
-        [DisplayName("Client Two Name")]
+
+        [DisplayName("Client Two")]
         public string ClientTwoName { get; set; }
-        [DisplayName("Created By")]
+
+        [DisplayName("Adviser")]
         public long UserId { get; set; }
+
         public virtual User User { get; set; }
 
         [Column(TypeName = "DateTime2")]
-        [DisplayName("Completed Date")]
+        [DisplayName("Date Of Completion")]
         public DateTime? CompletionDateTime { get; set; }
 
         //PageOne

@@ -61,7 +61,7 @@ namespace HboFactFind.Controllers
         [ValidateAntiForgeryToken]
         [Route("~/FactFind/PageNine/{factFindId}")]
         public async Task<ActionResult> Edit(
-           [Bind(Include = "Id,ClientOnePersonalProtectionPriority,ClientOnePensionPlanningPriority,ClientOneOptionsAtRetirementPriority,ClientOneSavingsAndInvestmentsPriority,ClientOneEstatePlanningPriority,ClientOneMortgageNeedsPriority,ClientOneEquityReleasePriority,ClientOneLongTermCarePriority,ClientOneGeneralInsuranceNeedsPriority,ClientOnePrioritiesNotes,ClientTwoPersonalProtectionPriority,ClientTwoPensionPlanningPriority,ClientTwoOptionsAtRetirementPriority,ClientTwoSavingsAndInvestmentsPriority,ClientTwoEstatePlanningPriority,ClientTwoMortgageNeedsPriority,ClientTwoEquityReleasePriority,ClientTwoLongTermCarePriority,ClientTwoGeneralInsuranceNeedsPriority,ClientTwoPrioritiesNotes,CreatedDateTime")] PageNine pageNine)
+           [Bind(Include = "Id,ClientOnePersonalProtectionPriority,ClientOnePensionPlanningPriority,ClientOneOptionsAtRetirementPriority,ClientOneSavingsAndInvestmentsPriority,ClientOneEstatePlanningPriority,ClientOneMortgageNeedsPriority,ClientOneEquityReleasePriority,ClientOneLongTermCarePriority,ClientOneGeneralInsuranceNeedsPriority,Notes,ClientTwoPersonalProtectionPriority,ClientTwoPensionPlanningPriority,ClientTwoOptionsAtRetirementPriority,ClientTwoSavingsAndInvestmentsPriority,ClientTwoEstatePlanningPriority,ClientTwoMortgageNeedsPriority,ClientTwoEquityReleasePriority,ClientTwoLongTermCarePriority,ClientTwoGeneralInsuranceNeedsPriority,ClientTwoPrioritiesNotes,CreatedDateTime")] PageNine pageNine)
         {
             if (!ModelState.IsValid) return View(pageNine);
             _db.Entry(pageNine).State = EntityState.Modified;

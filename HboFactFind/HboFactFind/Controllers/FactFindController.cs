@@ -104,13 +104,13 @@ namespace HboFactFind.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.Id = new SelectList(_db.PageEights, "Id", "ClientOneRequiredEmergancyFund", factFind.Id);
-            ViewBag.Id = new SelectList(_db.PageFives, "Id", "ClientOneIncomeNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageFives, "Id", "IncomeNotes", factFind.Id);
             ViewBag.Id = new SelectList(_db.PageFours, "Id", "Id", factFind.Id);
-            ViewBag.Id = new SelectList(_db.PageNines, "Id", "ClientOnePrioritiesNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageNines, "Id", "Notes", factFind.Id);
             ViewBag.Id = new SelectList(_db.PageOnes, "Id", "ClientOneForename", factFind.Id);
             ViewBag.Id = new SelectList(_db.PageSevens, "Id", "AssetsNotes", factFind.Id);
             ViewBag.Id = new SelectList(_db.PageSixs, "Id", "OutGoingsNotes", factFind.Id);
-            ViewBag.Id = new SelectList(_db.PageTens, "Id", "ExistingPlansNotes", factFind.Id);
+            ViewBag.Id = new SelectList(_db.PageTens, "Id", "Notes", factFind.Id);
             ViewBag.Id = new SelectList(_db.PageThrees, "Id", "ClientOneSolicitor", factFind.Id);
             ViewBag.Id = new SelectList(_db.PageTwos, "Id", "ClientOneOccupation", factFind.Id);
             return View(factFind);
