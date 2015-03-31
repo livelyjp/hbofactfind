@@ -1,0 +1,93 @@
+﻿@model HboFactFind.Domain.Questions.Dependants.FinancialDependant
+
+
+<div id="deleteDialog" title="Add Financial Dependant">
+    <h3>Are you sure you want to delete this?</h3>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DependantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DependantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DependantOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DependantOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeOfIndependance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeOfIndependance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelationshipAndReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelationshipAndReason)
+        </dd>
+    </dl>
+    @using (Html.BeginForm(null, null, FormMethod.Post, new {@class = "deleteFinancialDependantForm", id = "__AjaxAntiForgeryForm"}))
+    {
+        @Html.AntiForgeryToken()
+    }
+    <div class="modal-footer">
+        <a href="#" class="btn btn-primary deleteLink">Delete</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".btn.deleteLink").on("click", function (e) {
+            var frm = $(".deleteFinancialDependantForm");
+            var token = $('input[name="__RequestVerificationToken"]', frm).val();
+            $.ajax({
+                url: "/FinancialDependants/Delete?id=" + @Model.Id,
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                datatype: "html",
+                headers: {
+                    '__RequestVerificationToken': token
+                },
+                cache: false
+            }).done(function (data) {
+                location.reload();
+            });
+        });
+
+        $(".financialDepdnantDeleteButton").on("click", function (e) {
+            e.preventDefault();
+
+            var elementId = e.currentTarget.id.replace("fdd_", "");
+
+            $.ajax({
+                url: "/FinancialDependants/Delete",
+                type: 'GET',
+                cache: false,
+                data: { id: elementId }
+            }).done(function (result) {
+                $('#deleteDialog').html(result);
+                $("#deleteDialog").dialog();
+            });
+        });
+    });
+
+</script>

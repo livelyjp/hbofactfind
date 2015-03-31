@@ -39,10 +39,26 @@
                 @Html.DisplayFor(modelItem => item.RelationshipAndReason)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "FinancialDependants", new { id = item.Id }, new {@id = "fd_" + item.Id, @class = "financialDepdnantEditButton"}) |
-                @Html.ActionLink("Delete", "Delete", "FinancialDependants", new { id = item.Id }, null)
+                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "fde_" + item.Id, @class = "financialDepdnantEditButton" }) |
+                @Html.ActionLink("Delete", null, null, new { id = item.Id }, new { @id = "fdd_" + item.Id, @class = "financialDepdnantDeleteButton" })
             </td>
         </tr>
     }
     <tr>
 </table>
+
+<div class="buttonPanel col-xs-12">
+    <input type="submit" id="addFincancialDependantButton" value="Add Dependant" class="btn addFincancialDependantButton btn-default" />
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".addFincancialDependantButton").on("click", function(e) {
+            e.preventDefault();
+            $("#createDialog").dialog();
+        });
+    });
+
+</script>

@@ -105,6 +105,22 @@
                 location.reload();
             });
         });
+
+        $(".financialDepdnantEditButton").on("click", function (e) {
+            e.preventDefault();
+
+            var elementId = e.currentTarget.id.replace("fde_", "");
+
+            $.ajax({
+                url: "/FinancialDependants/Edit",
+                type: 'GET',
+                cache: false,
+                data: { id: elementId }
+            }).done(function (result) {
+                $('#editDialog').html(result);
+                $("#editDialog").dialog();
+            });
+        });
     });
 
 </script>

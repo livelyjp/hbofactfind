@@ -126,12 +126,12 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return HttpNotFound();
             }
-            return View(financialDependant);
+            return PartialView("Partials/_FinancialDependantsDelete",financialDependant);
         }
 
         // POST: FinancialDependants/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [AjaxValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(long id)
         {
             var financialDependant = await db.FinancialDependants.FindAsync(id);
