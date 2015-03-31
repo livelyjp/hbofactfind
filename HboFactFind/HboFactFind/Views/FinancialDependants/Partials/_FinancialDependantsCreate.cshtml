@@ -3,78 +3,114 @@
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/jqueryval")
 
-@**@
-@*@using (Html.BeginForm()) *@
-@*{*@
-@*    @Html.AntiForgeryToken()*@
-@*    *@
-    <div class="form-horizontal">
-        <h4>FinancialDependant</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.PageFourId, "PageFourId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+<div id="dialog" title="Add Financial Dependant">
+
+    <div class="modal-body col-xs-12">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new {@class = "helloworld", id = "__AjaxAntiForgeryForm"}))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.HiddenFor(model => model.Id)
                 @Html.HiddenFor(model => model.PageFourId)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DependantName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DependantName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DependantName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DependantName, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DependantName, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.DependantName, "", new {@class = "text-danger"})
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateOfBirth, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateOfBirth, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.DateOfBirth, "", new {@class = "text-danger"})
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DependantOn, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DependantOn, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DependantOn, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DependantOn, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DependantOn, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.DependantOn, "", new {@class = "text-danger"})
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.AgeOfIndependance, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AgeOfIndependance, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AgeOfIndependance, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AgeOfIndependance, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AgeOfIndependance, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.AgeOfIndependance, "", new {@class = "text-danger"})
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.RelationshipAndReason, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.RelationshipAndReason, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RelationshipAndReason, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RelationshipAndReason, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RelationshipAndReason, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.RelationshipAndReason, "", new {@class = "text-danger"})
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CreatedDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CreatedDateTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreatedDateTime, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CreatedDateTime, new {@class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CreatedDateTime, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.CreatedDateTime, "", new {@class = "text-danger"})
+                    </div>
+                </div>
             </div>
-        </div>
+        }
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+
     </div>
-//}
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a href="#" class="btn btn-primary link">Save Changes</a>
+    </div>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    <div id="validationSummary" class="validation-summary">
+        <ul></ul>
+    </div>
 </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".btn.link").on("click", function (e) {
+            var frm = $(".helloworld");
+            var token = $('input[name="__RequestVerificationToken"]', frm).val();
+
+            var o = {};
+            var a = frm.serializeArray();
+            $.each(a, function () {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            var next = JSON.stringify(o);
+
+            $.ajax({
+                url: "/FinancialDependants/Create",
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                datatype: "html",
+                headers: {
+                    '__RequestVerificationToken': token
+                },
+                data: next,
+                cache: false
+            }).done(function (data) {
+                location.reload();
+            });
+        });
+    });
+
+</script>

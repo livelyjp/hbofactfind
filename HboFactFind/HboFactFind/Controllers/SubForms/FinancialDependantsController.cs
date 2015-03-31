@@ -3,6 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using HboFactFind.Attributes;
 using HboFactFind.Domain.Questions.Dependants;
 using HboFactFind.EF;
 
@@ -47,6 +48,8 @@ namespace HboFactFind.Controllers.SubForms
 
         }
 
+        [AjaxValidateAntiForgeryToken]
+
         public ActionResult Test( FinancialDependant financialDependant)
         {
             return Json("hello", JsonRequestBehavior.AllowGet);
@@ -56,7 +59,7 @@ namespace HboFactFind.Controllers.SubForms
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [AjaxValidateAntiForgeryToken]
         public async Task<ActionResult> Create(
             [Bind(
                 Include =
@@ -94,7 +97,7 @@ namespace HboFactFind.Controllers.SubForms
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [AjaxValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(
             [Bind(
                 Include =

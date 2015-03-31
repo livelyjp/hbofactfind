@@ -1,6 +1,6 @@
 ﻿@model HboFactFind.Domain.Pages.PageFour
 
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
     <div class="col-xs-12">
         <div class="headerStyle col-xs-12 col-sm-6">
             @Html.DisplayNameFor(model => model.AnyFinancialDependants)
@@ -13,19 +13,15 @@
     </div>
 </div>
 
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
+    <h4>Dependants</h4>
     <div class="col-xs-12">
         @Html.Partial("~/Views/FinancialDependants/Partials/_FinancialDependantsIndex.cshtml", Model.FinancialDependants)
     </div>
 </div>
 
-<div class="hboDetailRow row">
-    <div class="headerStyle col-xs-12 col-sm-6">
-        <strong>Other non-financial dependants that you would like to condifer in relation to this advice</strong>
-    </div>
-</div>
-
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
+    <h4>Other non-financial dependants that you would like to condifer in relation to this advice</h4>
     <div class="col-xs-12">
         @Html.Partial("~/Views/NonFinancialDependants/Partials/_NonFinancialDependantIndex.cshtml", Model.NonFinancialDependantses)
     </div>

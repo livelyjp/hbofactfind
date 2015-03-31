@@ -133,6 +133,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\AjaxValidateAntiForgeryToken.cs" />
     <Compile Include="Attributes\AuthenticationAttribute.cs" />
     <Compile Include="Controllers\FactFindController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -307,6 +308,7 @@
     <Content Include="Views\NonFinancialDependants\Edit.cshtml" />
     <Content Include="Views\NonFinancialDependants\Index.cshtml" />
     <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsCreate.cshtml" />
+    <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsEditIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
