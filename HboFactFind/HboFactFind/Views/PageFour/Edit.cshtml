@@ -59,9 +59,6 @@
             </div>
         </div>
 
-
-        
-
         <div class="form-group">
             <div class="buttonPanel col-xs-12">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -71,19 +68,38 @@
 }
 
 @Html.Partial("~/Views/FinancialDependants/Partials/_FinancialDependantsCreate.cshtml", new FinancialDependant { PageFourId = Model.Id })
+@Html.Partial("~/Views/FinancialDependants/Partials/_FinancialDependantsEdit.cshtml", new FinancialDependant ())
 
 
 <script type="text/javascript">
 
     $(document).ready(function () {
-        $("#dialog").hide();
+        $("#createDialog").hide();
+        $("#editDialog").hide();
+
         $(window).resize(function () {
             $("#dialog").dialog("option", "position", "center");
         });
 
         $(".addFincancialDependantButton").on("click", function(e) {
             e.preventDefault();
-            $("#dialog").dialog();
+            $("#createDialog").dialog();
+        });
+
+        $(".financialDepdnantEditButton").on("click", function (e) {
+            e.preventDefault();
+
+            var elementId = e.currentTarget.id.replace("fd_", "");
+
+            $.ajax({
+                url: "/FinancialDependants/Edit",
+                type: 'GET',
+                cache: false,
+                data: { id: elementId }
+            }).done(function (result) {
+                $('#editDialog').html(result);
+                $("#editDialog").dialog();
+            });
         });
     });
 

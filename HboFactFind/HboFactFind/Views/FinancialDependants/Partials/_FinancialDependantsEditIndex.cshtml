@@ -39,8 +39,8 @@
                 @Html.DisplayFor(modelItem => item.RelationshipAndReason)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Edit", "Edit", "FinancialDependants", new { id = item.Id }, new {@id = "fd_" + item.Id, @class = "financialDepdnantEditButton"}) |
+                @Html.ActionLink("Delete", "Delete", "FinancialDependants", new { id = item.Id }, null)
             </td>
         </tr>
     }

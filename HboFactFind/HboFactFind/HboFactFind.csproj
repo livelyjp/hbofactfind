@@ -309,6 +309,7 @@
     <Content Include="Views\NonFinancialDependants\Index.cshtml" />
     <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsCreate.cshtml" />
     <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsEditIndex.cshtml" />
+    <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

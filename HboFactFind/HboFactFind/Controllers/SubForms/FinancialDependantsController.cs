@@ -90,7 +90,7 @@ namespace HboFactFind.Controllers.SubForms
                 return HttpNotFound();
             }
             ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id", financialDependant.PageFourId);
-            return View(financialDependant);
+                return PartialView("Partials/_FinancialDependantsEdit",financialDependant);
         }
 
         // POST: FinancialDependants/Edit/5
