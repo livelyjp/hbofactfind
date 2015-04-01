@@ -148,6 +148,7 @@
     <Compile Include="Controllers\PageTenController.cs" />
     <Compile Include="Controllers\PageThreeController.cs" />
     <Compile Include="Controllers\PageTwoController.cs" />
+    <Compile Include="Controllers\SubForms\BreakDownOfLiabilitiesController.cs" />
     <Compile Include="Controllers\SubForms\FinancialDependantsController.cs" />
     <Compile Include="Controllers\SubForms\NonFinancialDependantsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -315,6 +316,16 @@
     <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantEdit.cshtml" />
     <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantsEditIndex.cshtml" />
     <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantDelete.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Create.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Delete.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Details.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Edit.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Index.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Partials\_BreakDownOfLiabilitiesIndex.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Partials\_BreakDownOfLiabilitiesEdit.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Partials\_BreakDownOfLiabilitiesIndexEdit.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Partials\_BreakDownOfLiabilitiesCreate.cshtml" />
+    <Content Include="Views\BreakDownOfLiabilities\Partials\_BreakDownOfLiabilitiesDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

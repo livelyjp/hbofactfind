@@ -1,0 +1,63 @@
+﻿@model IEnumerable<HboFactFind.Domain.Questions.BreakDownOfLiabilities>
+
+<table class="table breakdownTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MoregateLoadCreditOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepaymentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepaymentDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoregateLoadCreditOwner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepaymentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepaymentDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", null, null, new {id = item.Id}, new {@id = "be_" + item.Id, @class = "breakdownEditButton"}) |
+                @Html.ActionLink("Delete", null, null, new {id = item.Id}, new {@id = "bd_" + item.Id, @class = "breakdownDeleteButton"})
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="buttonPanel col-xs-12">
+    <input type="submit" id="addbreakdownButton" value="Add Liabilty" class="btn addbreakdownButton btn-default"/>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".addbreakdownButton").on("click", function (e) {
+            e.preventDefault();
+            $("#createBreakdownDialog").dialog();
+        });
+    });
+
+</script>

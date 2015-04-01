@@ -1,4 +1,5 @@
-﻿@model HboFactFind.Domain.Pages.PageSeven
+﻿@using HboFactFind.Domain.Questions
+@model HboFactFind.Domain.Pages.PageSeven
 
 @{
     ViewBag.Title = "Edit";
@@ -13,6 +14,11 @@
 
     <div class="form-horizontal">
     <h4>PageSeven</h4>
+
+    <div class="hboDetailRowNoBorder row">
+        <h4>Summary Of Assets</h4>
+    </div>
+
     @Html.ValidationSummary(true, "", new {@class = "text-danger"})
     @Html.HiddenFor(model => model.Id)
 
@@ -217,7 +223,7 @@
     </div>
 
     <div class="form-group">
-        <div class="hboDetailRow row">
+        <div class="hboDetailRowNoBorder row">
             <div class="col-xs-12">
                 <div class="headerStyle col-xs-12 col-sm-4">
                     @Html.LabelFor(model => model.ClientOneTotalAssets)
@@ -234,6 +240,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="hboDetailRowNoBorder row">
+        <h4>Summary Of Liabilities</h4>
     </div>
 
     <div class="form-group">
@@ -376,6 +386,14 @@
         </div>
     </div>
 
+    <div class="hboDetailRowNoBorder row">
+        <h4>Breakdown of Liabilities</h4>
+        <div class="col-xs-12">
+            @Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesIndexEdit.cshtml", Model.BreakDownOfLiabilitieses)
+        </div>
+    </div>
+
+
     <div class="form-group">
         <div class="hboDetailRow row">
             <div class="col-xs-12">
@@ -394,14 +412,33 @@
 
     <div class="form-group">
         <div class="buttonPanel col-xs-12">
-            <input type="submit" value="Save" class="btn btn-default" />
+            <input type="submit" value="Save" class="btn btn-default"/>
         </div>
     </div>
     </div>
 }
 
+@Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesCreate.cshtml", new BreakDownOfLiabilities { PageSevenId = Model.Id })
+@Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesEdit.cshtml", new BreakDownOfLiabilities())
+@Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesDelete.cshtml", new BreakDownOfLiabilities())
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#createBreakdownDialog").hide();
+        $("#editBreakdownDialog").hide();
+        $("#deleteBreakdownDialog").hide();
+
+        $(window).resize(function () {
+            $("#dialog").dialog("option", "position", "center");
+        });
+    });
+
+</script>
+
+
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Details", "FactFind", new { @id = Model.Id }, null)
 </div>
 
 @section Scripts {

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<HboFactFind.Domain.Questions.BreakDownOfLiabilities>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PageSeven.AssetsNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoregateLoadCreditOwner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RepaymentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RepaymentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDateTime)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PageSeven.AssetsNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoregateLoadCreditOwner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepaymentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepaymentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDateTime)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

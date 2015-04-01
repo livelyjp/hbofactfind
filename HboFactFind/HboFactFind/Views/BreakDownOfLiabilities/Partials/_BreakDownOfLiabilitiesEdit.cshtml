@@ -1,0 +1,126 @@
+﻿@model HboFactFind.Domain.Questions.BreakDownOfLiabilities
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+
+<div id="editBreakdownDialog" title="Edit Breakdown">
+
+    <div class="modal-body col-xs-12">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "editBreakdownForm", id = "__AjaxAntiForgeryForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.Id)
+                @Html.HiddenFor(model => model.PageSevenId)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MoregateLoadCreditOwner, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MoregateLoadCreditOwner, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MoregateLoadCreditOwner, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Lender, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Lender, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Lender, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RepaymentType, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RepaymentType, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RepaymentType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RepaymentDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RepaymentDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RepaymentDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a href="#" class="btn btn-primary editBreakdownSaveButton">Save Changes</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".btn.editBreakdownSaveButton").on("click", function (e) {
+            var frm = $(".editBreakdownForm");
+            var token = $('input[name="__RequestVerificationToken"]', frm).val();
+
+            var o = {};
+            var a = frm.serializeArray();
+            $.each(a, function () {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            var next = JSON.stringify(o);
+
+            $.ajax({
+                url: "/BreakDownOfLiabilities/Edit",
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                datatype: "html",
+                headers: {
+                    '__RequestVerificationToken': token
+                },
+                data: next,
+                cache: false
+            }).done(function (data) {
+                location.reload();
+            });
+        });
+
+        $(".breakdownEditButton").on("click", function (e) {
+            e.preventDefault();
+
+            var elementId = e.currentTarget.id.replace("be_", "");
+
+            $.ajax({
+                url: "/BreakDownOfLiabilities/Edit",
+                type: 'GET',
+                cache: false,
+                data: { id: elementId }
+            }).done(function (result) {
+                $('#editDialog').html(result);
+                $("#editDialog").dialog();
+            });
+        });
+    });
+
+</script>
