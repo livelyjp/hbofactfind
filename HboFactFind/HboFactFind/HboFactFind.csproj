@@ -344,6 +344,21 @@
     <Content Include="Views\SavingsAndInvestmentPolicies\Details.cshtml" />
     <Content Include="Views\SavingsAndInvestmentPolicies\Edit.cshtml" />
     <Content Include="Views\SavingsAndInvestmentPolicies\Index.cshtml" />
+    <Content Include="Views\ProtectionAndInsurancePolicies\Partials\_ProtectionCreate.cshtml" />
+    <Content Include="Views\ProtectionAndInsurancePolicies\Partials\_ProtectionEdit.cshtml" />
+    <Content Include="Views\ProtectionAndInsurancePolicies\Partials\_ProtectionDelete.cshtml" />
+    <Content Include="Views\ProtectionAndInsurancePolicies\Partials\_ProtectionEditIndex.cshtml" />
+    <Content Include="Views\ProtectionAndInsurancePolicies\Partials\_ProtectionIndex.cshtml" />
+    <Content Include="Views\PensionPolicies\Partials\_PensionCreate.cshtml" />
+    <Content Include="Views\PensionPolicies\Partials\_PensionDelete.cshtml" />
+    <Content Include="Views\PensionPolicies\Partials\_PensionEdit.cshtml" />
+    <Content Include="Views\PensionPolicies\Partials\_PensionIndex.cshtml" />
+    <Content Include="Views\PensionPolicies\Partials\_PensionIndexEdit.cshtml" />
+    <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsCreate.cshtml" />
+    <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsDelete.cshtml" />
+    <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsEdit.cshtml" />
+    <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsIndex.cshtml" />
+    <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsIndexEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

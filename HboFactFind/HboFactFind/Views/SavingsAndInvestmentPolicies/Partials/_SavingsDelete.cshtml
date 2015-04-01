@@ -1,0 +1,106 @@
+﻿@model HboFactFind.Domain.Questions.ExistingPlans.SavingsAndInvestmentPolicies
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SavingsAndInvestmentPolicies</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTen.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTen.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contrbution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contrbution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Frequency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Frequency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InTrust)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InTrust)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastValuation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastValuation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Provider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Provider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PolicyNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPlanType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPlanType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InForce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InForce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
