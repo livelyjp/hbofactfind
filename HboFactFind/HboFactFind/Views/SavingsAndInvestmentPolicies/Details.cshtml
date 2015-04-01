@@ -1,0 +1,114 @@
+﻿@model HboFactFind.Domain.Questions.ExistingPlans.SavingsAndInvestmentPolicies
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>SavingsAndInvestmentPolicies</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PageTen.Notes)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PageTen.Notes)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Contrbution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Contrbution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Frequency)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Frequency)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.InTrust)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.InTrust)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastValuation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastValuation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Owner)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Owner)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Provider)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Provider)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PolicyNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PolicyNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductPlanType)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductPlanType)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.InForce)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.InForce)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDateTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDateTime)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
