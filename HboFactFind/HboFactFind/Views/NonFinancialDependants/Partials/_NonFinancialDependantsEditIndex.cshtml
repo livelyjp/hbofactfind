@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HboFactFind.Domain.Questions.Dependants.NonFinancialDependants>
+
+<table class="table nonFinancialDependantsTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PageFour.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Relationship)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PageFour.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Relationship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDateTime)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "nfde_" + item.Id, @class = "nonFinancialDepdnantEditButton" }) |
+                @Html.ActionLink("Delete", null, null, new { id = item.Id }, new { @id = "nfdd_" + item.Id, @class = "nonFinancialDepdnantDeleteButton" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="buttonPanel col-xs-12">
+    <input type="submit" id="addNonFincancialDependantButton" value="Add Non Financial Dependant" class="btn addNonFincancialDependantButton btn-default"/>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".addNonFincancialDependantButton").on("click", function (e) {
+            e.preventDefault();
+            $("#createNonFinancialDialog").dialog();
+        });
+    });
+
+</script>

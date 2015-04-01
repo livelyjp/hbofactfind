@@ -1,9 +1,6 @@
 ﻿@model IEnumerable<HboFactFind.Domain.Questions.Dependants.NonFinancialDependants>
 
-<p>
-@*    @Html.ActionLink("Create New", "Create", "NonFinancialDependants")*@
-</p>
-<table class="table">
+<table class="table nonFinancialDependantsTable">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -17,28 +14,24 @@
         <th>
             @Html.DisplayNameFor(model => model.Notes)
         </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateOfBirth)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Relationship)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Notes)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Relationship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+        </tr>
+    }
 
 </table>

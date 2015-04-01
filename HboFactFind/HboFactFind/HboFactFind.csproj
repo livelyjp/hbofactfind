@@ -311,6 +311,10 @@
     <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsEditIndex.cshtml" />
     <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsEdit.cshtml" />
     <Content Include="Views\FinancialDependants\Partials\_FinancialDependantsDelete.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantCreate.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantEdit.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantsEditIndex.cshtml" />
+    <Content Include="Views\NonFinancialDependants\Partials\_NonFinancialDependantDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

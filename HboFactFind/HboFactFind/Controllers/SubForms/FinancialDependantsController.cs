@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Net;
 using System.Threading.Tasks;
-using System.Web.Helpers;
 using System.Web.Mvc;
 using HboFactFind.Attributes;
 using HboFactFind.Domain.Questions.Dependants;
@@ -41,16 +40,8 @@ namespace HboFactFind.Controllers.SubForms
             return View();
         }
 
-        public class TestObj
-        {
-            public string TestOne { get;set; }
-            public string TestTwo { get;set; }
-
-        }
-
         [AjaxValidateAntiForgeryToken]
-
-        public ActionResult Test( FinancialDependant financialDependant)
+        public ActionResult Test(FinancialDependant financialDependant)
         {
             return Json("hello", JsonRequestBehavior.AllowGet);
         }
@@ -90,7 +81,7 @@ namespace HboFactFind.Controllers.SubForms
                 return HttpNotFound();
             }
             ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id", financialDependant.PageFourId);
-                return PartialView("Partials/_FinancialDependantsEdit",financialDependant);
+            return PartialView("Partials/_FinancialDependantsEdit", financialDependant);
         }
 
         // POST: FinancialDependants/Edit/5
@@ -126,7 +117,7 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return HttpNotFound();
             }
-            return PartialView("Partials/_FinancialDependantsDelete",financialDependant);
+            return PartialView("Partials/_FinancialDependantsDelete", financialDependant);
         }
 
         // POST: FinancialDependants/Delete/5
@@ -147,6 +138,12 @@ namespace HboFactFind.Controllers.SubForms
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public class TestObj
+        {
+            public string TestOne { get; set; }
+            public string TestTwo { get; set; }
         }
     }
 }

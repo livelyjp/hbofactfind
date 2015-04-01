@@ -2,6 +2,7 @@
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using HboFactFind.Attributes;
 using HboFactFind.Domain.Questions.Dependants;
 using HboFactFind.EF;
 
@@ -43,7 +44,7 @@ namespace HboFactFind.Controllers.SubForms
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [AjaxValidateAntiForgeryToken]
         public async Task<ActionResult> Create(
             [Bind(Include = "Id,PageFourId,Name,DateOfBirth,Relationship,Notes,CreatedDateTime")] NonFinancialDependants
                 nonFinancialDependants)
@@ -72,14 +73,14 @@ namespace HboFactFind.Controllers.SubForms
                 return HttpNotFound();
             }
             ViewBag.PageFourId = new SelectList(db.PageFours, "Id", "Id", nonFinancialDependants.PageFourId);
-            return View(nonFinancialDependants);
+            return PartialView("Partials/_NonFinancialDependantEdit", nonFinancialDependants);
         }
 
         // POST: NonFinancialDependants/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [AjaxValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(
             [Bind(Include = "Id,PageFourId,Name,DateOfBirth,Relationship,Notes,CreatedDateTime")] NonFinancialDependants
                 nonFinancialDependants)
@@ -106,12 +107,12 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return HttpNotFound();
             }
-            return View(nonFinancialDependants);
+            return PartialView("Partials/_NonFinancialDependantDelete", nonFinancialDependants);
         }
 
         // POST: NonFinancialDependants/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [AjaxValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(long id)
         {
             var nonFinancialDependants = await db.NonFinancialDependantses.FindAsync(id);
