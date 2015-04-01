@@ -39,7 +39,7 @@
                 @Html.DisplayFor(modelItem => item.RepaymentDate)
             </td>
             <td>
-                @Html.ActionLink("Edit", null, null, new {id = item.Id}, new {@id = "be_" + item.Id, @class = "breakdownEditButton"}) |
+                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "be_" + item.Id, @class = "breakdownEditButton" }) |
                 @Html.ActionLink("Delete", null, null, new {id = item.Id}, new {@id = "bd_" + item.Id, @class = "breakdownDeleteButton"})
             </td>
         </tr>

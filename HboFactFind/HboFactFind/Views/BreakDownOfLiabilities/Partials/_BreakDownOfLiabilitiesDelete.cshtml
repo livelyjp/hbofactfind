@@ -64,7 +64,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-        $(".btn.deleteLink").on("click", function (e) {
+        $(".btn.deleteBreakdownLink").on("click", function (e) {
             var frm = $(".deleteBreakdownForm");
             var token = $('input[name="__RequestVerificationToken"]', frm).val();
             $.ajax({
@@ -81,7 +81,7 @@
             });
         });
 
-        $(".financialDepdnantDeleteButton").on("click", function (e) {
+        $(".breakdownDeleteButton").on("click", function (e) {
             e.preventDefault();
 
             var elementId = e.currentTarget.id.replace("bd_", "");
