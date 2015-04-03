@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using HboFactFind.Domain.AbstractEntities;
 using HboFactFind.Domain.Pages;
@@ -20,6 +21,8 @@ namespace HboFactFind.Domain
         public virtual User User { get; set; }
 
         [Column(TypeName = "DateTime2")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         [DisplayName("Date Of Completion")]
         public DateTime? CompletionDateTime { get; set; }
 

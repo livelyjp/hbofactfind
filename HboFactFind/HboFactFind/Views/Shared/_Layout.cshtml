@@ -7,6 +7,14 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/jquery")
+        <script type="text/javascript">
+    $(function () {
+        $.validator.methods.date = function (value, element) {
+            Globalize.culture("en-GB");
+            return this.optional(element) || Globalize.parseDate(value) !== null;
+        }
+    });
+        </script>
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top">

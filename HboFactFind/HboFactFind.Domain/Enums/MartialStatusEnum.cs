@@ -6,6 +6,8 @@
         Married,
         Widowed,
         Divorced,
-        CoHabiting
+        CoHabiting,
+        CivilPartership,
+        Seperated
     }
 }
