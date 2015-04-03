@@ -138,3 +138,22 @@ textarea.form-control {
         width: 80% !important;
     }
   }
+
+   /*
+    * Print CSS
+   */
+
+.pageBreak {
+    page-break-before: always;
+    page-break-inside: avoid;
+}
+
+@media print {
+    @page {
+        size: 330mm 427mm;
+        margin: 14mm;
+    }
+    .container {
+        width: 2170px;
+    }
+}

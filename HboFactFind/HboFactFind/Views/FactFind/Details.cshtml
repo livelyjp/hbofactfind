@@ -8,55 +8,55 @@
     <div class="dl-horizontal">
 
         @Html.Partial("Partial/_DetailsFactFind", Model)
-        <h4>Core Details</h4>
+        <h4 class="pageBreak">Core Details</h4>
         <div class="dl-horizontal">
             @Html.Partial("Partial/_DetailsPageOne", Model.PageOne)
             </div>
-            <h4>Employment Details</h4>
+        <h4 class="pageBreak">Employment Details</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageTwo", Model.PageTwo)
             </div>
 
-            <h4>Professional Advisers</h4>
+        <h4 class="pageBreak">Professional Advisers</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageThree", Model.PageThree)
             </div>
 
 
-            <h4>Dependants</h4>
+        <h4 class="pageBreak">Dependants</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageFour", Model.PageFour)
             </div>
 
-            <h4>Income</h4>
+        <h4 class="pageBreak">Income</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageFive", Model.PageFive)
             </div>
 
-            <h4>Expenditure</h4>
+        <h4 class="pageBreak">Expenditure</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageSix", Model.PageSix)
             </div>
 
-            <h4>Assets & Liabilities</h4>
+        <h4 class="pageBreak">Assets & Liabilities</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageSeven", Model.PageSeven)
             </div>
 
-            <h4>Emergency Fund</h4>
+        <h4 class="pageBreak">Emergency Fund</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageEight", Model.PageEight)
             </div>
-            <h4>Financial Priorities</h4>
+        <h4 class="pageBreak">Financial Priorities</h4>
             <div class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageNine", Model.PageNine)
             </div>
 
-            <h4>Existing Plans</h4>
+        <h4 class="pageBreak">Existing Plans</h4>
             <dl class="dl-horizontal">
                 @Html.Partial("Partial/_DetailsPageTen", Model.PageTen)
             </dl>
-            <div class="col-xs-12" style="text-align: center">
+            <div class="col-xs-12 hidden-print" style="text-align: center">
                 <p>
                     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
                     @Html.ActionLink("Back to List", "Index")
