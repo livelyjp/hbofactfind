@@ -27,7 +27,11 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var pageTen = await _db.PageTens.FindAsync(id);
+            var pageTen = await _db.PageTens
+                .Include(x => x.ProtectionAndInsurancePolicies)
+                .Include(x => x.PensionPolicieses)
+                .Include(x => x.SavingsAndInvestmentPolicieses)
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (pageTen == null)
             {
                 return HttpNotFound();
@@ -49,7 +53,10 @@ namespace HboFactFind.Controllers
                 return HttpNotFound();
             }
 
-            var page = await _db.PageTens.FirstAsync(x => x.Id == factFind.PageTenId);
+            var page = await _db.PageTens.Include(x => x.ProtectionAndInsurancePolicies)
+                .Include(x => x.PensionPolicieses)
+                .Include(x => x.SavingsAndInvestmentPolicieses)
+                .FirstOrDefaultAsync(x => x.Id == factFind.PageTenId);
 
             if (page == null)
             {
@@ -86,7 +93,10 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var pageTen = await _db.PageTens.FindAsync(id);
+            var pageTen = await _db.PageTens.Include(x => x.ProtectionAndInsurancePolicies)
+                .Include(x => x.PensionPolicieses)
+                .Include(x => x.SavingsAndInvestmentPolicieses)
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (pageTen == null)
             {
                 return HttpNotFound();

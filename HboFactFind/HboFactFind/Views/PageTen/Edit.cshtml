@@ -1,11 +1,12 @@
-﻿@model HboFactFind.Domain.Pages.PageTen
+﻿@using HboFactFind.Domain.Questions.Dependants
+@using HboFactFind.Domain.Questions.ExistingPlans
+@model HboFactFind.Domain.Pages.PageTen
 
 @{
     ViewBag.Title = "Edit";
 }
 
 <h2>Edit</h2>
-
 
 @using (Html.BeginForm())
 {
@@ -16,6 +17,28 @@
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
         @Html.HiddenFor(model => model.Id)
 
+        <div class="hboDetailRowNoBorder row">
+            <h4>Protection & General Insurance Policies</h4>
+            <div class="col-xs-12">
+                @Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionEditIndex.cshtml", Model.ProtectionAndInsurancePolicies)
+            </div>
+        </div>
+
+        <div class="hboDetailRowNoBorder row">
+            <h4>Pension Policies ( Including Money Purchase Occupational Schemes)</h4>
+            <div class="col-xs-12">
+                @Html.Partial("~/Views/PensionPolicies/Partials/_PensionIndexEdit.cshtml", Model.PensionPolicieses)
+            </div>
+        </div>
+
+
+        <div class="hboDetailRowNoBorder row">
+            <h4>Savings & Investment Policies</h4>
+            <div class="col-xs-12">
+                @Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsIndexEdit.cshtml", Model.SavingsAndInvestmentPolicieses)
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="hboDetailRow row">
                 <div class="col-xs-12">
@@ -24,13 +47,14 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12">
-                            @Html.EditorFor(model => model.Notes, new {htmlAttributes = new {@class = "form-control"}})
-                            @Html.ValidationMessageFor(model => model.Notes, "", new {@class = "text-danger"})
+                            @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <div class="form-group">
             <div class="buttonPanel col-xs-12">
@@ -39,6 +63,39 @@
         </div>
     </div>
 }
+
+@Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionCreate.cshtml", new ProtectionAndInsurancePolicies { PageTenId = Model.Id })
+@Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionEdit.cshtml", new ProtectionAndInsurancePolicies())
+@Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionDelete.cshtml", new ProtectionAndInsurancePolicies())
+
+@Html.Partial("~/Views/PensionPolicies/Partials/_PensionCreate.cshtml", new PensionPolicies { PageTenId = Model.Id })
+@Html.Partial("~/Views/PensionPolicies/Partials/_PensionEdit.cshtml", new PensionPolicies())
+@Html.Partial("~/Views/PensionPolicies/Partials/_PensionDelete.cshtml", new PensionPolicies())
+
+@Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsCreate.cshtml", new SavingsAndInvestmentPolicies { PageTenId = Model.Id })
+@Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsEdit.cshtml", new SavingsAndInvestmentPolicies())
+@Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsDelete.cshtml", new SavingsAndInvestmentPolicies())
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#createProtectionDialog").hide();
+        $("#editProtectionDialog").hide();
+        $("#deleteProtectionDialog").hide();
+        $("#createPensionDialog").hide();
+        $("#editPensionDialog").hide();
+        $("#deletePensionDialog").hide();
+        $("#createSavingsDialog").hide();
+        $("#editSavingsDialog").hide();
+        $("#deleteSavingsDialog").hide();
+
+        $(window).resize(function () {
+            $("#dialog").dialog("option", "position", "center");
+        });
+    });
+
+</script>
 
 <div class="factFindEditReturnButton">
     @Html.ActionLink("Back to List", "Index", "FactFind")

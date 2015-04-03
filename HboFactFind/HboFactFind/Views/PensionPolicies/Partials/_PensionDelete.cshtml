@@ -115,7 +115,7 @@
         $(".pensionDeleteButton").on("click", function (e) {
             e.preventDefault();
 
-            var elementId = e.currentTarget.id.replace("ppd_", "");
+            var elementId = e.currentTarget.id.replace("pd_", "");
 
             $.ajax({
                 url: "/PensionPolicies/Delete",

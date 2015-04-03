@@ -3,7 +3,7 @@
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/jqueryval")
 
-<div id="editProtectionDialog" title="Edit Financial Dependant">
+<div id="editProtectionDialog" title="Edit Protection & General Insurance Policy">
 
     <div class="modal-body col-xs-12">
         @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "editProtectionForm", id = "__AjaxAntiForgeryForm" }))
@@ -72,14 +72,6 @@
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.CICCover, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.CICCover, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.PageTenId, "PageTenId", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.DropDownList("PageTenId", null, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.PageTenId, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
@@ -163,7 +155,7 @@
             var next = JSON.stringify(o);
 
             $.ajax({
-                url: "/editProtectionDialog/Edit",
+                url: "/ProtectionAndInsurancePolicies/Edit",
                 type: 'POST',
                 contentType: "application/json; charset=utf-8",
                 datatype: "html",
@@ -183,13 +175,13 @@
             var elementId = e.currentTarget.id.replace("ppe_", "");
 
             $.ajax({
-                url: "/editProtectionDialog/Edit",
+                url: "/ProtectionAndInsurancePolicies/Edit",
                 type: 'GET',
                 cache: false,
                 data: { id: elementId }
             }).done(function (result) {
-                $('#editDialog').html(result);
-                $("#editDialog").dialog();
+                $('#editProtectionDialog').html(result);
+                $("#editProtectionDialog").dialog();
             });
         });
     });

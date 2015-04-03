@@ -1,5 +1,28 @@
 ﻿@model HboFactFind.Domain.Pages.PageTen
 
+<div class="hboDetailRowNoBorder row">
+    <h4>Protection & General Insurance Policies</h4>
+    <div class="col-xs-12">
+        @Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionIndex.cshtml", Model.ProtectionAndInsurancePolicies)
+    </div>
+</div>
+
+
+<div class="hboDetailRowNoBorder row">
+    <h4>Pension Policies ( Including Money Purchase Occupational Schemes)</h4>
+    <div class="col-xs-12">
+        @Html.Partial("~/Views/PensionPolicies/Partials/_PensionIndex.cshtml", Model.PensionPolicieses)
+    </div>
+</div>
+
+
+<div class="hboDetailRowNoBorder row">
+    <h4>Savings & Investment Policies</h4>
+    <div class="col-xs-12">
+        @Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsIndex.cshtml", Model.SavingsAndInvestmentPolicieses)
+    </div>
+</div>
+
 <div class="hboDetailRow row">
     <div class="col-xs-12">
         <div class="headerStyle col-xs-12 col-sm-4">

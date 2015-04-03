@@ -57,7 +57,11 @@ namespace HboFactFind.Services
                 .Include(x => x.PageSeven)
                 .Include(x => x.PageEight)
                 .Include(x => x.PageNine)
-                .Include(x => x.PageTen).FirstOrDefaultAsync(x => x.Id == (id));
+                .Include(x => x.PageTen)
+                .Include(x => x.PageTen.ProtectionAndInsurancePolicies)
+                .Include(x => x.PageTen.PensionPolicieses)
+                .Include(x => x.PageTen.SavingsAndInvestmentPolicieses)
+                .FirstOrDefaultAsync(x => x.Id == (id));
 
             return factFind;
         }

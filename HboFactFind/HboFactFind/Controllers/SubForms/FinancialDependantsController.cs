@@ -40,12 +40,6 @@ namespace HboFactFind.Controllers.SubForms
             return View();
         }
 
-        [AjaxValidateAntiForgeryToken]
-        public ActionResult Test(FinancialDependant financialDependant)
-        {
-            return Json("hello", JsonRequestBehavior.AllowGet);
-        }
-
         // POST: FinancialDependants/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

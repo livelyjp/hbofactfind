@@ -75,7 +75,8 @@ namespace HboFactFind.Controllers.SubForms
                 return HttpNotFound();
             }
             ViewBag.PageTenId = new SelectList(_db.PageTens, "Id", "Notes", pensionPolicies.PageTenId);
-            return View(pensionPolicies);
+            return PartialView("Partials/_PensionEdit", pensionPolicies);
+
         }
 
         // POST: PensionPolicies/Edit/5
@@ -111,7 +112,7 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return HttpNotFound();
             }
-            return View(pensionPolicies);
+            return PartialView("Partials/_PensionDelete", pensionPolicies);
         }
 
         // POST: PensionPolicies/Delete/5

@@ -75,7 +75,8 @@ namespace HboFactFind.Controllers.SubForms
                 return HttpNotFound();
             }
             ViewBag.PageTenId = new SelectList(_db.PageTens, "Id", "Notes", savingsAndInvestmentPolicies.PageTenId);
-            return View(savingsAndInvestmentPolicies);
+            return PartialView("Partials/_SavingsEdit", savingsAndInvestmentPolicies);
+
         }
 
         // POST: SavingsAndInvestmentPolicies/Edit/5
@@ -111,7 +112,7 @@ namespace HboFactFind.Controllers.SubForms
             {
                 return HttpNotFound();
             }
-            return View(savingsAndInvestmentPolicies);
+            return PartialView("Partials/_SavingsDelete", savingsAndInvestmentPolicies);
         }
 
         // POST: SavingsAndInvestmentPolicies/Delete/5

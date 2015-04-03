@@ -69,8 +69,8 @@
                 @Html.DisplayFor(modelItem => item.InForce)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
-                @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "pe_" + item.Id, @class = "pensionEditButton" }) |
+                @Html.ActionLink("Delete", null, null, new { id = item.Id }, new { @id = "pd_" + item.Id, @class = "pensionDeleteButton" })
             </td>
         </tr>
     }
