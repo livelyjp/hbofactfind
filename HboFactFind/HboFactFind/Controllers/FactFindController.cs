@@ -8,8 +8,6 @@ using HboFactFind.Attributes;
 using HboFactFind.Domain;
 using HboFactFind.EF;
 using HboFactFind.Services;
-using MvcRazorToPdf;
-using Rotativa.Options;
 
 namespace HboFactFind.Controllers
 {
@@ -164,12 +162,7 @@ namespace HboFactFind.Controllers
             {
                 return HttpNotFound();
             }
-            return new Rotativa.ViewAsPdf("Details", factFind)
-            {
-                FileName = "TestViewAsPdf.pdf",
-                PageSize = Size.A4,
-                CustomSwitches = "--disable-smart-shrinking --print-media-type"
-            };
+            return null;
         }
     }
 }
