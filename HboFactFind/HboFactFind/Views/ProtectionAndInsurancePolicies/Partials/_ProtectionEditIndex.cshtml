@@ -1,13 +1,7 @@
 ﻿@model IEnumerable<HboFactFind.Domain.Questions.ExistingPlans.ProtectionAndInsurancePolicies>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table protectionTable">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PageTen.Notes)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.GrossPremium)
         </th>
@@ -44,62 +38,69 @@
         <th>
             @Html.DisplayNameFor(model => model.InForce)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDateTime)
-        </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PageTen.Notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GrossPremium)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PremiumFrequency)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Waiver)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InTrust)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Term)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LifeCover)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CICCover)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Owner)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Provider)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PolicyNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductPlanType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InForce)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedDateTime)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GrossPremium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PremiumFrequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Waiver)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InTrust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LifeCover)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CICCover)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPlanType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InForce)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<div class="buttonPanel col-xs-12">
+    <input type="submit" id="addProtectionButton" value="Add Dependant" class="btn addProtectionButton btn-default" />
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(".addProtectionButton").on("click", function (e) {
+            e.preventDefault();
+            $("#createProtectionDialog").dialog();
+        });
+    });
+
+</script>

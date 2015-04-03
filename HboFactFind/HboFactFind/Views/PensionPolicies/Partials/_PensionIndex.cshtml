@@ -1,13 +1,7 @@
 ﻿@model IEnumerable<HboFactFind.Domain.Questions.ExistingPlans.PensionPolicies>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table pensionTable">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PageTen.Notes)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Contribution)
         </th>
@@ -38,56 +32,42 @@
         <th>
             @Html.DisplayNameFor(model => model.InForce)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDateTime)
-        </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PageTen.Notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Contribution)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Frequency)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pci)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdditionalLifeCover)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastValuation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Owner)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Provider)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PolicyNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductPlanType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InForce)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedDateTime)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contribution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pci)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalLifeCover)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastValuation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPlanType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InForce)
+            </td>
+        </tr>
+    }
 
 </table>
