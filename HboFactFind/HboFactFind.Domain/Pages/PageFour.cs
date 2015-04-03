@@ -13,7 +13,7 @@ namespace HboFactFind.Domain.Pages
             NonFinancialDependantses = new List<NonFinancialDependants>();
         }
 
-        [DisplayName("Any Financial Dependants?")]
+        [DisplayName("Do You Have Any Financial Dependants?")]
         public bool AnyFinancialDependants { get; set; }
         public virtual List<FinancialDependant> FinancialDependants { get; set; }
         public virtual List<NonFinancialDependants> NonFinancialDependantses { get; set; }

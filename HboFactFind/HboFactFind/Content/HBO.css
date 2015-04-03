@@ -27,6 +27,7 @@ a.blueButton {
 textarea.form-control {
     max-width: inherit;
     width: 100%;
+    min-height: 150px;
 }
 
 /*

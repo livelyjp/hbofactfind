@@ -37,14 +37,23 @@ namespace HboFactFind.Domain.Pages
         [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
 
+        [Range(0, 5)]
         public int ClientTwoPersonalProtectionPriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoPensionPlanningPriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoOptionsAtRetirementPriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoSavingsAndInvestmentsPriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoEstatePlanningPriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoMortgageNeedsPriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoEquityReleasePriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoLongTermCarePriority { get; set; }
+        [Range(0, 5)]
         public int ClientTwoGeneralInsuranceNeedsPriority { get; set; }
     }
 }

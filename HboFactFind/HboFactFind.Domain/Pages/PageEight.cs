@@ -6,7 +6,7 @@ namespace HboFactFind.Domain.Pages
 {
     public class PageEight : Page
     {
-        [DisplayName("How Much Emergancy Fund Do You Require")]
+        [DisplayName("How Much Emergancy Fund Do You Require?*")]
         public string ClientOneRequiredEmergancyFund { get; set; }
         [DisplayName("Details Of Planned Expenditure")]
         public string ClientOnePlannedExpenditure { get; set; }

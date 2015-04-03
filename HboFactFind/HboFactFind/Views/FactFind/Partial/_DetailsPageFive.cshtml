@@ -152,75 +152,82 @@
 
 
 <div class="hboDetailRow row">
-    <div class="col-xs-12">
-        <div class="headerStyle col-xs-12 col-sm-4">
-            @Html.DisplayNameFor(model => model.ClientOneTaxRate)
-        </div>
-        <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientOneTaxRate)
+    
+</div>
+
+    <div class="hboDetailRow row">
+        <div class="col-xs-12">
+            <div class="headerStyle col-xs-12 col-sm-4">
+                @Html.DisplayNameFor(model => model.ClientOneTaxRate)
             </div>
-            <div class="bottomTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientTwoTaxRate)
+            <div class="fieldStyle col-xs-12 col-sm-8">
+                <div class="topTFStyle col-xs-12 col-sm-6">
+                    @Html.DisplayFor(model => model.ClientOneTaxRate)
+                </div>
+                <div class="bottomTFStyle col-xs-12 col-sm-6">
+                    @Html.DisplayFor(model => model.ClientTwoTaxRate)
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+
+    <div class="hboDetailRow row">
+        <div class="col-xs-12">
+            <div class="headerStyle col-xs-12 col-sm-4">
+                @Html.DisplayNameFor(model => model.ClientOneAnyChangesToIncome)
+            </div>
+            <div class="fieldStyle col-xs-12 col-sm-8">
+                <div class="topTFStyle col-xs-12 col-sm-6">
+                    @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, true) Yes
+                    @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, false) No
+                </div>
+                <div class="bottomTFStyle col-xs-12 col-sm-6">
+                    @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, true) Yes
+                    @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, false) No
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hboDetailRow row">
+        <div class="col-xs-12">
+            <div class="headerStyle col-xs-12 col-sm-4">
+                @Html.DisplayNameFor(model => model.ClientOneAnyChangesToTax)
+            </div>
+            <div class="fieldStyle col-xs-12 col-sm-8">
+                <div class="topTFStyle col-xs-12 col-sm-6">
+                    @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, true) Yes
+                    @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, false) No
+                </div>
+                <div class="bottomTFStyle col-xs-12 col-sm-6">
+                    @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, true) Yes
+                    @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, false) No
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="hboDetailRow row">
-    <div class="col-xs-12">
-        <div class="headerStyle col-xs-12 col-sm-4">
-            @Html.DisplayNameFor(model => model.ClientOneAnyChangesToIncome)
-        </div>
-        <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12 col-sm-6">
-                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, true) Yes
-                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, false) No
-            </div>
-            <div class="bottomTFStyle col-xs-12 col-sm-6">
-                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, true) Yes
-                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, false) No
-            </div>
-        </div>
-    </div>
-</div>
 
+</div>
 
 <div class="hboDetailRow row">
-    <div class="col-xs-12">
-        <div class="headerStyle col-xs-12 col-sm-4">
-            @Html.DisplayNameFor(model => model.ClientOneAnyChangesToTax)
-        </div>
-        <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12 col-sm-6">
-                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, true) Yes
-                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, false) No
+        <div class="col-xs-12">
+            <div class="headerStyle col-xs-12 col-sm-4">
+                @Html.DisplayNameFor(model => model.IncomeNotes)
             </div>
-            <div class="bottomTFStyle col-xs-12 col-sm-6">
-                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, true) Yes
-                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, false) No
+            <div class="fieldStyle col-xs-12 col-sm-8">
+                <div class="topTFStyle col-xs-12">
+                    @Html.DisplayFor(model => model.IncomeNotes)
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-
-<div class="hboDetailRow row">
-    <div class="col-xs-12">
-        <div class="headerStyle col-xs-12 col-sm-4">
-            @Html.DisplayNameFor(model => model.IncomeNotes)
-        </div>
-        <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12">
-                @Html.DisplayFor(model => model.IncomeNotes)
-            </div>
-        </div>
+    <div class="col-xs-12" style="text-align: center">
+        <p>
+            @Html.ActionLink("Edit", "PageFive", new { id = Model.Id })
+        </p>
     </div>
-</div>
-
-<div class="col-xs-12" style="text-align: center">
-    <p>
-        @Html.ActionLink("Edit", "PageFive", new { id = Model.Id })
-    </p>
-</div>

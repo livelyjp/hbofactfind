@@ -21,7 +21,20 @@
 
     @Html.ValidationSummary(true, "", new {@class = "text-danger"})
     @Html.HiddenFor(model => model.Id)
-
+        <div class="hboDetailRow row">
+            <div class="col-xs-12">
+                <div class="headerStyle col-xs-12 col-sm-4">
+                </div>
+                <div class="columnTitle col-xs-12 col-sm-8">
+                    <div class="col-xs-12 col-sm-6">
+                        <strong>Client One</strong>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <strong>Client Two</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="form-group">
         <div class="hboDetailRow row">
             <div class="col-xs-12">
@@ -221,7 +234,9 @@
             </div>
         </div>
     </div>
+        <div class="hboDetailRow row">
 
+        </div>
     <div class="form-group">
         <div class="hboDetailRowNoBorder row">
             <div class="col-xs-12">
@@ -245,7 +260,20 @@
     <div class="hboDetailRowNoBorder row">
         <h4>Summary Of Liabilities</h4>
     </div>
-
+        <div class="hboDetailRow row">
+            <div class="col-xs-12">
+                <div class="headerStyle col-xs-12 col-sm-4">
+                </div>
+                <div class="columnTitle col-xs-12 col-sm-8">
+                    <div class="col-xs-12 col-sm-6">
+                        <strong>Client One</strong>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <strong>Client Two</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="form-group">
         <div class="hboDetailRow row">
             <div class="col-xs-12">
@@ -365,57 +393,57 @@
             </div>
         </div>
     </div>
-
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneTotalDebt)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneTotalDebt, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientOneTotalDebt, "", new {@class = "text-danger"})
-                    </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoTotalDebt, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientTwoTotalDebt, "", new {@class = "text-danger"})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="hboDetailRowNoBorder row">
-        <h4>Breakdown of Liabilities</h4>
-        <div class="col-xs-12">
-            @Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesIndexEdit.cshtml", Model.BreakDownOfLiabilitieses)
-        </div>
-    </div>
-
-
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.AssetsNotes)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12">
-                        @Html.EditorFor(model => model.AssetsNotes, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.AssetsNotes, "", new {@class = "text-danger"})
+    <div class="hboDetailRow row"></div>
+            <div class="form-group">
+                <div class="hboDetailRow row">
+                    <div class="col-xs-12">
+                        <div class="headerStyle col-xs-12 col-sm-4">
+                            @Html.LabelFor(model => model.ClientOneTotalDebt)
+                        </div>
+                        <div class="fieldStyle col-xs-12 col-sm-8">
+                            <div class="topTFStyle col-xs-12 col-sm-6">
+                                @Html.EditorFor(model => model.ClientOneTotalDebt, new {htmlAttributes = new {@class = "form-control"}})
+                                @Html.ValidationMessageFor(model => model.ClientOneTotalDebt, "", new {@class = "text-danger"})
+                            </div>
+                            <div class="bottomTFStyle col-xs-12 col-sm-6">
+                                @Html.EditorFor(model => model.ClientTwoTotalDebt, new {htmlAttributes = new {@class = "form-control"}})
+                                @Html.ValidationMessageFor(model => model.ClientTwoTotalDebt, "", new {@class = "text-danger"})
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="form-group">
-        <div class="buttonPanel col-xs-12">
-            <input type="submit" value="Save" class="btn btn-default"/>
+            <div class="hboDetailRowNoBorder row">
+                <h4>Breakdown of Liabilities</h4>
+                <div class="col-xs-12">
+                    @Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesIndexEdit.cshtml", Model.BreakDownOfLiabilitieses)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="hboDetailRow row">
+                    <div class="col-xs-12">
+                        <div class="headerStyle col-xs-12 col-sm-4">
+                            @Html.LabelFor(model => model.AssetsNotes)
+                        </div>
+                        <div class="fieldStyle col-xs-12 col-sm-8">
+                            <div class="topTFStyle col-xs-12">
+                                @Html.EditorFor(model => model.AssetsNotes, new {htmlAttributes = new {@class = "form-control", placeholder="*Please provide details of other lending or other relevant information"}})
+                                @Html.ValidationMessageFor(model => model.AssetsNotes, "", new {@class = "text-danger"})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="buttonPanel col-xs-12">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
 }
 
 @Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesCreate.cshtml", new BreakDownOfLiabilities { PageSevenId = Model.Id })
