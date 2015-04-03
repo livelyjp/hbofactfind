@@ -244,11 +244,11 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientOneDateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.ClientOneDateOfBirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
                             @Html.ValidationMessageFor(model => model.ClientOneDateOfBirth, "", new { @class = "text-danger" })
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientTwoDateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.ClientTwoDateOfBirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
                             @Html.ValidationMessageFor(model => model.ClientTwoDateOfBirth, "", new { @class = "text-danger" })
                         </div>
                     </div>

@@ -43,6 +43,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Mobile Telephone")]
         public string ClientOneMobileTelephone { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [DisplayName("Date Of Birth")]
         [Column(TypeName = "DateTime2")]
         public DateTime ClientOneDateOfBirth { get; set; }
@@ -53,12 +54,13 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Marital Status")]
         public MartialStatusEnum ClientOneMartialStatus { get; set; }
 
-        [DisplayName("Good Health?")]
+        [DisplayName("Are You In Good Health?")]
         public bool ClientOneGoodHealth { get; set; }
 
         [DisplayName("Smoked In The Last 12 Months?")]
         public bool ClientOneSmoked { get; set; }
 
+        [RegularExpression(@"^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$", ErrorMessage = "National Insurance Number Should Be Informat AA NN NN NN A")]
         [DisplayName("National Insurance Number")]
         public string ClientOneNationalInsuranceNumber { get; set; }
 
@@ -114,6 +116,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Client Two Mobile Telephone")]
         public string ClientTwoMobileTelephone { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Column(TypeName = "DateTime2")]
         [DisplayName("Client Two Date Of Birth")]
         public DateTime ClientTwoDateOfBirth { get; set; }

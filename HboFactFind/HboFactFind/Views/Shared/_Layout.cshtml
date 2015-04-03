@@ -57,6 +57,11 @@
         </div>
 
         @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript">
+            $('.datepicker').datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+    </script>
         @RenderSection("scripts", false)
     </body>
 </html>

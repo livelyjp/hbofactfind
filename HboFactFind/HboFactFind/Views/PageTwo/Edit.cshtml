@@ -85,11 +85,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneEmploymentStartDate, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.EditorFor(model => model.ClientOneEmploymentStartDate, new {htmlAttributes = new {@class = "form-control datepicker"}})
                         @Html.ValidationMessageFor(model => model.ClientOneEmploymentStartDate, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoEmploymentStartDate, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.EditorFor(model => model.ClientTwoEmploymentStartDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
                         @Html.ValidationMessageFor(model => model.ClientTwoEmploymentStartDate, "", new {@class = "text-danger"})
                     </div>
                 </div>
