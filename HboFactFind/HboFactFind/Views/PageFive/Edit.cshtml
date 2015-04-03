@@ -205,13 +205,15 @@
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.ClientOneAnyChangesToIncome)
+                            @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, true) Yes
+                            @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, false) No
                             @Html.ValidationMessageFor(model => model.ClientOneAnyChangesToIncome, "", new {@class = "text-danger"})
                         </div>
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.ClientTwoAnyChangesToIncome)
+                            @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, true) Yes
+                            @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, false) No
                             @Html.ValidationMessageFor(model => model.ClientTwoAnyChangesToIncome, "", new {@class = "text-danger"})
                         </div>
                     </div>
@@ -229,13 +231,15 @@
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.ClientOneAnyChangesToTax)
+                            @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, true) Yes
+                            @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, false) No
                             @Html.ValidationMessageFor(model => model.ClientOneAnyChangesToTax, "", new {@class = "text-danger"})
                         </div>
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.ClientTwoAnyChangesToTax)
+                            @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, true) Yes
+                            @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, false) No
                             @Html.ValidationMessageFor(model => model.ClientTwoAnyChangesToTax, "", new {@class = "text-danger"})
                         </div>
                     </div>

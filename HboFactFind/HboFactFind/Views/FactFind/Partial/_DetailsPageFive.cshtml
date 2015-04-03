@@ -175,10 +175,12 @@
         </div>
         <div class="fieldStyle col-xs-12 col-sm-8">
             <div class="topTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientOneAnyChangesToIncome)
+                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, true) Yes
+                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToIncome, false) No
             </div>
             <div class="bottomTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientTwoAnyChangesToIncome)
+                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, true) Yes
+                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToIncome, false) No
             </div>
         </div>
     </div>
@@ -192,10 +194,12 @@
         </div>
         <div class="fieldStyle col-xs-12 col-sm-8">
             <div class="topTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientOneAnyChangesToTax)
+                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, true) Yes
+                @Html.RadioButtonFor(model => model.ClientOneAnyChangesToTax, false) No
             </div>
             <div class="bottomTFStyle col-xs-12 col-sm-6">
-                @Html.DisplayFor(model => model.ClientTwoAnyChangesToTax)
+                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, true) Yes
+                @Html.RadioButtonFor(model => model.ClientTwoAnyChangesToTax, false) No
             </div>
         </div>
     </div>

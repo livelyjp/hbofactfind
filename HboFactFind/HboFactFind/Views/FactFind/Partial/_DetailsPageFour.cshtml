@@ -7,7 +7,8 @@
         </div>
         <div class="fieldStyle col-xs-12 col-sm-6">
             <div class="topTFStyle col-xs-12">
-                @Html.DisplayFor(model => model.AnyFinancialDependants)
+                @Html.RadioButtonFor(model => model.AnyFinancialDependants, true) Yes
+                @Html.RadioButtonFor(model => model.AnyFinancialDependants, false) No
             </div>
         </div>
     </div>

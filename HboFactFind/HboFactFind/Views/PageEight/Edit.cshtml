@@ -65,13 +65,15 @@
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
                             <div class="checkbox">
-                                @Html.EditorFor(model => model.ClientOneMadeAWill)
+                                @Html.RadioButtonFor(model => model.ClientOneMadeAWill, true) Yes
+                                @Html.RadioButtonFor(model => model.ClientOneMadeAWill, false) No
                                 @Html.ValidationMessageFor(model => model.ClientOneMadeAWill, "", new {@class = "text-danger"})
                             </div>
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
                             <div class="checkbox">
-                                @Html.EditorFor(model => model.ClientTwoMadeAWill)
+                                @Html.RadioButtonFor(model => model.ClientTwoMadeAWill, true) Yes
+                                @Html.RadioButtonFor(model => model.ClientTwoMadeAWill, false) No
                                 @Html.ValidationMessageFor(model => model.ClientTwoMadeAWill, "", new {@class = "text-danger"})
                             </div>
                         </div>
