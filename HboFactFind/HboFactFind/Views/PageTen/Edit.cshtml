@@ -10,7 +10,8 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Existing Plans</h4>
+        <h3>Existing Plans</h3>
+        @Html.Partial("_EditNavigationBar", Model.Id)
         <div class="hboDetailRowNoBorder row">
             <strong>For employer benefits please include these where possible in the following tables (for PHI these need to be included in the notes section) with the owner as employer, where plan types such as DIS - death in service, FS - Final Salary Scheme</strong>
         </div>
@@ -102,7 +103,6 @@
 </script>
 
 <div class="factFindEditReturnButton">
-    @Html.ActionLink("Back to List", "Index", "FactFind")
 </div>
 
 @section Scripts {

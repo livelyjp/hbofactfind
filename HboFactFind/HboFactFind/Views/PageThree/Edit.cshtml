@@ -9,7 +9,8 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Professional Advisers</h4>
+        <h3>Professional Advisers</h3>
+        @Html.Partial("_EditNavigationBar", Model.Id)
         <div class="hboDetailRowNoBorder row">
             <div class="col-xs-12">
                 <strong>Please Provide Details Of Other Professional Advisers e.g. Solicitors & Accountants</strong>
@@ -100,7 +101,6 @@
 }
 
 <div class="factFindEditReturnButton">
-    @Html.ActionLink("Back to List", "Index", "FactFind")
 </div>
 
 @section Scripts {

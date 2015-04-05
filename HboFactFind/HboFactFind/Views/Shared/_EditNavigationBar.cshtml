@@ -1,0 +1,37 @@
+﻿@model Int64
+<div class="navbar navbar-inverse hboEditNavigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li>
+                @Html.ActionLink("Core Details", "Edit", "PageOne", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Employment", "Edit", "PageTwo", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Advisers", "Edit", "PageThree", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Dependants", "Edit", "PageFour", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Income", "Edit", "PageFive", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Expenditure", "Edit", "PageSix", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Assets & Liabilities", "Edit", "PageSeven", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Emergancy Fund", "Edit", "PageEight", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Priorities", "Edit", "PageNine", null, new { @id = Model })
+            </li>
+            <li>
+                @Html.ActionLink("Exising Plans", "Edit", "PageTen", null, new { @id = Model })
+            </li>
+        </ul>
+    </div>
+</div>  

@@ -9,7 +9,8 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-    <h4>Employment Details</h4>
+    <h3>Employment Details</h3>
+        @Html.Partial("_EditNavigationBar", Model.Id)
     @Html.ValidationSummary(true, "", new {@class = "text-danger"})
     @Html.HiddenFor(model => model.Id)
         <div class="hboDetailRow row">
@@ -136,7 +137,6 @@
 }
 
 <div class="factFindEditReturnButton">
-    @Html.ActionLink("Back to List", "Index", "FactFind")
 </div>
 
 @section Scripts {

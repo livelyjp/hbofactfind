@@ -365,6 +365,7 @@
     <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsEdit.cshtml" />
     <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsIndex.cshtml" />
     <Content Include="Views\SavingsAndInvestmentPolicies\Partials\_SavingsIndexEdit.cshtml" />
+    <Content Include="Views\Shared\_EditNavigationBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
