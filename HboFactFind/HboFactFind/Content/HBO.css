@@ -8,6 +8,12 @@
 
 h1, h2, h3, h4, h5 { color: #101052; }
 
+h3 {
+    background-color: #43A9D1;
+    color: white;
+    padding: 10px;
+}
+
 h4 {
     background-color: #101052;
     color: white;
@@ -100,13 +106,6 @@ textarea.form-control {
     padding: 7px 7px 0;
 }
 
-/*.topTFStyle, .bottomTFStyle {
-    padding: 14px;
-}*/
-
-
-
-
 .headerStyle {
     font-weight: bold;
     min-height: 49px;
@@ -133,6 +132,24 @@ textarea.form-control {
     margin-bottom: 0;
 }
 
+.hboEditNavigation {
+    text-align: center;
+    margin-top: -10px;
+    border-radius: 0;
+}
+
+.hboEditNavigation ul li {
+    text-align: center;
+}
+
+.hboEditNavigation ul li a{
+    text-align: center;
+}
+
+.hboEditNavigation ul li a:hover{
+       border-bottom: 5px solid #43A9D1;
+    padding-bottom: 10px;
+}
 /*
     Model Popups
 */
