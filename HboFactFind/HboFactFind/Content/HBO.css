@@ -30,6 +30,16 @@ textarea.form-control {
     min-height: 150px;
 }
 
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+    background-color: #101052;
+    color: white;
+}
+
+.ui-widget-content a {
+    color: white;
+}
+
+
 /*
     Home Panel
 */
@@ -64,7 +74,7 @@ textarea.form-control {
 
 .hboDetailRow, .hboDetailRowNoBorder {
     clear: both;
-    margin: 7px 40px;
+    margin: 1px 40px 7px;
     min-height: 45px;
 }
 
@@ -89,7 +99,9 @@ textarea.form-control {
     text-align: right;
 }
 
-.fieldStyle { height: 100%; }
+.fieldStyle { height: 100%;
+    padding-top: 0;
+}
 
 .topTFStyle {
     height: 100%;
@@ -100,6 +112,10 @@ textarea.form-control {
 
 @media (max-width: 992px) {
     .headerStyle { text-align: left; }
+}
+
+.form-group {
+    margin-bottom: 0;
 }
 
 /*
@@ -116,12 +132,14 @@ textarea.form-control {
 }
 
 .ui-widget-header {
-    background-color: #101052;
+    background: #101052 no-repeat right top;
     color: white;
     font-size: 18px;
     font-weight: normal;
 }
-
+.modal-footer {
+    text-align: center;
+}
    .ui-dialog {
       min-width: 80%;  
       width: 80% !important;

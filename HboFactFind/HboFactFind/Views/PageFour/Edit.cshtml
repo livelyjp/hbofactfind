@@ -80,7 +80,12 @@
         $("#deleteNonFinanicalDialog").hide();
 
         $(window).resize(function () {
-            $("#dialog").dialog("option", "position", "center");
+            $("#createDialog").dialog("option", "position", "center");
+            $("#editDialog").dialog("option", "position", "center");
+            $("#deleteDialog").dialog("option", "position", "center");
+            $("#createNonFinancialDialog").dialog("option", "position", "center");
+            $("#editNonfinancialDialog").dialog("option", "position", "center");
+            $("#deleteNonFinanicalDialog").dialog("option", "position", "center");
         });
     });
 

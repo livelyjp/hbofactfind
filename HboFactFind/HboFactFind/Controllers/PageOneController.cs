@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using HboFactFind.Attributes;
 using HboFactFind.Domain.Pages;
 using HboFactFind.EF;
+using HboFactFind.Models;
 using HboFactFind.Services;
 
 namespace HboFactFind.Controllers
@@ -54,6 +55,8 @@ namespace HboFactFind.Controllers
             {
                 return HttpNotFound();
             }
+            ViewData["CountriesList"] = new SelectList(CountriesList.CountryList);
+            ViewData["NationalityList"] = new SelectList(NationailtyList.NationatlityList);
             return View(page);
         }
 

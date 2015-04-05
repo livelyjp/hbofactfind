@@ -1,4 +1,7 @@
-﻿@model HboFactFind.Domain.Pages.PageOne
+﻿@using System.Web.Mvc.Html
+@using HboFactFind.Domain.Enums
+@using HboFactFind.HtmlHelpers
+@model HboFactFind.Domain.Pages.PageOne
 
 @{
     ViewBag.Title = "Edit";
@@ -391,12 +394,10 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientOneNationality, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientOneNationality, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientOneNationality", ViewData["NationalityList"] as SelectList, new { @class = "form-control" })
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientTwoNationality, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientTwoNationality, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientTwoNationality", ViewData["NationalityList"] as SelectList, new { @class = "form-control" })
                         </div>
                     </div>
                 </div>
@@ -411,12 +412,10 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientOneCountryOfBirth, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientOneCountryOfBirth, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientOneCountryOfBirth", ViewData["CountriesList"] as SelectList, new { @class = "form-control" })
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientTwoCountryOfBirth, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientTwoCountryOfBirth, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientTwoCountryOfBirth", ViewData["CountriesList"] as SelectList, new { @class = "form-control" })
                         </div>
                     </div>
                 </div>
@@ -431,12 +430,10 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientOneCountryOfResidence, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientOneCountryOfResidence, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientOneCountryOfResidence", ViewData["CountriesList"] as SelectList, new { @class = "form-control" })
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientTwoCountryOfResidence, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientTwoCountryOfResidence, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientTwoCountryOfResidence", ViewData["CountriesList"] as SelectList, new { @class = "form-control" })
                         </div>
                     </div>
                 </div>
@@ -471,12 +468,10 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientOneTaxationResidency, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientOneTaxationResidency, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientOneTaxationResidency", ViewData["CountriesList"] as SelectList, new { @class = "form-control" })
                         </div>
                         <div class="bottomTFStyle col-xs-12 col-sm-6">
-                            @Html.EditorFor(model => model.ClientTwoTaxationResidency, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ClientTwoTaxationResidency, "", new { @class = "text-danger" })
+                            @Html.DropDownList("ClientTwoTaxationResidency", ViewData["CountriesList"] as SelectList, new { @class = "form-control" })
                         </div>
                     </div>
                 </div>
@@ -491,7 +486,7 @@
                     </div>
                     <div class="fieldStyle col-xs-12 col-sm-8">
                         <div class="topTFStyle col-xs-12">
-                            @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control", placeholder = "Notes* Please provide relevant details including items like medication, residence status etc." } })
+                            @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control", placeholder = "* Please provide relevant details including items like medication, residence status etc." } })
                             @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
                         </div>
                     </div>

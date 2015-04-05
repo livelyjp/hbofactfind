@@ -54,13 +54,13 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Marital Status")]
         public MartialStatusEnum ClientOneMartialStatus { get; set; }
 
-        [DisplayName("Are You In Good Health?")]
+        [DisplayName("Are You In Good Health?*")]
         public bool ClientOneGoodHealth { get; set; }
 
         [DisplayName("Smoked In The Last 12 Months?")]
         public bool ClientOneSmoked { get; set; }
 
-        [RegularExpression(@"^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$", ErrorMessage = "National Insurance Number Should Be Informat AA NN NN NN A")]
+        [RegularExpression(@"^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$", ErrorMessage = "Invalid NI Number")]
         [DisplayName("National Insurance Number")]
         public string ClientOneNationalInsuranceNumber { get; set; }
 
@@ -133,6 +133,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Client Two Smoked")]
         public bool ClientTwoSmoked { get; set; }
 
+        [RegularExpression(@"^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$", ErrorMessage = "Invalid NI Number")]
         [DisplayName("Client Two National Insurance Number")]
         public string ClientTwoNationalInsuranceNumber { get; set; }
 
