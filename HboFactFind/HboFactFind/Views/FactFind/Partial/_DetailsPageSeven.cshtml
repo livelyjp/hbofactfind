@@ -1,7 +1,7 @@
 ﻿@model HboFactFind.Domain.Pages.PageSeven
 
 
-<div class="hboDetailRowNoBorder row">
+<div class="hboDetailRowNoBorder">
     <h4>Summary Of Assets</h4>
 </div>
 
@@ -225,7 +225,7 @@
 <div class="hboDetailRow row"></div>
 
 
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
     <div class="col-xs-12">
         <div class="headerStyle col-xs-12 col-sm-4">
             @Html.DisplayNameFor(model => model.ClientOneTotalAssets)
@@ -244,7 +244,7 @@
     </div>
 </div>
 
-<div class="hboDetailRowNoBorder row">
+<div class="hboDetailRowNoBorder">
     <h4>Summary Of Liabilities</h4>
 </div>
 
@@ -387,7 +387,7 @@
 <div class="hboDetailRow row"></div>
 
 
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
     <div class="col-xs-12">
         <div class="headerStyle col-xs-12 col-sm-4">
             @Html.DisplayNameFor(model => model.ClientOneTotalDebt)
@@ -405,10 +405,10 @@
         </div>
     </div>
 </div>
+<h4>Breakdown Of Liabilities</h4>
+<strong>Mortages/Loans</strong>
 
 <div class="hboDetailRowNoBorder row">
-    <h4>Breakdown Of Liabilities</h4>
-    <strong>Mortages/Loans</strong>
     <div class="col-xs-12">
         @Html.Partial("~/Views/BreakDownOfLiabilities/Partials/_BreakDownOfLiabilitiesIndex.cshtml", Model.BreakDownOfLiabilitieses)
     </div>
