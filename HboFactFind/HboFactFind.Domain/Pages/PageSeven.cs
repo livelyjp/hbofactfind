@@ -37,7 +37,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal ClientOneIsa { get; set; }
 
-        [DisplayName("Collectives*")]
+        [DisplayName("Collectives")]
         [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal ClientOneCollectives { get; set; }
 
@@ -73,11 +73,11 @@ namespace HboFactFind.Domain.Pages
         [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal ClientOneLoansHp { get; set; }
 
-        [DisplayName("Mortgage (Other Property")]
+        [DisplayName("Mortgage (Other Property)")]
         [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal ClientOneOtherMortgage { get; set; }
 
-        [DisplayName("Any Other Lending")]
+        [DisplayName("Any Other Lending*")]
         [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal ClientOneOtherLending { get; set; }
 

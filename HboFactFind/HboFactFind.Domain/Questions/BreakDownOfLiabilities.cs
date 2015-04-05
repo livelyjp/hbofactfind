@@ -10,7 +10,7 @@ namespace HboFactFind.Domain.Questions
     public class BreakDownOfLiabilities : BaseEntity
     {
         public long PageSevenId { get; set; }
-        [DisplayName("Mortgage/Load/Credit Owner")]
+        [DisplayName("Mortgage/Loan/Credit Owner")]
         public string MoregateLoadCreditOwner { get; set; }
         [DisplayName("Lender")]
         public string Lender { get; set; }

@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ClientOneEmploymentStatus)
+            @Html.DisplayNameFor(model => model.ClientOneEmploymentStatusEnum)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ClientOneOccupation)
@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.ClientOneIntendedRetirementAge)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ClientTwoStatusEmploymentStatus)
+            @Html.DisplayNameFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ClientTwoOccupation)
@@ -50,7 +50,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ClientOneEmploymentStatus)
+            @Html.DisplayFor(modelItem => item.ClientOneEmploymentStatusEnum)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ClientOneOccupation)
@@ -65,7 +65,7 @@
             @Html.DisplayFor(modelItem => item.ClientOneIntendedRetirementAge)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ClientTwoStatusEmploymentStatus)
+            @Html.DisplayFor(modelItem => item.ClientTwoStatusEnumEmploymentStatusEnum)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ClientTwoOccupation)

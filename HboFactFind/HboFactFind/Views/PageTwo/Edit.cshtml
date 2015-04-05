@@ -34,16 +34,16 @@
         <div class="hboDetailRow row">
             <div class="col-xs-12">
                 <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneEmploymentStatus)
+                    @Html.LabelFor(model => model.ClientOneEmploymentStatusEnum)
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EnumDropDownListFor(model => model.ClientOneEmploymentStatus, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(model => model.ClientOneEmploymentStatus, "", new {@class = "text-danger"})
+                        @Html.EnumDropDownListFor(model => model.ClientOneEmploymentStatusEnum, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.ClientOneEmploymentStatusEnum, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EnumDropDownListFor(model => model.ClientTwoStatusEmploymentStatus, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(model => model.ClientTwoStatusEmploymentStatus, "", new {@class = "text-danger"})
+                        @Html.EnumDropDownListFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum, new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum, "", new {@class = "text-danger"})
                     </div>
                 </div>
             </div>

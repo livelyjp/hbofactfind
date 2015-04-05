@@ -17,7 +17,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Gross Private Pension Income (Pa)")]
         public decimal ClientOneGrossPrivatePensionIncome { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
-        [DisplayName("Gross State Pension (Pa")]
+        [DisplayName("Gross State Pension (Pa)")]
         public decimal ClientOneGrossStatePension { get; set; }
         [DisplayFormat(DataFormatString = "{0:c}")]
         [DisplayName("Any Additional Received")]

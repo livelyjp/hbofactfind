@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="AbstractEntities\BaseEntity.cs" />
     <Compile Include="Questions\BreakDownOfLiabilities.cs" />
-    <Compile Include="Enums\EmploymentStatus.cs" />
+    <Compile Include="Enums\EmploymentStatusEnum.cs" />
     <Compile Include="Enums\MartialStatusEnum.cs" />
     <Compile Include="Enums\SexEnum.cs" />
     <Compile Include="Enums\TaxRateEnum.cs" />

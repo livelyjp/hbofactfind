@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201503301725143_Removed client two notes from PageOne.Designer.cs">
       <DependentUpon>201503301725143_Removed client two notes from PageOne.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504051758427_Small names changed.cs" />
+    <Compile Include="Migrations\201504051758427_Small names changed.Designer.cs">
+      <DependentUpon>201504051758427_Small names changed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -132,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503301725143_Removed client two notes from PageOne.resx">
       <DependentUpon>201503301725143_Removed client two notes from PageOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504051758427_Small names changed.resx">
+      <DependentUpon>201504051758427_Small names changed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

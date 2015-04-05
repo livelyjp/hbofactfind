@@ -43,11 +43,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOnePersonalProtectionPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOnePersonalProtectionPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOnePersonalProtectionPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoPersonalProtectionPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoPersonalProtectionPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoPersonalProtectionPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -63,11 +63,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOnePensionPlanningPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOnePensionPlanningPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOnePensionPlanningPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoPensionPlanningPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoPensionPlanningPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoPensionPlanningPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -83,11 +83,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneOptionsAtRetirementPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneOptionsAtRetirementPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneOptionsAtRetirementPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoOptionsAtRetirementPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoOptionsAtRetirementPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoOptionsAtRetirementPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -103,11 +103,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneSavingsAndInvestmentsPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneSavingsAndInvestmentsPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneSavingsAndInvestmentsPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoSavingsAndInvestmentsPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoSavingsAndInvestmentsPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoSavingsAndInvestmentsPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -123,11 +123,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneEstatePlanningPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneEstatePlanningPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneEstatePlanningPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoEstatePlanningPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoEstatePlanningPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoEstatePlanningPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -143,11 +143,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneMortgageNeedsPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneMortgageNeedsPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneMortgageNeedsPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoMortgageNeedsPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoMortgageNeedsPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoMortgageNeedsPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -163,11 +163,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneEquityReleasePriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneEquityReleasePriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneEquityReleasePriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoEquityReleasePriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoEquityReleasePriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoEquityReleasePriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -183,11 +183,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneLongTermCarePriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneLongTermCarePriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneLongTermCarePriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoLongTermCarePriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoLongTermCarePriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoLongTermCarePriority, "", new {@class = "text-danger"})
                     </div>
                 </div>
@@ -203,11 +203,11 @@
                 </div>
                 <div class="fieldStyle col-xs-12 col-sm-8">
                     <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneGeneralInsuranceNeedsPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientOneGeneralInsuranceNeedsPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientOneGeneralInsuranceNeedsPriority, "", new {@class = "text-danger"})
                     </div>
                     <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoGeneralInsuranceNeedsPriority, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.DropDownList("ClientTwoGeneralInsuranceNeedsPriority", ViewData["RangeValues"] as SelectList, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ClientTwoGeneralInsuranceNeedsPriority, "", new {@class = "text-danger"})
                     </div>
                 </div>

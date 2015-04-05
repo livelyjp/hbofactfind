@@ -11,7 +11,7 @@ namespace HboFactFind.Domain.Pages
     {
         //PageTwo
         [DisplayName("Employment Status")]
-        public EmploymentStatus ClientOneEmploymentStatus { get; set; }
+        public EmploymentStatusEnum ClientOneEmploymentStatusEnum { get; set; }
         [DisplayName("Occupation")]
         public string ClientOneOccupation { get; set; }
         [DisplayName("Details Of Employer")]
@@ -24,7 +24,7 @@ namespace HboFactFind.Domain.Pages
         [DisplayName("Intended Retirement Age")]
         public int ClientOneIntendedRetirementAge { get; set; }
 
-        public EmploymentStatus ClientTwoStatusEmploymentStatus { get; set; }
+        public EmploymentStatusEnum ClientTwoStatusEnumEmploymentStatusEnum { get; set; }
         public string ClientTwoOccupation { get; set; }
         public string ClientTwoDetailsOfEmployer { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
