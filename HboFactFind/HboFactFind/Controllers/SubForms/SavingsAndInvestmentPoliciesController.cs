@@ -8,6 +8,7 @@ using HboFactFind.EF;
 
 namespace HboFactFind.Controllers.SubForms
 {
+    [Authentication]
     public class SavingsAndInvestmentPoliciesController : Controller
     {
         private readonly HboDbContext _db = new HboDbContext();

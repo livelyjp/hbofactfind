@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.Entity;
-using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -18,7 +17,7 @@ namespace HboFactFind.Controllers
         // GET: FactFinds
         public async Task<ActionResult> Index()
         {
-            var factFinds = _db.FactFinds.Include(x=>x.User);
+            var factFinds = _db.FactFinds.Include(x => x.User);
             return View(await factFinds.ToListAsync());
         }
 
@@ -83,7 +82,7 @@ namespace HboFactFind.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            return RedirectToAction("PageOne", "FactFind", new { @id =id });
+            return RedirectToAction("PageOne", "FactFind", new {id});
         }
 
         // POST: FactFinds/Edit/5

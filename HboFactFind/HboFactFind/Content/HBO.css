@@ -39,11 +39,9 @@ textarea.form-control {
     color: white;
 }
 
-
 /*
     Home Panel
 */
-
 
 .hboHomePanel {
     padding: 20px;
@@ -72,10 +70,14 @@ textarea.form-control {
 
 .columnTitle { margin-top: 10px; }
 
-.hboDetailRow, .hboDetailRowNoBorder {
-    clear: both;
+.form-group .hboDetailRow, .form-group .hboDetailRowNoBorder {
+   clear: both;
     margin: 1px 40px 7px;
-    min-height: 45px;
+    min-height: 35px;
+}
+
+.form-group .hboDetailRow {
+    padding-bottom: 7px;
 }
 
 .hboDetailRow {
@@ -88,8 +90,21 @@ textarea.form-control {
 
 .headerStyle, .fieldStyle, .topTFStyle, .bottomTFStyle {
     min-height: 35px;
-    padding: 7px;
 }
+
+.topTFStyle, .bottomTFStyle {
+    padding: 14px 7px;
+}
+
+.headerStyle, .fieldStyle, .form-group .topTFStyle, .form-group .bottomTFStyle {
+    padding: 7px 7px 0;
+}
+
+/*.topTFStyle, .bottomTFStyle {
+    padding: 14px;
+}*/
+
+
 
 
 .headerStyle {
