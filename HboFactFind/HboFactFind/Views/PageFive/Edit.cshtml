@@ -188,18 +188,22 @@
         </div>
     </div>
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             var updateClientOneMontlyTotal = function() {
                 calculateMonthlyTotalFromAnnual('.clientOneTotalAnnualIncome', '.clientOneTotalMonthlyIncome');
             }
-            var updateClientTwoMontlyTotal = function () {
+            var updateClientTwoMontlyTotal = function() {
                 calculateMonthlyTotalFromAnnual('.clientTwoTotalAnnualIncome', '.clientTwoTotalMonthlyIncome');
             }
             updateTotalInputFields('.clientOne', '.clientOneTotalAnnualIncome', updateClientOneMontlyTotal);
             updateTotalInputFields('.clientTwo', '.clientTwoTotalAnnualIncome', updateClientTwoMontlyTotal);
         });
     </script>
-    <div class="hboDetailRow row"></div>
+        <div class="form-group">
+            <div class="hboDetailRow row">
+
+            </div>
+        </div>
     <div class="form-group">
         <div class="hboDetailRow row">
             <div class="col-xs-12">
@@ -271,10 +275,14 @@
             </div>
         </div>
     </div>
-    <div class="hboDetailRow row"></div>
+        <div class="form-group">
+            <div class="hboDetailRow row">
+
+            </div>
+        </div>
 
     <div class="form-group">
-        <div class="hboDetailRow row">
+        <div class="hboDetailRowNoBorder row">
             <div class="col-xs-12">
                 <div class="headerStyle col-xs-12 col-sm-4">
                     @Html.LabelFor(model => model.IncomeNotes)
