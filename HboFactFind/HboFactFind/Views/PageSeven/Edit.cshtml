@@ -12,7 +12,8 @@
     <div class="form-horizontal">
     <h3>Assests & Liabilities</h3>
 
-        @Html.Partial("_EditNavigationBar", Model.Id)
+        @Html.Partial("_EditNavigationBar", new KeyValuePair<string, long>("AssetsLiabilities", Model.Id))
+
     <div class="hboDetailRowNoBorder row">
         <h4>Summary Of Assets</h4>
     </div>

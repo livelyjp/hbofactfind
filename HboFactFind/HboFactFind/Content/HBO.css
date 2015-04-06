@@ -150,6 +150,10 @@ textarea.form-control {
        border-bottom: 5px solid #43A9D1;
     padding-bottom: 10px;
 }
+.hboEditNavigation ul li a.active{
+       border-bottom: 5px solid #43A9D1;
+    padding-bottom: 10px;
+}
 /*
     Model Popups
 */

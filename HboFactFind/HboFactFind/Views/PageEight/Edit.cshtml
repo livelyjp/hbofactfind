@@ -10,7 +10,8 @@
 
     <div class="form-horizontal">
         <h3>Emergancy Fund</h3>
-        @Html.Partial("_EditNavigationBar", Model.Id)
+        @Html.Partial("_EditNavigationBar", new KeyValuePair<string, long>("EmergancyFund", Model.Id))
+
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
         @Html.HiddenFor(model => model.Id)
 

@@ -1,37 +1,43 @@
-﻿@model Int64
+﻿@model KeyValuePair<string, long>
 <div class="navbar navbar-inverse hboEditNavigation">
     <div class="container">
         <ul class="nav navbar-nav">
             <li>
-                @Html.ActionLink("Core Details", "Edit", "PageOne", null, new { @id = Model })
+                @Html.ActionLink("Core Details", "Edit", "PageOne", null, new { @class = "CoreDetails" })
             </li>
             <li>
-                @Html.ActionLink("Employment", "Edit", "PageTwo", null, new { @id = Model })
+                @Html.ActionLink("Employment", "Edit", "PageTwo", null, new { @class = "EmploymentDetails" })
             </li>
             <li>
-                @Html.ActionLink("Advisers", "Edit", "PageThree", null, new { @id = Model })
+                @Html.ActionLink("Advisers", "Edit", "PageThree", null, new { @class = "Advisers" })
             </li>
             <li>
-                @Html.ActionLink("Dependants", "Edit", "PageFour", null, new { @id = Model })
+                @Html.ActionLink("Dependants", "Edit", "PageFour", null, new { @class = "Dependants" })
             </li>
             <li>
-                @Html.ActionLink("Income", "Edit", "PageFive", null, new { @id = Model })
+                @Html.ActionLink("Income", "Edit", "PageFive", null, new { @class = "Income" })
             </li>
             <li>
-                @Html.ActionLink("Expenditure", "Edit", "PageSix", null, new { @id = Model })
+                @Html.ActionLink("Expenditure", "Edit", "PageSix", null, new { @class = "Expenditure" })
             </li>
             <li>
-                @Html.ActionLink("Assets & Liabilities", "Edit", "PageSeven", null, new { @id = Model })
+                @Html.ActionLink("Assets & Liabilities", "Edit", "PageSeven", null, new { @class = "AssetsLiabilities" })
             </li>
             <li>
-                @Html.ActionLink("Emergancy Fund", "Edit", "PageEight", null, new { @id = Model })
+                @Html.ActionLink("Emergancy Fund", "Edit", "PageEight", null, new { @class = "EmergancyFund" })
             </li>
             <li>
-                @Html.ActionLink("Priorities", "Edit", "PageNine", null, new { @id = Model })
+                @Html.ActionLink("Priorities", "Edit", "PageNine", null, new { @class = "Priorities" })
             </li>
             <li>
-                @Html.ActionLink("Exising Plans", "Edit", "PageTen", null, new { @id = Model })
+                @Html.ActionLink("Exising Plans", "Edit", "PageTen", null, new { @class = "ExisingPlans" })
             </li>
         </ul>
     </div>
-</div>  
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.@Model.Key').addClass('active');
+    });
+</script>

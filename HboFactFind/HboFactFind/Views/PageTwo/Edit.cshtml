@@ -9,10 +9,10 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-    <h3>Employment Details</h3>
-        @Html.Partial("_EditNavigationBar", Model.Id)
-    @Html.ValidationSummary(true, "", new {@class = "text-danger"})
-    @Html.HiddenFor(model => model.Id)
+        <h3>Employment Details</h3>
+        @Html.Partial("_EditNavigationBar", new KeyValuePair<string, long>("EmploymentDetails", Model.Id))
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        @Html.HiddenFor(model => model.Id)
         <div class="hboDetailRow row">
             <div class="col-xs-12">
                 <div class="headerStyle col-xs-12 col-sm-4">
@@ -28,111 +28,111 @@
             </div>
         </div>
 
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneEmploymentStatusEnum)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EnumDropDownListFor(model => model.ClientOneEmploymentStatusEnum, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(model => model.ClientOneEmploymentStatusEnum, "", new {@class = "text-danger"})
+        <div class="form-group">
+            <div class="hboDetailRow row">
+                <div class="col-xs-12">
+                    <div class="headerStyle col-xs-12 col-sm-4">
+                        @Html.LabelFor(model => model.ClientOneEmploymentStatusEnum)
                     </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EnumDropDownListFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum, new {@class = "form-control"})
-                        @Html.ValidationMessageFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum, "", new {@class = "text-danger"})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneOccupation)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneOccupation, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientOneOccupation, "", new {@class = "text-danger"})
-                    </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoOccupation, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientTwoOccupation, "", new {@class = "text-danger"})
+                    <div class="fieldStyle col-xs-12 col-sm-8">
+                        <div class="topTFStyle col-xs-12 col-sm-6">
+                            @Html.EnumDropDownListFor(model => model.ClientOneEmploymentStatusEnum, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.ClientOneEmploymentStatusEnum, "", new {@class = "text-danger"})
+                        </div>
+                        <div class="bottomTFStyle col-xs-12 col-sm-6">
+                            @Html.EnumDropDownListFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum, new {@class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.ClientTwoStatusEnumEmploymentStatusEnum, "", new {@class = "text-danger"})
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneDetailsOfEmployer)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneDetailsOfEmployer, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientOneDetailsOfEmployer, "", new {@class = "text-danger"})
+        <div class="form-group">
+            <div class="hboDetailRow row">
+                <div class="col-xs-12">
+                    <div class="headerStyle col-xs-12 col-sm-4">
+                        @Html.LabelFor(model => model.ClientOneOccupation)
                     </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoDetailsOfEmployer, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientTwoDetailsOfEmployer, "", new {@class = "text-danger"})
+                    <div class="fieldStyle col-xs-12 col-sm-8">
+                        <div class="topTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientOneOccupation, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.ClientOneOccupation, "", new {@class = "text-danger"})
+                        </div>
+                        <div class="bottomTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientTwoOccupation, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.ClientTwoOccupation, "", new {@class = "text-danger"})
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneEmploymentStartDate)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneEmploymentStartDate, new {htmlAttributes = new {@class = "form-control datepicker"}})
-                        @Html.ValidationMessageFor(model => model.ClientOneEmploymentStartDate, "", new {@class = "text-danger"})
+        <div class="form-group">
+            <div class="hboDetailRow row">
+                <div class="col-xs-12">
+                    <div class="headerStyle col-xs-12 col-sm-4">
+                        @Html.LabelFor(model => model.ClientOneDetailsOfEmployer)
                     </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoEmploymentStartDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
-                        @Html.ValidationMessageFor(model => model.ClientTwoEmploymentStartDate, "", new {@class = "text-danger"})
+                    <div class="fieldStyle col-xs-12 col-sm-8">
+                        <div class="topTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientOneDetailsOfEmployer, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.ClientOneDetailsOfEmployer, "", new {@class = "text-danger"})
+                        </div>
+                        <div class="bottomTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientTwoDetailsOfEmployer, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.ClientTwoDetailsOfEmployer, "", new {@class = "text-danger"})
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <div class="hboDetailRow row">
-            <div class="col-xs-12">
-                <div class="headerStyle col-xs-12 col-sm-4">
-                    @Html.LabelFor(model => model.ClientOneIntendedRetirementAge)
-                </div>
-                <div class="fieldStyle col-xs-12 col-sm-8">
-                    <div class="topTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientOneIntendedRetirementAge, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientOneIntendedRetirementAge, "", new {@class = "text-danger"})
+        <div class="form-group">
+            <div class="hboDetailRow row">
+                <div class="col-xs-12">
+                    <div class="headerStyle col-xs-12 col-sm-4">
+                        @Html.LabelFor(model => model.ClientOneEmploymentStartDate)
                     </div>
-                    <div class="bottomTFStyle col-xs-12 col-sm-6">
-                        @Html.EditorFor(model => model.ClientTwoIntendedRetirementAge, new {htmlAttributes = new {@class = "form-control"}})
-                        @Html.ValidationMessageFor(model => model.ClientTwoIntendedRetirementAge, "", new {@class = "text-danger"})
+                    <div class="fieldStyle col-xs-12 col-sm-8">
+                        <div class="topTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientOneEmploymentStartDate, new {htmlAttributes = new {@class = "form-control datepicker"}})
+                            @Html.ValidationMessageFor(model => model.ClientOneEmploymentStartDate, "", new {@class = "text-danger"})
+                        </div>
+                        <div class="bottomTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientTwoEmploymentStartDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                            @Html.ValidationMessageFor(model => model.ClientTwoEmploymentStartDate, "", new {@class = "text-danger"})
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <div class="buttonPanel col-xs-12">
-            <input type="submit" value="Save" class="btn btn-default" />
+        <div class="form-group">
+            <div class="hboDetailRow row">
+                <div class="col-xs-12">
+                    <div class="headerStyle col-xs-12 col-sm-4">
+                        @Html.LabelFor(model => model.ClientOneIntendedRetirementAge)
+                    </div>
+                    <div class="fieldStyle col-xs-12 col-sm-8">
+                        <div class="topTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientOneIntendedRetirementAge, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.ClientOneIntendedRetirementAge, "", new {@class = "text-danger"})
+                        </div>
+                        <div class="bottomTFStyle col-xs-12 col-sm-6">
+                            @Html.EditorFor(model => model.ClientTwoIntendedRetirementAge, new {htmlAttributes = new {@class = "form-control"}})
+                            @Html.ValidationMessageFor(model => model.ClientTwoIntendedRetirementAge, "", new {@class = "text-danger"})
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="form-group">
+            <div class="buttonPanel col-xs-12">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
     </div>
 }
 
