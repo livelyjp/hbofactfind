@@ -16,8 +16,17 @@
         </th>
         <th></th>
     </tr>
-
-    @foreach (var item in Model)
+@if (Model.Count() == 0)
+{
+    <tr>
+        <td colspan="10" class="empty">
+            No Non-Financial Dependants
+        </td>
+    </tr>
+}
+else
+{
+    foreach (var item in Model)
     {
         <tr>
             <td>
@@ -33,12 +42,12 @@
                 @Html.DisplayFor(modelItem => item.Notes)
             </td>
             <td>
-                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "nfde_" + item.Id, @class = "nonFinancialDepdnantEditButton" }) |
-                @Html.ActionLink("Delete", null, null, new { id = item.Id }, new { @id = "nfdd_" + item.Id, @class = "nonFinancialDepdnantDeleteButton" })
+                @Html.ActionLink("Edit", null, null, new {id = item.Id}, new {@id = "nfde_" + item.Id, @class = "nonFinancialDepdnantEditButton"}) |
+                @Html.ActionLink("Delete", null, null, new {id = item.Id}, new {@id = "nfdd_" + item.Id, @class = "nonFinancialDepdnantDeleteButton"})
             </td>
         </tr>
     }
-
+}
 </table>
 
 <div class="buttonPanel col-xs-12">

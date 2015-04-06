@@ -31,48 +31,58 @@
         </th>
         <th></th>
     </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contrbution)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Frequency)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InTrust)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastValuation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Owner)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Provider)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductPlanType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InForce)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "se_" + item.Id, @class = "savingsEditButton" }) |
-                @Html.ActionLink("Delete", null, null, new { id = item.Id }, new { @id = "sd_" + item.Id, @class = "savingsDeleteButton" })
-            </td>
-        </tr>
-    }
+@if (Model.Count() == 0)
+{
+    <tr>
+        <td colspan="10" class="empty">
+            No Savings Or Investment Policies
+        </td>
+    </tr>
+}
+else
+{
+    foreach (var item in Model)
+     {
+         <tr>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Contrbution)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Frequency)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.InTrust)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.LastValuation)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Owner)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Provider)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.PolicyNumber)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.ProductPlanType)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.InForce)
+             </td>
+             <td>
+                 @Html.ActionLink("Edit", null, null, new {id = item.Id}, new {@id = "se_" + item.Id, @class = "savingsEditButton"}) |
+                 @Html.ActionLink("Delete", null, null, new {id = item.Id}, new {@id = "sd_" + item.Id, @class = "savingsDeleteButton"})
+             </td>
+         </tr>
+     }
+}
 
 </table>
 
 <div class="buttonPanel col-xs-12">
-    <input type="submit" id="addSavingButton" value="Add Dependant" class="btn addSavingButton btn-default" />
+    <input type="submit" id="addSavingButton" value="Add Savings Or Investment Policy" class="btn addSavingButton btn-default" />
 </div>
 
 

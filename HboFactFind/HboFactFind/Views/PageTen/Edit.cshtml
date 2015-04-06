@@ -43,8 +43,7 @@
                 </div>
             </div>
 
-            <div class="hboDetailRowNoBorder">
-                *provide details of any ISA contributions, additional features, guaranteese etc. in the previous notes section
+            <div class="hboDetailRowNoBorder row">
             </div>
 
             <div class="form-group">
@@ -55,7 +54,7 @@
                         </div>
                         <div class="fieldStyle col-xs-12 col-sm-8">
                             <div class="topTFStyle col-xs-12">
-                                @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control", placeholder = "*Provide details of any ISA contributions, additional features, guaranteese etc. in the previous notes section" } })
                                 @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
                             </div>
                         </div>

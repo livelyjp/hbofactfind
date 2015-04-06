@@ -41,56 +41,67 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.GrossPremium)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PremiumFrequency)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Waiver)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InTrust)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Term)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LifeCover)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CICCover)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Owner)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Provider)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductPlanType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InForce)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", null, null, new { id = item.Id }, new { @id = "ppe_" + item.Id, @class = "protectionEditButton" }) |
-                @Html.ActionLink("Delete", null, null, new { id = item.Id }, new { @id = "ppd_" + item.Id, @class = "protectionDeleteButton" })
-            </td>
-        </tr>
-    }
+ @if (Model.Count() == 0)
+ {
+     <tr>
+         <td colspan="13" class="empty">
+             No Protection & General Insurance Policies
+         </td>
+     </tr>
+ }
+ else
+ {
+     foreach (var item in Model)
+     {
+         <tr>
+             <td>
+                 @Html.DisplayFor(modelItem => item.GrossPremium)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.PremiumFrequency)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Waiver)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.InTrust)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Term)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.LifeCover)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.CICCover)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Owner)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Provider)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.PolicyNumber)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.ProductPlanType)
+             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.InForce)
+             </td>
+             <td>
+                 @Html.ActionLink("Edit", null, null, new {id = item.Id}, new {@id = "ppe_" + item.Id, @class = "protectionEditButton"}) |
+                 @Html.ActionLink("Delete", null, null, new {id = item.Id}, new {@id = "ppd_" + item.Id, @class = "protectionDeleteButton"})
+             </td>
+         </tr>
+     }
+ }
 
 </table>
 
 <div class="buttonPanel col-xs-12">
-    <input type="submit" id="addProtectionButton" value="Add Dependant" class="btn addProtectionButton btn-default" />
+    <input type="submit" id="addProtectionButton" value="Add Protection & General Insurance Policy" class="btn addProtectionButton btn-default" />
 </div>
 
 

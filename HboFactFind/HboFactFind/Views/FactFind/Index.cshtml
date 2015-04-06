@@ -4,7 +4,7 @@
     ViewBag.Title = "View All Fact Finds";
 }
 
-<h2>View All Fact Finds</h2>
+<h3>Fact Finds</h3>
 
 <div class="row">
     <div class="col-sm-2 col-sm-offset-5">
@@ -38,9 +38,9 @@
 
 @foreach (var item in Model) {
     <tr>
-        <th>
+        <td>
             @Html.DisplayFor(model => item.Id)
-        </th>
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.ClientOneName)
         </td>

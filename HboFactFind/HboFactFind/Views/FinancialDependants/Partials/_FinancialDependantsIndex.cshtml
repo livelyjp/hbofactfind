@@ -18,8 +18,17 @@
             @Html.DisplayNameFor(model => model.RelationshipAndReason)
         </th>
     </tr>
-
-    @foreach (var item in Model)
+@if (Model.Count() == 0)
+{
+    <tr>
+        <td colspan="10" class="empty">
+            No Dependants
+        </td>
+    </tr>
+}
+else
+{
+    foreach (var item in Model)
     {
         <tr>
             <td>
@@ -39,5 +48,6 @@
             </td>
         </tr>
     }
+}
     <tr>
 </table>
