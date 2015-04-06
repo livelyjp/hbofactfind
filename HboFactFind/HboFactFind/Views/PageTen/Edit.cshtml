@@ -13,61 +13,63 @@
         <h3>Existing Plans</h3>
         @Html.Partial("_EditNavigationBar", new KeyValuePair<string, long>("ExisingPlans", Model.Id))
 
-        <div class="hboDetailRowNoBorder row">
-            <strong>For employer benefits please include these where possible in the following tables (for PHI these need to be included in the notes section) with the owner as employer, where plan types such as DIS - death in service, FS - Final Salary Scheme</strong>
-        </div>
-        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
-        @Html.HiddenFor(model => model.Id)
-
-        <div class="hboDetailRowNoBorder row">
-            <h4>Protection & General Insurance Policies</h4>
-            <div class="col-xs-12">
-                @Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionEditIndex.cshtml", Model.ProtectionAndInsurancePolicies)
-            </div>
-        </div>
-
-        <div class="hboDetailRowNoBorder row">
-            <h4>Pension Policies ( Including Money Purchase Occupational Schemes)</h4>
-            <div class="col-xs-12">
-                @Html.Partial("~/Views/PensionPolicies/Partials/_PensionIndexEdit.cshtml", Model.PensionPolicieses)
-            </div>
-        </div>
-
-
-        <div class="hboDetailRowNoBorder row">
-            <h4>Savings & Investment Policies</h4>
-            <div class="col-xs-12">
-                @Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsIndexEdit.cshtml", Model.SavingsAndInvestmentPolicieses)
-            </div>
-        </div>
-
-        <div class="hboDetailRowNoBorder">
-            *provide details of any ISA contributions, additional features, guaranteese etc. in the previous notes section
-        </div>
-
         <div class="form-group">
             <div class="hboDetailRowNoBorder row">
+                <strong>For employer benefits please include these where possible in the following tables (for PHI these need to be included in the notes section) with the owner as employer, where plan types such as DIS - death in service, FS - Final Salary Scheme</strong>
+            </div>
+            </div>
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="hboDetailRowNoBorder row">
+                <h4>Protection & General Insurance Policies</h4>
                 <div class="col-xs-12">
-                    <div class="headerStyle col-xs-12 col-sm-4">
-                        @Html.LabelFor(model => model.Notes)
-                    </div>
-                    <div class="fieldStyle col-xs-12 col-sm-8">
-                        <div class="topTFStyle col-xs-12">
-                            @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+                    @Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionEditIndex.cshtml", Model.ProtectionAndInsurancePolicies)
+                </div>
+            </div>
+
+            <div class="hboDetailRowNoBorder row">
+                <h4>Pension Policies ( Including Money Purchase Occupational Schemes)</h4>
+                <div class="col-xs-12">
+                    @Html.Partial("~/Views/PensionPolicies/Partials/_PensionIndexEdit.cshtml", Model.PensionPolicieses)
+                </div>
+            </div>
+
+
+            <div class="hboDetailRowNoBorder row">
+                <h4>Savings & Investment Policies</h4>
+                <div class="col-xs-12">
+                    @Html.Partial("~/Views/SavingsAndInvestmentPolicies/Partials/_SavingsIndexEdit.cshtml", Model.SavingsAndInvestmentPolicieses)
+                </div>
+            </div>
+
+            <div class="hboDetailRowNoBorder">
+                *provide details of any ISA contributions, additional features, guaranteese etc. in the previous notes section
+            </div>
+
+            <div class="form-group">
+                <div class="hboDetailRowNoBorder row">
+                    <div class="col-xs-12">
+                        <div class="headerStyle col-xs-12 col-sm-4">
+                            @Html.LabelFor(model => model.Notes)
+                        </div>
+                        <div class="fieldStyle col-xs-12 col-sm-8">
+                            <div class="topTFStyle col-xs-12">
+                                @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <div class="form-group">
-            <div class="buttonPanel col-xs-12">
-                <input type="submit" value="Complete" class="btn btn-default" />
+            <div class="form-group">
+                <div class="buttonPanel col-xs-12">
+                    <input type="submit" value="Complete" class="btn btn-default" />
+                </div>
             </div>
         </div>
-    </div>
 }
 
 @Html.Partial("~/Views/ProtectionAndInsurancePolicies/Partials/_ProtectionCreate.cshtml", new ProtectionAndInsurancePolicies { PageTenId = Model.Id })

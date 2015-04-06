@@ -83,7 +83,7 @@
 </div>
 
 
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
     <div class="col-xs-12">
         <div class="headerStyle col-xs-12 col-sm-4">
             @Html.DisplayNameFor(model => model.ClientOneIntendedRetirementAge)
@@ -101,6 +101,6 @@
 
 <div class="col-xs-12" style="text-align: center">
     <p>
-        @Html.ActionLink("Edit", "PageTwo", new { id = Model.Id })
+        @Html.ActionLink("Edit", "PageTwo", new { id = Model.Id }, new { @class = "btn btn-default hidden-print" })
     </p>
 </div>

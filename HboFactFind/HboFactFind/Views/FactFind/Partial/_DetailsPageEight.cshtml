@@ -95,34 +95,13 @@
         </div>
     </div>
 </div>
-Please confirm the main provisions in the notes section.
-*If no, please explain why this has been considered in the notes section.
-<div class="hboDetailRowNoBorder row">
-</div>
 
-<div class="hboDetailRow row">
-    <div class="col-xs-12">
-        <div class="headerStyle col-xs-12 col-sm-4">
-            <strong>Example Questions Relating To Wills</strong>
-        </div>
-        <div class="fieldStyle col-xs-12 col-sm-8">
-            <div class="topTFStyle col-xs-12">
-                <ul>
-                    <li>Have there been any significant changes that may mean the wills are not up to date?</li>
-                    <li>Are the wills up to date?</li>
-                    <li>Do they reflect your ongoing requirements?</li>
-                    <li>Is your children's guardianship catered for in the will?</li>
-                    <li>Do you own a foreign property? (A UK will may not be valid for a foreign realty)</li>
-                    <li>Have your circumstances chaned since last updating your will?</li>
-                    <li>Do you have a power of attorney in place? Is this a lasting or enduring arrangement?</li>
-                </ul>
-            </div>
-        </div>
+    <div class="hboDetailRow row">
+        Please confirm the main provisions in the notes section.
+        *If no, please explain why this has been considered in the notes section.
     </div>
-</div>
 
-
-<div class="hboDetailRow row">
+<div class="hboDetailRowNoBorder row">
         <div class="col-xs-12">
             <div class="headerStyle col-xs-12 col-sm-4">
                 @Html.DisplayNameFor(model => model.Notes)
@@ -136,7 +115,7 @@ Please confirm the main provisions in the notes section.
     </div>
 
     <div class="col-xs-12" style="text-align: center">
-        <p>
-            @Html.ActionLink("Edit", "PageEight", new { id = Model.Id })
-        </p>
+            @Html.ActionLink("Edit", "PageEight", new { id = Model.Id }, new { @class = "btn btn-default hidden-print" })
     </div>
+
+    

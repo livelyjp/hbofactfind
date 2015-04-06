@@ -1,10 +1,8 @@
 ﻿@model HboFactFind.Domain.Pages.PageNine
 
-
-<div class="hboDetailRowNoBorder row">
-    <strong>Please indicate the relative importance of the following needs/objectives on a scale of 1 to 5. Insert 1 to indecate very important and 5 to indicate that you attach little importance to that item. *</strong>
-</div>
-
+    <div class="hboDetailRowNoBorder row">
+        <strong>Please indicate the relative importance of the following needs/objectives on a scale of 1 to 5. Insert 1 to indecate very important and 5 to indicate that you attach little importance to that item. *</strong>
+    </div>
     <div class="hboDetailRow row">
         <div class="col-xs-12">
             <div class="headerStyle col-xs-12 col-sm-4">
@@ -172,9 +170,11 @@
         </div>
     </div>
     Appropriate supplementary fact finds should be completed to record further details for the areas where advice is required.
-    <div class="hboDetailRow row"></div>
-
     <div class="hboDetailRow row">
+
+    </div>
+
+    <div class="hboDetailRowNoBorder row">
         <div class="col-xs-12">
             <div class="headerStyle col-xs-12 col-sm-4">
                 @Html.DisplayNameFor(model => model.Notes)
@@ -189,6 +189,6 @@
 
     <div class="col-xs-12" style="text-align: center">
         <p>
-            @Html.ActionLink("Edit", "PageNine", new { id = Model.Id })
+            @Html.ActionLink("Edit", "PageNine", new { id = Model.Id }, new { @class = "btn btn-default hidden-print" })
         </p>
     </div>
