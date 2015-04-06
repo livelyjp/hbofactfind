@@ -44,7 +44,7 @@ textarea.form-control {
     margin-bottom: 10px;
     padding: 15px 17px;
 }
-.btn-default:hover, .btn-default:active {
+.btn-default:hover, .btn-default:active, .btn-default:focus {
     background-color: #4389d1;
     border-color: #4389d1;
     color: white;
@@ -219,7 +219,6 @@ textarea.form-control {
         width: 80% !important;
     }
   }
-
    /*
     * Print CSS
    */
