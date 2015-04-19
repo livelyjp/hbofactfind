@@ -11,7 +11,7 @@ namespace HboFactFind
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-ui.min.js",
-                "~/Scripts/HBOFunctions.js"));
+                "~/Scripts/yourCompanyFunctions.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/globalize/globalize.js",
@@ -33,7 +33,7 @@ namespace HboFactFind
                       "~/Content/jquery-ui.theme.css",
                       "~/Content/jquery-ui.structure.css",
                       "~/Content/jquery-ui.min.css", 
-                      "~/Content/HBO.css"));
+                      "~/Content/yourcompany.css"));
         }
     }
 }
